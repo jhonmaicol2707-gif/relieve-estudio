@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nodo Analytics | IA para predecir tu inventario online</title>
+  <meta name="description" content="Software de inteligencia artificial que ayuda a tu tienda online a predecir cuánto inventario comprar. Planes desde 49 USD al mes. Pide tu demo.">
+  <meta name="theme-color" content="#090d0b">
+  <!-- MUESTRA: mientras la web no esté publicada con su dominio, Google no debe indexarla. Quitar esta línea al publicar. -->
+  <meta name="robots" content="noindex">
+  <!-- PENDIENTE al publicar: añadir <link rel="canonical" href="https://dominio-final/"> y poner el dominio delante de og:image -->
+
+  <!-- Vista previa al compartir (WhatsApp, redes) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nodo Analytics | IA para predecir tu inventario online">
+  <meta property="og:description" content="Software de inteligencia artificial que ayuda a tu tienda online a predecir cuánto inventario comprar. Planes desde 49 USD al mes. Pide tu demo.">
+  <meta property="og:image" content="assets/img/compartir.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Tipografías: Bricolage Grotesque (titulares) y Manrope (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Manrope:wght@400;500;700&display=swap">
+
+  <link rel="stylesheet" href="css/base.css?v=20261120">
+  <link rel="stylesheet" href="css/sitio.css?v=20261120">
+
+  <!-- Datos estructurados: solo lo que consta (nombre, qué es y precio de entrada) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Nodo Analytics",
+    "applicationCategory": "BusinessApplication",
+    "description": "Software de inteligencia artificial que ayuda a tiendas online a predecir cuánto inventario comprar.",
+    "offers": { "@type": "Offer", "price": "49", "priceCurrency": "USD", "description": "Plan de entrada, precio por mes" }
+  }
+  </script>
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <header class="nav" data-nav>
+    <a class="nav__marca" href="#inicio" aria-label="Nodo Analytics — inicio">
+      <svg class="nav__logo" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M9 22V10l14 12V10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="22" r="2.6" fill="currentColor"/><circle cx="23" cy="10" r="2.6" fill="currentColor"/></svg>
+      <span>Nodo <b>Analytics</b></span>
+    </a>
+    <nav class="nav__menu" id="menu" data-menu aria-label="Principal">
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#diferencia">Qué cambia</a>
+      <a href="#precio">Precio</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="boton boton--principal boton--chico" href="#demo">Pedir demo</a>
+    </nav>
+    <button class="nav__boton" data-menu-boton aria-label="Abrir menú" aria-controls="menu"><span></span></button>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ RELATO: portada + cómo funciona, con la escena 3D pegada ============
+         La nube de puntos (ventas sueltas) se ordena al bajar: serie de ventas → barras de previsión → caja (el pedido). -->
+    <div class="relato" data-escena-zona>
+      <div class="relato__escena l3d-pegada l3d-escena" aria-hidden="true">
+        <div class="l3d-respaldo"></div>
+        <canvas class="l3d-lienzo" data-escena="particulas" data-opciones='{"formas":["nube","serie","barras","cubo"],"cantidad":9000,"tamano":0.075}'></canvas>
+      </div>
+
+      <div class="relato__contenido">
+
+        <!-- PORTADA -->
+        <section class="portada" id="inicio">
+          <div class="portada__texto">
+            <p class="etiqueta" data-revelar>IA para el inventario de tu tienda online</p>
+            <h1 data-dividir>Deja de adivinar cuánto inventario comprar.</h1>
+            <p class="portada__sub" data-revelar style="--i:5">Nodo Analytics es un software de inteligencia artificial que ayuda a tu tienda online a predecir cuánto inventario comprar. Menos compras a ojo, más decisiones con datos.</p>
+            <div class="portada__acciones" data-revelar style="--i:7">
+              <a class="boton boton--principal" href="#demo" data-iman="0.2">Pedir demo</a>
+              <a class="boton boton--linea" href="#como-funciona">Ver cómo funciona</a>
+            </div>
+            <p class="portada__nota" data-revelar style="--i:9">Planes desde <b><span data-plan="desde">49</span> <span data-plan="moneda">USD</span></b> al <span data-plan="periodo">mes</span>.</p>
+          </div>
+        </section>
+
+        <!-- CÓMO FUNCIONA -->
+        <section class="pasos" id="como-funciona" aria-labelledby="t-pasos">
+          <article class="paso">
+            <div class="paso__caja">
+              <h2 class="etiqueta" id="t-pasos">Cómo funciona</h2>
+              <p class="paso__num" aria-hidden="true">01</p>
+              <h3>Parte de tus ventas</h3>
+              <p>Nodo trabaja con el historial de tu tienda online: qué se vendió, cuánto y cuándo. Es la materia prima de la previsión.</p>
+            </div>
+          </article>
+          <article class="paso">
+            <div class="paso__caja">
+              <p class="paso__num" aria-hidden="true">02</p>
+              <h3>La IA encuentra el patrón</h3>
+              <p>La inteligencia artificial busca en esos datos lo que a simple vista no se ve y estima cuánta demanda viene.</p>
+            </div>
+          </article>
+          <article class="paso">
+            <div class="paso__caja">
+              <p class="paso__num" aria-hidden="true">03</p>
+              <h3>Tú decides cuánto comprar</h3>
+              <p>Recibes una estimación de cuánto inventario comprar. Es una ayuda para decidir, no una orden: la última palabra es tuya.</p>
+              <a class="enlace-flecha" href="#demo">Verlo en una demo</a>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+
+    <!-- ============ QUÉ CAMBIA: a ojo vs con Nodo ============ -->
+    <section class="diferencia" id="diferencia" aria-labelledby="t-diferencia">
+      <div class="contenedor">
+        <header class="cabecera">
+          <p class="etiqueta" data-revelar>Qué cambia</p>
+          <h2 id="t-diferencia" data-dividir>Comprar a ojo sale caro en las dos direcciones.</h2>
+          <p class="cabecera__texto" data-revelar>Si pides de más, el dinero se queda parado. Si pides de menos, la venta se va a otra tienda. Nodo te ayuda a acercarte a la cantidad que de verdad vas a vender.</p>
+        </header>
+
+        <div class="comparativa" role="table" aria-label="Comprar a ojo frente a comprar con Nodo Analytics">
+          <div class="comparativa__fila comparativa__fila--cabeza" role="row">
+            <span role="columnheader" class="solo-lector">Situación</span>
+            <span role="columnheader" class="comparativa__ojo">A ojo</span>
+            <span role="columnheader" class="comparativa__nodo">Con Nodo</span>
+          </div>
+          <div class="comparativa__fila" role="row" data-revelar>
+            <h3 role="rowheader">Cuánto pedir</h3>
+            <p role="cell" class="comparativa__ojo">Lo decide la intuición o se repite el pedido anterior.</p>
+            <p role="cell" class="comparativa__nodo">Partes de una previsión hecha con las ventas de tu propia tienda.</p>
+          </div>
+          <div class="comparativa__fila" role="row" data-revelar>
+            <h3 role="rowheader">Si pides de más</h3>
+            <p role="cell" class="comparativa__ojo">Te enteras cuando el producto ya lleva meses sin salir.</p>
+            <p role="cell" class="comparativa__nodo">Ves antes de comprar qué productos piden menos unidades.</p>
+          </div>
+          <div class="comparativa__fila" role="row" data-revelar>
+            <h3 role="rowheader">Si pides de menos</h3>
+            <p role="cell" class="comparativa__ojo">Te enteras cuando aparece el aviso de «agotado».</p>
+            <p role="cell" class="comparativa__nodo">Ves antes de comprar qué productos necesitan refuerzo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUÉ GANAS + ilustración de una previsión ============ -->
+    <section class="ganas" id="que-ganas" aria-labelledby="t-ganas">
+      <div class="contenedor ganas__rejilla">
+        <figure class="panel" data-revelar="escala" data-inclinar="6">
+          <div class="panel__barra" aria-hidden="true"><i></i><i></i><i></i><span>Previsión de demanda</span></div>
+          <svg class="panel__grafico" viewBox="0 0 560 300" role="img" aria-label="Ilustración: una línea de ventas pasadas que continúa en una línea de puntos con la previsión de las próximas semanas">
+            <g class="g-rejilla"><path d="M40 60H540M40 120H540M40 180H540M40 240H540"/></g>
+            <path class="g-banda" d="M330 138 C370 112 400 96 440 82 C480 66 510 52 540 34 L540 122 C510 126 480 132 440 140 C400 148 370 152 330 138Z"/>
+            <path class="g-pasado" d="M40 214 C70 196 86 222 112 204 C140 184 152 206 180 186 C206 168 222 196 248 172 C272 150 290 170 330 138"/>
+            <path class="g-futuro" d="M330 138 C370 130 400 122 440 110 C480 98 510 90 540 78"/>
+            <path class="g-hoy" d="M330 40V250"/>
+            <circle class="g-punto" cx="330" cy="138" r="6"/>
+            <text x="336" y="36" class="g-texto g-texto--acento">Hoy</text>
+            <text x="40" y="276" class="g-texto">Ventas pasadas</text>
+            <text x="540" y="276" class="g-texto g-texto--acento" text-anchor="end">Previsión</text>
+          </svg>
+          <figcaption>Ilustración de ejemplo. No es una captura del producto ni usa datos reales.</figcaption>
+        </figure>
+
+        <div class="ganas__texto">
+          <p class="etiqueta" data-revelar>Qué ganas</p>
+          <h2 id="t-ganas" data-dividir>Una previsión antes de cada pedido.</h2>
+          <ol class="lista" role="list" data-revelar-grupo>
+            <li><span class="lista__num" aria-hidden="true">01</span><div><h3>Menos dinero parado</h3><p>Comprar más cerca de lo que vas a vender reduce el stock que se queda sin salir.</p></div></li>
+            <li><span class="lista__num" aria-hidden="true">02</span><div><h3>Menos ventas perdidas</h3><p>Anticipar la demanda te ayuda a no quedarte sin lo que más se vende.</p></div></li>
+            <li><span class="lista__num" aria-hidden="true">03</span><div><h3>Decisiones con datos</h3><p>Cada compra parte de las cifras de tu tienda, no de una corazonada.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRECIO ============ -->
+    <section class="precio" id="precio" aria-labelledby="t-precio">
+      <div class="contenedor precio__rejilla">
+        <div>
+          <p class="etiqueta" data-revelar>Precio</p>
+          <h2 id="t-precio" class="precio__cifra" data-revelar>
+            <span class="precio__desde">Desde</span>
+            <span class="precio__numero"><span data-plan="desde">49</span><small><span data-plan="moneda">USD</span> / <span data-plan="periodo">mes</span></small></span>
+          </h2>
+        </div>
+        <div class="precio__texto" data-revelar>
+          <p>Nodo Analytics tiene planes desde 49 USD al mes. En la demo te contamos qué incluye cada plan y cuál encaja con tu tienda.</p>
+          <a class="boton boton--principal" href="#demo">Pedir demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PREGUNTAS ============ -->
+    <section class="preguntas" id="preguntas" aria-labelledby="t-preguntas">
+      <div class="contenedor preguntas__rejilla">
+        <header class="cabecera">
+          <p class="etiqueta" data-revelar>Preguntas frecuentes</p>
+          <h2 id="t-preguntas" data-dividir>Lo que conviene saber antes de la demo.</h2>
+        </header>
+        <div class="acordeon" data-revelar-grupo>
+          <details>
+            <summary>¿Qué hace exactamente Nodo Analytics?</summary>
+            <p>Es un software de inteligencia artificial para tiendas online. Te ayuda a predecir cuánto inventario comprar, para que no dependas de la intuición en cada pedido.</p>
+          </details>
+          <details>
+            <summary>¿La previsión acierta siempre?</summary>
+            <p>No, y ninguna previsión lo hace. Es una estimación para que decidas con más información. La decisión de compra sigue siendo tuya.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto cuesta?</summary>
+            <p>Hay planes desde 49 USD al mes. En la demo te explicamos qué incluye cada uno.</p>
+          </details>
+          <details>
+            <summary>¿Funciona con la plataforma de mi tienda?</summary>
+            <p>Cuéntanos en el formulario qué plataforma usas y te lo confirmamos antes de la demo.</p>
+          </details>
+          <details>
+            <summary>¿Qué pasa cuando pido la demo?</summary>
+            <p>Nos dejas tus datos, te escribimos para acordar un momento y te enseñamos el software funcionando. Pedirla no te obliga a contratar.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CIERRE: pedir demo ============ -->
+    <section class="demo" id="demo" aria-labelledby="t-demo">
+      <div class="contenedor demo__rejilla">
+        <div class="demo__texto">
+          <p class="etiqueta" data-revelar>Pide tu demo</p>
+          <h2 id="t-demo" data-dividir>Míralo con una tienda como la tuya.</h2>
+          <p data-revelar>Déjanos tus datos y te enseñamos cómo Nodo Analytics estima cuánto inventario comprar.</p>
+          <p class="demo__directo" data-revelar>
+            <a class="enlace-flecha" data-enlace="email" href="#demo">Escribirnos por correo</a>
+            <a class="enlace-flecha" data-enlace="whatsapp" data-respaldo="#demo" data-mensaje="Hola, quiero una demo de Nodo Analytics para mi tienda online." href="#demo">Hablar por WhatsApp</a>
+          </p>
+        </div>
+
+        <form class="formulario" data-formulario data-revelar="escala">
+          <div class="campo">
+            <label for="f-nombre">Nombre</label>
+            <input id="f-nombre" name="Nombre" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="f-correo">Correo de trabajo</label>
+            <input id="f-correo" name="Correo" type="email" autocomplete="email" inputmode="email" required>
+          </div>
+          <div class="campo">
+            <label for="f-tienda">Tu tienda online <span>(nombre o dirección web)</span></label>
+            <input id="f-tienda" name="Tienda" autocomplete="organization" required>
+          </div>
+          <div class="campo">
+            <label for="f-msg">¿Qué plataforma usas y qué vendes? <span>(opcional)</span></label>
+            <textarea id="f-msg" name="Mensaje" rows="3"></textarea>
+          </div>
+          <input name="web" tabindex="-1" autocomplete="off" class="solo-lector" aria-hidden="true">
+          <div class="casilla"><input id="f-priv" type="checkbox" required> <label for="f-priv">He leído la <a href="privacidad.html">política de privacidad</a></label></div>
+          <button type="submit" class="boton boton--principal boton--ancho">Pedir demo</button>
+          <p class="formulario__estado" data-formulario-estado role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="pie">
+    <div class="contenedor pie__rejilla">
+      <div class="pie__marca">
+        <p class="pie__nombre">Nodo <b>Analytics</b></p>
+        <p>Inteligencia artificial para saber cuánto inventario comprar.</p>
+      </div>
+      <nav class="pie__enlaces" aria-label="Secciones">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#diferencia">Qué cambia</a>
+        <a href="#precio">Precio</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="#demo">Pedir demo</a>
+      </nav>
+      <nav class="pie__enlaces" aria-label="Contacto y legal">
+        <a data-enlace="email" href="#demo">Correo</a>
+        <a data-enlace="whatsapp" data-respaldo="#demo" href="#demo">WhatsApp</a>
+        <a data-enlace="linkedin" href="#demo">LinkedIn</a>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="aviso-legal.html">Aviso legal</a>
+      </nav>
+    </div>
+    <div class="contenedor pie__base">
+      <p>© <span data-anio>2026</span> Nodo Analytics</p>
+      <p>Las previsiones son estimaciones y no garantizan resultados.</p>
+    </div>
+  </footer>
+
+  <!-- Barra fija en móvil con la acción principal -->
+  <div class="barra-movil" data-barra>
+    <span>Desde <b><span data-plan="desde">49</span> <span data-plan="moneda">USD</span></b>/<span data-plan="periodo">mes</span></span>
+    <a class="boton boton--principal boton--chico" href="#demo">Pedir demo</a>
+  </div>
+
+  <!-- Orden obligatorio. `defer` mantiene el orden y no bloquea la carga. -->
+  <script defer src="lib/three.min.js"></script>
+  <script defer src="js/datos.js?v=20261120"></script>
+  <script defer src="js/motor.js?v=20261120"></script>
+  <script defer src="js/escena.js?v=20261120"></script>
+  <script defer src="js/app.js?v=20261120"></script>
+</body>
+</html>

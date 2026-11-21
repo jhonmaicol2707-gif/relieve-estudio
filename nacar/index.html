@@ -1,0 +1,504 @@
+<!doctype html>
+<!-- Nácar — PROYECTO DE MUESTRA (marca inventada; precios = rangos de referencia del mercado con su fuente).
+     Sin cursor propio: público amplio que reserva desde el celular (references/cinematografia.md §7). -->
+<html lang="es-CO" data-cine-entrada="Nácar">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Sin destello antes de la cortina (ver cine.css: .cine-pre) -->
+  <script>try{var h=document.documentElement;if(h.hasAttribute("data-cine-entrada")&&!sessionStorage.getItem("cine-entro")&&!/[?&]qa=/.test(location.search)&&!matchMedia("(prefers-reduced-motion: reduce)").matches)h.classList.add("cine-pre")}catch(e){}</script>
+  <title>Nácar · Estudio de belleza en Medellín: cabello, uñas y mirada</title>
+  <meta name="description" content="Demo de estudio de belleza en Medellín: color, keratina, uñas en gel, cejas y pestañas. Precios de referencia con fuente y reserva por WhatsApp en un minuto.">
+  <meta name="theme-color" content="#2A1520">
+  <!-- Muestra: que no aparezca en Google. Quitar esta línea el día de publicar la web real. -->
+  <meta name="robots" content="noindex">
+  <!-- Sin dominio todavía: sin canonical y og:image relativa (pendiente para el día de publicar). -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nácar · El brillo se construye por capas">
+  <meta property="og:description" content="Cabello, uñas y mirada en Medellín. Elige servicio, día y franja, y reserva por WhatsApp.">
+  <meta property="og:image" content="assets/img/compartir.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="css/fuentes.css?v=20261120">
+
+  <link rel="stylesheet" href="css/base.css?v=20261120">
+  <link rel="stylesheet" href="css/cine.css?v=20261120">
+  <link rel="stylesheet" href="css/sitio.css?v=20261120">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Nácar (proyecto de muestra)",
+    "description": "Demo de estudio de belleza en Medellín: cabello y color, uñas, cejas y pestañas, con reserva por WhatsApp.",
+    "areaServed": "Medellín, Colombia"
+  }
+  </script>
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <!-- Iconos (se usan con <use href="#…">) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5 3.5h3.2l1.6 4.2-2.2 1.4a11 11 0 0 0 7.3 7.3l1.4-2.2 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5Z"/></symbol>
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+    <symbol id="i-mapa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></g></symbol>
+    <symbol id="i-chispa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5c.5 4.6 2.9 7 7.5 7.5-4.6.5-7 2.9-7.5 7.5-.5-4.6-2.9-7-7.5-7.5 4.6-.5 7-2.9 7.5-7.5Zm6.5 12c.2 1.9 1.1 2.8 3 3-1.9.2-2.8 1.1-3 3-.2-1.9-1.1-2.8-3-3 1.9-.2 2.8-1.1 3-3Z"/></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 3 4.5 6v5.5c0 4.6 3.2 8 7.5 9.5 4.3-1.5 7.5-4.9 7.5-9.5V6L12 3Zm-3.2 9 2.2 2.2 4.2-4.4"/></symbol>
+    <symbol id="i-gota" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 3.2s-6 6.6-6 11a6 6 0 0 0 12 0c0-4.4-6-11-6-11Z"/></symbol>
+    <symbol id="i-hoja" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></g></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></g></symbol>
+  </svg>
+
+  <!-- Franja de muestra: app.js la rellena mientras falte alguno de estos datos en datos.js -->
+  <p class="franja-muestra" data-pendientes="direccion,horario" data-pendientes-texto="Proyecto de muestra: marca inventada y precios de referencia del mercado. Faltan:" hidden></p>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <header class="nav" data-nav>
+    <div class="nav__progreso" data-cine-progreso></div>
+    <a class="nav__marca marca" href="#inicio" aria-label="Nácar — inicio">
+      <svg class="marca__simbolo" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-chispa"/></svg>
+      Nácar</a>
+    <nav class="nav__menu" id="menu" data-menu aria-label="Principal">
+      <a href="#servicios"><small>01</small> Servicios</a>
+      <a href="#precios"><small>02</small> Precios</a>
+      <a href="#estudio"><small>03</small> El estudio</a>
+      <a href="#contacto"><small>04</small> Contacto</a>
+      <a class="nav__wa" href="#contacto" data-enlace="telefono" data-respaldo="#contacto">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-tel"/></svg> Llamar al estudio</a>
+    </nav>
+    <a class="nav__cita boton boton--principal" href="#reservar">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-reloj"/></svg><span>Reservar</span></a>
+    <button class="nav__boton" data-menu-boton aria-label="Abrir menú" aria-controls="menu"><span></span></button>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ ZONA FIJADA: portada → el frasco por capas → cierre (el frasco se abre con el scroll) ============ -->
+    <section class="zona" id="inicio" data-escena-zona data-cine-tema="oscuro" aria-label="Portada">
+      <div class="zona__escena l3d-pegada l3d-escena" aria-hidden="true">
+        <div class="l3d-respaldo"></div>
+        <!-- El frasco: render propio en Blender (_trabajo/blender/frasco.py), foto entera + 3 capas recortadas.
+             La escena las mueve; sin JS se ve la foto entera. -->
+        <div class="capas-foto">
+          <div class="capas-foto__caja">
+            <img class="capas-foto__capa" data-capa="0" src="assets/img/producto/capa-0.webp" alt="" width="246" height="572" decoding="async">
+            <img class="capas-foto__capa" data-capa="1" src="assets/img/producto/capa-1.webp" alt="" width="88" height="621" decoding="async">
+            <img class="capas-foto__capa" data-capa="2" src="assets/img/producto/capa-2.webp" alt="" width="521" height="670" decoding="async">
+            <img class="capas-foto__entera" src="assets/img/producto/armada.webp" alt="" width="1000" height="2145" fetchpriority="high">
+          </div>
+        </div>
+        <canvas class="l3d-lienzo" data-escena="capas-foto" data-opciones='{"geo":{"aspecto":0.3805,"armada":0.4662,"capas":[[0.3631,0.6369,0.0667,0.3087],[0.4514,0.5486,0.3427,0.6053],[0.2104,0.7896,0.644,0.9272]]},"etiquetas":".capa-etiqueta","chispas":true,"chispasColor":["#F7D6E0","#FFFFFF"],"profundidad":40,"planos":{"ancho":[{"x":0.72,"y":0.55,"s":0.62},{"x":0.66,"y":0.5,"s":0.4},{"x":0.72,"y":0.53,"s":0.56}],"medio":[{"x":0.66,"y":0.62,"s":0.44},{"x":0.58,"y":0.42,"s":0.3},{"x":0.6,"y":0.42,"s":0.38}],"movil":[{"x":0.5,"y":0.77,"s":0.26},{"x":0.5,"y":0.3,"s":0.2},{"x":0.5,"y":0.3,"s":0.27}]}}'></canvas>
+        <!-- Etiquetas que la escena coloca junto a cada capa. El texto real está en el paso 2. -->
+        <ol class="capas" role="list">
+          <li class="capa-etiqueta" data-capa="0"><b>01</b><span>Escuchar</span></li>
+          <li class="capa-etiqueta" data-capa="1"><b>02</b><span>Técnica</span></li>
+          <li class="capa-etiqueta" data-capa="2"><b>03</b><span>Producto</span></li>
+        </ol>
+      </div>
+
+      <div class="zona__pasos">
+        <article class="paso paso--portada">
+          <p class="etiqueta"><span data-cine-codigo>Estudio de belleza · Medellín</span></p>
+          <h1 class="portada__titulo" data-dividir>El brillo se construye <em>por capas.</em></h1>
+          <p class="portada__apoyo" data-revelar style="--i:5">Cabello, uñas y mirada en un mismo estudio. Mira cuánto dura y cuánto cuesta, elige tu día y reserva por WhatsApp.</p>
+          <div class="portada__acciones" data-revelar style="--i:7">
+            <a class="boton boton--principal" href="#reservar" data-iman="0.2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-reloj"/></svg> Reservar mi cita</a>
+            <a class="boton boton--fantasma" href="#precios">Ver precios</a>
+          </div>
+          <ul class="portada__modos" role="list" data-revelar style="--i:9">
+            <li><b>01</b> Cabello y color</li>
+            <li><b>02</b> Uñas</li>
+            <li><b>03</b> Cejas y pestañas</li>
+          </ul>
+        </article>
+
+        <article class="paso paso--capas" aria-labelledby="capas-titulo">
+          <div class="paso__tarjeta">
+            <p class="etiqueta"><span data-cine-codigo>Cómo trabajamos</span></p>
+            <h2 id="capas-titulo" data-dividir>Tres capas en cada cita.</h2>
+            <ol class="ritual" role="list" data-revelar-grupo>
+              <li data-revelar><b>01</b><span><strong>Escuchar</strong> Qué quieres, qué se puede y cuánto cuesta, antes de empezar</span></li>
+              <li data-revelar><b>02</b><span><strong>Técnica</strong> Cada servicio con el tiempo que necesita, sin afanes</span></li>
+              <li data-revelar><b>03</b><span><strong>Producto</strong> Te decimos qué usamos y cómo cuidarlo en casa</span></li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="paso paso--cierre" aria-labelledby="cierre-titulo">
+          <div class="paso__tarjeta">
+            <p class="etiqueta"><span data-cine-codigo>Tu turno</span></p>
+            <h2 id="cierre-titulo" data-dividir>Elige servicio, día y franja. Nosotras confirmamos.</h2>
+            <p data-revelar>El reservador suma la duración y el rango de precio, y te abre WhatsApp con todo escrito.</p>
+            <a class="boton boton--principal" href="#reservar" data-revelar>Ir al reservador
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-flecha"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CINTA ============ -->
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta__pista" data-cine-cinta="50">
+        <span>Color</span><i>✦</i><span>Keratina</span><i>✦</i><span>Uñas en gel</span><i>✦</i><span>Pedicura</span><i>✦</i><span>Cejas</span><i>✦</i><span>Pestañas</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ MANIFIESTO ============ -->
+    <section class="manifiesto-seccion" aria-label="Nuestra forma de trabajar">
+      <div class="contenedor">
+        <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>Antes de sentarte</span></p>
+        <p class="manifiesto" data-cine-leer>Sabes cuánto dura y cuánto cuesta antes de sentarte. Lo único que eliges tú es el día.</p>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS: tres mundos ============ -->
+    <section class="servicios" id="servicios" aria-labelledby="servicios-titulo">
+      <div class="contenedor">
+        <header class="cabecera">
+          <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>01 · Servicios</span></p>
+          <h2 id="servicios-titulo" class="titulo-grande" data-dividir>Tres mundos, <em>un mismo cuidado.</em></h2>
+          <p class="cabecera__apoyo" data-revelar>Puedes reservar uno solo o combinarlos en la misma visita: el reservador suma el tiempo para que no te quedes corta.</p>
+        </header>
+
+        <div class="mundos">
+          <article class="mundo" data-revelar>
+            <figure class="mundo__foto">
+              <img src="assets/img/fotos/cabello.webp" width="1100" height="1366" loading="lazy" decoding="async"
+                   alt="Melena castaña larga con mechas cobrizas, vista de espaldas.">
+              <figcaption class="rotulo-ia">Imagen generada con IA, ilustrativa</figcaption>
+            </figure>
+            <div class="mundo__texto">
+              <p class="mundo__num">01</p>
+              <h3>Cabello y color</h3>
+              <p>Corte, cepillado, color, decoloración, keratina e hidratación. El color empieza con una conversación y, si es tu primera vez, con una prueba de sensibilidad.</p>
+              <ul class="chips" role="list"><li>Corte</li><li>Color</li><li>Keratina</li><li>Hidratación</li></ul>
+              <a class="enlace-flecha" href="#reservar" data-reservar-grupo="Cabello">Reservar cabello <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-flecha"/></svg></a>
+            </div>
+          </article>
+
+          <article class="mundo mundo--invertido" data-revelar>
+            <figure class="mundo__foto">
+              <img src="assets/img/fotos/manos.webp" width="1100" height="1366" loading="lazy" decoding="async"
+                   alt="Manos con uñas en gel color ciruela sosteniendo un frasco de esmalte con tapa dorada.">
+              <figcaption class="rotulo-ia">Imagen generada con IA, ilustrativa</figcaption>
+            </figure>
+            <div class="mundo__texto">
+              <p class="mundo__num">02</p>
+              <h3>Uñas</h3>
+              <p>Manicura tradicional y en gel, pedicura y pedicura spa. Limas y palitos de un solo uso, y herramientas metálicas esterilizadas entre clienta y clienta.</p>
+              <ul class="chips" role="list"><li>Gel</li><li>Tradicional</li><li>Pedicura</li><li>Spa</li></ul>
+              <a class="enlace-flecha" href="#reservar" data-reservar-grupo="Uñas">Reservar uñas <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-flecha"/></svg></a>
+            </div>
+          </article>
+
+          <article class="mundo" data-revelar>
+            <figure class="mundo__foto">
+              <img src="assets/img/fotos/mirada.webp" width="1100" height="1366" loading="lazy" decoding="async"
+                   alt="Primer plano de un ojo cerrado con la ceja diseñada y la piel natural.">
+              <figcaption class="rotulo-ia">Imagen generada con IA, ilustrativa</figcaption>
+            </figure>
+            <div class="mundo__texto">
+              <p class="mundo__num">03</p>
+              <h3>Cejas, pestañas y piel</h3>
+              <p>Diseño de cejas con hilo o tinte, relleno de pestañas y limpieza facial. Buscamos que se vea tuyo, no copiado de un filtro.</p>
+              <ul class="chips" role="list"><li>Cejas</li><li>Pestañas</li><li>Facial</li></ul>
+              <a class="enlace-flecha" href="#reservar" data-reservar-grupo="Mirada">Reservar mirada <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-flecha"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRECIOS ============ -->
+    <section class="precios" id="precios" aria-labelledby="precios-titulo">
+      <div class="contenedor">
+        <header class="cabecera cabecera--doble">
+          <div>
+            <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>02 · Precios y tiempos</span></p>
+            <h2 id="precios-titulo" class="titulo-grande" data-dividir>Cuánto cuesta y <em>cuánto dura.</em></h2>
+          </div>
+          <p class="cabecera__apoyo" data-revelar>Rangos del mercado colombiano en 2026, cada uno con su fuente, y la duración aproximada de cada servicio. <strong>Son referencias, no tarifas de Nácar.</strong></p>
+        </header>
+
+        <div class="filtros" role="group" aria-label="Filtrar servicios" data-filtros>
+          <button type="button" aria-pressed="true" data-filtro="">Todos</button>
+          <button type="button" aria-pressed="false" data-filtro="Cabello">Cabello</button>
+          <button type="button" aria-pressed="false" data-filtro="Uñas">Uñas</button>
+          <button type="button" aria-pressed="false" data-filtro="Mirada">Cejas, pestañas y piel</button>
+        </div>
+
+        <div class="tabla-precios" data-revelar>
+          <table>
+            <caption class="solo-lector">Servicios de belleza con su duración, rango de precio de referencia, la fuente y el precio de Nácar</caption>
+            <thead>
+              <tr><th scope="col">Servicio</th><th scope="col">Referencia 2026</th><th scope="col">Fuente</th><th scope="col">Nácar</th><th scope="col"><span class="solo-lector">Reservar</span></th></tr>
+            </thead>
+            <!-- app.js repinta estas filas desde js/datos.js (servicios). Este resumen es para quien no tiene JavaScript. -->
+            <tbody data-precios>
+              <tr data-grupo="Cabello"><th scope="row">Corte y peinado <small>≈ 1 h</small></th><td>$20.000 – $180.000</td><td>ColombiaMove 2026</td><td><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-grupo="Cabello"><th scope="row">Color (proceso único) <small>≈ 2 h</small></th><td>$80.000 – $300.000</td><td>ColombiaMove 2026</td><td><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-grupo="Cabello"><th scope="row">Keratina <small>≈ 2 h 30 min</small></th><td>$150.000 – $400.000</td><td>ColombiaMove 2026</td><td><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-grupo="Uñas"><th scope="row">Manicura en gel <small>≈ 1 h 15 min</small></th><td>$25.000 – $60.000</td><td>ColombiaMove 2026</td><td><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-grupo="Uñas"><th scope="row">Pedicura <small>≈ 1 h</small></th><td>$15.000 – $45.000</td><td>ColombiaMove 2026</td><td><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-grupo="Mirada"><th scope="row">Diseño de cejas <small>≈ 30 min</small></th><td>$8.000 – $30.000</td><td>ColombiaMove 2026</td><td><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-grupo="Mirada"><th scope="row">Relleno de pestañas volumen <small>≈ 1 h 30 min</small></th><td>desde $165.000</td><td>Salones de Medellín en Fresha</td><td><span class="pendiente">Por confirmar</span></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="precios__notas" data-revelar>
+          <p><span data-precios-nota>Rangos de referencia del mercado, no tarifas de Nácar.</span></p>
+          <p class="precios__fuentes">Fuentes:
+            <a href="https://colombiamove.com/blog/es/haircuts-spas-personal-care-colombia/" target="_blank" rel="noopener">ColombiaMove, peluquería, spas y cuidado personal en Colombia (actualizado en noviembre de 2026)</a> ·
+            <a href="https://www.fresha.com/lp/en/bt/hair-salons/in/co-medell%C3%ADn" target="_blank" rel="noopener">precios publicados por salones de Medellín en Fresha (noviembre de 2026)</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESERVADOR ============ -->
+    <section class="reservar" id="reservar" data-cine-tema="oscuro" aria-labelledby="reservar-titulo">
+      <div class="contenedor">
+        <header class="cabecera cabecera--doble">
+          <div>
+            <p class="etiqueta"><span data-cine-codigo>03 · Reserva en un minuto</span></p>
+            <h2 id="reservar-titulo" class="titulo-grande" data-dividir>Arma tu cita.</h2>
+          </div>
+          <p class="cabecera__apoyo" data-revelar>Marca uno o varios servicios, elige el día y la franja que te sirven. Te abrimos WhatsApp con todo escrito y te respondemos con la hora exacta.</p>
+        </header>
+
+        <form class="reserva" data-reserva novalidate>
+          <div class="reserva__pasos">
+            <fieldset class="reserva__bloque">
+              <legend><b>1</b> ¿Qué te quieres hacer?</legend>
+              <!-- app.js rellena las opciones desde datos.js (servicios). Estas son para quien no tiene JavaScript. -->
+              <div class="reserva__servicios" data-reserva-servicios>
+                <label class="opcion"><input type="checkbox" name="servicio" value="corte"><span>Corte y peinado</span></label>
+                <label class="opcion"><input type="checkbox" name="servicio" value="color"><span>Color</span></label>
+                <label class="opcion"><input type="checkbox" name="servicio" value="gel"><span>Manicura en gel</span></label>
+                <label class="opcion"><input type="checkbox" name="servicio" value="cejas"><span>Diseño de cejas</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="reserva__bloque">
+              <legend><b>2</b> ¿Qué día?</legend>
+              <div class="reserva__dias" data-reserva-dias>
+                <p class="sin-js">Escríbenos por WhatsApp y te damos los días libres.</p>
+              </div>
+              <p class="reserva__aviso" data-reserva-ejemplo>Días y franjas de ejemplo: el estudio confirma su horario.</p>
+            </fieldset>
+
+            <fieldset class="reserva__bloque">
+              <legend><b>3</b> ¿A qué hora más o menos?</legend>
+              <div class="reserva__franjas" data-reserva-franjas>
+                <label class="opcion opcion--franja"><input type="radio" name="franja" value="Mañana"><span>Mañana</span></label>
+                <label class="opcion opcion--franja"><input type="radio" name="franja" value="Mediodía"><span>Mediodía</span></label>
+                <label class="opcion opcion--franja"><input type="radio" name="franja" value="Tarde"><span>Tarde</span></label>
+              </div>
+              <div class="campo campo--oscuro">
+                <label for="r-nombre">Tu nombre <small>(opcional)</small></label>
+                <input id="r-nombre" name="nombre" type="text" autocomplete="given-name" maxlength="60">
+              </div>
+            </fieldset>
+          </div>
+
+          <aside class="ticket" aria-labelledby="ticket-titulo" data-revelar>
+            <p class="ticket__marca">Nácar <span>· tu cita</span></p>
+            <h3 id="ticket-titulo" class="solo-lector">Resumen de tu cita</h3>
+            <ul class="ticket__lista" data-reserva-lista role="list">
+              <li class="ticket__vacio">Aún no has elegido servicios.</li>
+            </ul>
+            <dl class="ticket__datos">
+              <div><dt>Día</dt><dd data-reserva-out="dia">Sin elegir</dd></div>
+              <div><dt>Franja</dt><dd data-reserva-out="franja">Sin elegir</dd></div>
+              <div><dt>Duración aprox.</dt><dd data-reserva-out="duracion">—</dd></div>
+              <div class="ticket__total"><dt>Rango de referencia</dt><dd data-reserva-out="rango">—</dd></div>
+            </dl>
+            <p class="ticket__falta" data-reserva-out="falta" role="status" aria-live="polite">Elige al menos un servicio.</p>
+            <a class="boton boton--principal boton--ancho" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-reserva-wa
+               data-mensaje="Hola, Nácar. Quiero reservar una cita.">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Reservar por WhatsApp</a>
+            <a class="ticket__llamar" href="#contacto" data-enlace="telefono" data-respaldo="#contacto">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-tel"/></svg> ¿Prefieres llamar? <span data-dato="telefonoTexto"></span></a>
+            <p class="ticket__nota">El precio final lo confirma el estudio según tu cabello y el diseño. Rango con <a href="#precios">fuentes del mercado</a>.</p>
+          </aside>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ EL ESTUDIO Y LA HIGIENE ============ -->
+    <section class="estudio" id="estudio" aria-labelledby="estudio-titulo">
+      <div class="contenedor estudio__rejilla">
+        <figure class="estudio__foto" data-revelar>
+          <img src="assets/img/fotos/salon.webp" width="1100" height="1366" loading="lazy" decoding="async"
+               alt="Puesto de peinado con espejo redondo iluminado por detrás, silla de terciopelo rosa y pared ciruela.">
+          <figcaption class="rotulo-ia">Imagen generada con IA, ilustrativa</figcaption>
+        </figure>
+        <div class="estudio__texto">
+          <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>04 · El estudio</span></p>
+          <h2 id="estudio-titulo" class="titulo-grande" data-dividir>Higiene que <em>se ve.</em></h2>
+          <p class="cabecera__apoyo" data-revelar>En Colombia, los salones de belleza siguen un manual de bioseguridad (<a href="https://normas.cra.gov.co/gestor/docs/resolucion_minproteccion_2827_2006.htm" target="_blank" rel="noopener">Resolución 2827 de 2006</a>) que vigila la Secretaría de Salud. Estos son los gestos que puedes ver en tu cita:</p>
+          <ul class="higiene" role="list" data-revelar-grupo>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-escudo"/></svg>
+              <p><strong>Herramientas esterilizadas</strong> Alicates, cortacutículas y pinzas salen de su bolsa sellada frente a ti.</p>
+            </li>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-gota"/></svg>
+              <p><strong>Un solo uso</strong> Limas, palitos de naranjo y toallas desechables: se abren contigo y se botan al terminar.</p>
+            </li>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-hoja"/></svg>
+              <p><strong>Ficha de color</strong> Anotamos fórmula y tiempos de tu color para repetir el tono la próxima vez.</p>
+            </li>
+          </ul>
+          <p class="estudio__nota" data-revelar>Compromisos de ejemplo en esta demo: el negocio real confirma los suyos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PREGUNTAS ============ -->
+    <section class="preguntas" id="preguntas" aria-labelledby="preguntas-titulo">
+      <div class="contenedor preguntas__rejilla">
+        <header class="cabecera">
+          <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>05 · Preguntas</span></p>
+          <h2 id="preguntas-titulo" class="titulo-grande" data-dividir>Antes de tu cita.</h2>
+        </header>
+        <div data-revelar>
+          <details>
+            <summary>¿La cita queda reservada al enviar el WhatsApp?</summary>
+            <p>Todavía no: el mensaje nos dice qué quieres y cuándo te sirve. Te respondemos con la hora exacta y, cuando la confirmas, queda apartada.</p>
+          </details>
+          <details>
+            <summary>¿Puedo hacerme varios servicios el mismo día?</summary>
+            <p>Sí. Márcalos todos en el reservador: suma la duración aproximada para que separemos el tiempo completo. Algunos se pueden hacer a la vez, como manos y pies.</p>
+          </details>
+          <details>
+            <summary>¿Por qué los precios son rangos?</summary>
+            <p>Porque dependen del largo y el estado del cabello, la cantidad de producto y el diseño. Te mostramos rangos del mercado con su fuente; el precio de tu servicio te lo decimos antes de empezar.</p>
+          </details>
+          <details>
+            <summary>Es mi primer color, ¿necesito algo antes?</summary>
+            <p>Si nunca te has teñido o vas a cambiar de producto, los fabricantes recomiendan una prueba de sensibilidad unas 48 horas antes. Escríbenos y la programamos.</p>
+          </details>
+          <details>
+            <summary>¿Y si necesito cambiar o cancelar?</summary>
+            <p>Escríbenos por WhatsApp con la mayor anticipación posible para dar el turno a otra persona. <span class="pendiente">Política de cambios y cancelaciones por confirmar.</span></p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="contacto" id="contacto" data-cine-tema="oscuro" aria-labelledby="contacto-titulo">
+      <div class="contenedor contacto__rejilla">
+        <div class="contacto__texto">
+          <p class="etiqueta"><span data-cine-codigo>06 · Contacto</span></p>
+          <h2 id="contacto-titulo" class="contacto__titulo" data-dividir>¿Dudas? <em>Pregúntanos.</em></h2>
+          <p data-revelar>Escríbenos lo que quieras saber antes de reservar, o llámanos y lo resolvemos en un momento.</p>
+          <a class="contacto__llamar" href="#contacto" data-enlace="telefono" data-respaldo="#contacto" data-revelar>
+            <span class="contacto__llamar-icono"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><use href="#i-tel"/></svg></span>
+            <span><small>Llamar al estudio</small> <b data-dato="telefonoTexto" data-pendiente="Teléfono por confirmar"></b></span>
+          </a>
+          <ul class="contacto__datos" role="list" data-revelar-grupo>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-wa"/></svg>
+              <a href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto"><span data-dato="whatsappTexto" data-pendiente="WhatsApp por confirmar"></span></a>
+            </li>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-mapa"/></svg>
+              <span data-dato="direccion" data-pendiente="Dirección por confirmar (Medellín)"></span>
+            </li>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-reloj"/></svg>
+              <span data-dato="horario" data-pendiente="Horario por confirmar"></span>
+            </li>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-ig"/></svg>
+              <a href="#contacto" data-enlace="instagram" hidden>Instagram</a>
+              <span data-si-falta="instagram" class="pendiente">Instagram por confirmar</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="formulario" data-formulario data-whatsapp-saludo="Hola, Nácar. Tengo una pregunta." novalidate data-revelar>
+          <div class="campo">
+            <label for="f-nombre">Tu nombre</label>
+            <input id="f-nombre" name="Nombre" type="text" autocomplete="name" required maxlength="80">
+          </div>
+          <div class="campo">
+            <label for="f-tema">¿Sobre qué?</label>
+            <select id="f-tema" name="Tema" required>
+              <option value="">Elige uno</option>
+              <option>Cabello y color</option>
+              <option>Uñas</option>
+              <option>Cejas, pestañas o piel</option>
+              <option>Precios</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="f-nota">Tu pregunta</label>
+            <textarea id="f-nota" name="Pregunta" rows="3" maxlength="300" required placeholder="Por ejemplo: tengo el cabello decolorado, ¿me pueden hacer keratina?"></textarea>
+          </div>
+          <label class="campo campo--casilla">
+            <input type="checkbox" name="autorizacion" value="Sí" required data-no-mensaje>
+            <span>Autorizo el tratamiento de mis datos para responder mi pregunta, según la <a href="privacidad.html">política de privacidad</a> (Ley 1581 de 2012).</span>
+          </label>
+          <input class="trampa" type="text" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="boton boton--principal boton--ancho" type="submit">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Enviar por WhatsApp</button>
+          <p class="formulario__estado" data-formulario-estado role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__rejilla">
+        <div>
+          <p class="pie__marca marca">Nácar</p>
+          <p class="pie__lema">Estudio de belleza · Medellín</p>
+        </div>
+        <div class="pie__datos">
+          <a href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto">WhatsApp <span data-dato="whatsappTexto"></span></a>
+          <a href="#contacto" data-enlace="telefono" data-respaldo="#contacto">Llamar <span data-dato="telefonoTexto"></span></a>
+          <span data-dato="horario" data-pendiente="Horario por confirmar"></span>
+          <span>NIT: <span data-dato="nit" data-pendiente="por confirmar"></span></span>
+        </div>
+        <div class="pie__legal">
+          <a href="privacidad.html">Política de privacidad</a>
+          <a href="creditos.html">Créditos y fuentes</a>
+          <a href="#inicio">Volver arriba</a>
+        </div>
+      </div>
+      <p class="pie__muestra"><strong>Proyecto de muestra.</strong> Nácar es una marca inventada para enseñar este diseño. Los precios son rangos de referencia del mercado con su fuente (ColombiaMove y salones de Medellín en Fresha, 2026), no tarifas de Nácar; las duraciones, los días y las franjas son de ejemplo. Las fotos de personas y del estudio son imágenes generadas con IA, ilustrativas; el frasco es un render 3D propio. © <span data-anio>2026</span></p>
+    </div>
+  </footer>
+
+  <!-- Barra fija del móvil: llamar y reservar; aparece al salir de la portada y se esconde en el reservador y el cierre -->
+  <div class="barra-movil">
+    <a class="barra-movil__llamar" href="#contacto" data-enlace="telefono" data-respaldo="#contacto">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-tel"/></svg> Llamar</a>
+    <a class="barra-movil__boton" href="#reservar">
+      <span class="barra-movil__icono"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-reloj"/></svg></span>
+      <span class="barra-movil__texto">Reservar cita</span>
+    </a>
+  </div>
+
+  <script defer src="lib/three.min.js"></script>
+  <script defer src="js/datos.js?v=20261120"></script>
+  <script defer src="js/motor.js?v=20261120"></script>
+  <script defer src="js/cine.js?v=20261120"></script>
+  <script defer src="js/escena.js?v=20261120"></script>
+  <script defer src="js/app.js?v=20261120"></script>
+</body>
+</html>

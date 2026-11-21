@@ -1,0 +1,126 @@
+/* cine.css · landing-3d-pro — estilos de la capa cinematográfica (js/cine.js). NO editar por proyecto:
+ * se ajusta desde sitio.css con estas variables:
+ *   --cine-fondo, --cine-tinta (cortina y cursor), --cine-acento, --cine-radio (tarjetas), --cine-foco-color
+ */
+:root {
+  --cine-fondo: var(--fondo, #0b0b10);
+  --cine-tinta: var(--texto, #f4f4f6);
+  --cine-acento: var(--acento, #7c5cff);
+  --cine-radio: var(--radio, 20px);
+  --cine-foco-color: color-mix(in srgb, var(--cine-acento) 28%, transparent);
+}
+
+/* ------------------------------------------------------------ 1. Cortina de entrada */
+.cine-cortina {
+  position: fixed; inset: 0; z-index: 10000; display: grid; place-items: center;
+  background: var(--cine-fondo); color: var(--cine-tinta);
+  clip-path: inset(0 0 0 0); transition: clip-path 1.1s cubic-bezier(.77, 0, .18, 1);
+}
+.cine-cortina.abierta { clip-path: inset(0 0 100% 0); }
+.cine-cortina__marca { overflow: hidden; font-family: var(--fuente-titulo, inherit); font-size: clamp(1.6rem, 1rem + 3vw, 3.4rem); font-weight: 700; letter-spacing: -.02em; }
+.cine-cortina__marca span { display: block; animation: cine-subir 1s cubic-bezier(.16, 1, .3, 1) both .1s; }
+.cine-cortina.abierta .cine-cortina__marca span { transform: translateY(-110%); transition: transform .7s cubic-bezier(.7, 0, .84, 0); }
+.cine-cortina__cuenta { position: absolute; right: clamp(1.25rem, 4vw, 3rem); bottom: clamp(1.25rem, 4vw, 3rem); font-family: var(--fuente-mono, ui-monospace, monospace); font-size: .85rem; letter-spacing: .2em; opacity: .7; font-variant-numeric: tabular-nums; }
+.cine-cortina__linea { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: color-mix(in srgb, var(--cine-tinta) 12%, transparent); }
+.cine-cortina__linea i { display: block; height: 100%; background: var(--cine-acento); transform: scaleX(var(--p, 0)); transform-origin: left; }
+@keyframes cine-subir { from { transform: translateY(110%); } }
+/* mientras la cortina está puesta, la portada espera oculta; al abrirse, entra con sus tiempos normales */
+.cine-entrando .l3d-dividido.visible .l3d-pieza > span { transform: translate3d(0, 112%, 0); }
+.cine-entrando [data-revelar].visible { opacity: 0; transform: translate3d(0, 28px, 0); }
+.cine-entrando .l3d-lienzo { opacity: 0 !important; }
+/* Antes de que cargue cine.js (el <head> pone html.cine-pre): solo se ve el color de fondo, sin destello de la
+   portada. cine.js lo quita al montar la cortina; si los scripts no llegan, se muestra sola a los 3 s. */
+.cine-pre body { visibility: hidden; animation: cine-pre-fin 0s linear 3s forwards; }
+@keyframes cine-pre-fin { to { visibility: visible; } }
+
+/* ------------------------------------------------------------ 2. Cursor propio */
+.cine-con-cursor, .cine-con-cursor a, .cine-con-cursor button, .cine-con-cursor [data-cursor] { cursor: none; }
+.cine-con-cursor input, .cine-con-cursor textarea, .cine-con-cursor select { cursor: text; }
+.cine-cursor__punto, .cine-cursor__aro {
+  position: fixed; left: 0; top: 0; z-index: 9999; pointer-events: none; border-radius: 50%;
+  opacity: 0; transition: opacity .3s;
+}
+.cine-cursor-visible .cine-cursor__punto, .cine-cursor-visible .cine-cursor__aro { opacity: 1; }
+.cine-cursor__punto { width: 6px; height: 6px; margin: -3px 0 0 -3px; background: var(--cine-acento); }
+.cine-cursor__aro {
+  width: 38px; height: 38px; margin: -19px 0 0 -19px; display: grid; place-items: center;
+  border: 1px solid color-mix(in srgb, var(--cine-tinta) 45%, transparent);
+  transition: opacity .3s, width .35s cubic-bezier(.16, 1, .3, 1), height .35s cubic-bezier(.16, 1, .3, 1), margin .35s cubic-bezier(.16, 1, .3, 1), background-color .3s, border-color .3s;
+  mix-blend-mode: difference;
+}
+.cine-cursor__aro span { font-size: .7rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #fff; opacity: 0; transition: opacity .2s; }
+.cine-cursor__aro.sobre { width: 64px; height: 64px; margin: -32px 0 0 -32px; border-color: transparent; background: color-mix(in srgb, #fff 92%, transparent); }
+.cine-cursor__aro.con-texto { width: 86px; height: 86px; margin: -43px 0 0 -43px; }
+.cine-cursor__aro.con-texto span { opacity: 1; color: #000; }
+.cine-cursor__aro.pulsado { width: 30px; height: 30px; margin: -15px 0 0 -15px; }
+
+/* ------------------------------------------------------------ 3. Texto que se ilumina */
+.cine-palabra { transition: opacity .15s linear; }
+
+/* ------------------------------------------------------------ 4. Imagen con zoom */
+.cine-imagen { overflow: hidden; clip-path: inset(var(--cine-recorte, 0%) var(--cine-recorte, 0%) var(--cine-recorte, 0%) var(--cine-recorte, 0%) round var(--cine-radio)); }
+.cine-imagen > * { display: block; width: 100%; height: 100%; object-fit: cover; transform-origin: center; will-change: transform; }
+
+/* ------------------------------------------------------------ 5. Galería horizontal */
+.cine-horizontal { position: relative; }
+.cine-horizontal__fijo { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center; gap: clamp(1.25rem, 4vh, 3rem); }
+.cine-horizontal__fijo > :not(.cine-horizontal__pista) { padding-inline: var(--margen, 5vw); }
+.cine-horizontal__pista { align-self: flex-start; display: flex; gap: clamp(1rem, 2.5vw, 2rem); padding-inline: var(--margen, 5vw); will-change: transform; }
+.cine-horizontal__pista > * { flex: 0 0 auto; }
+/* Ancho por defecto de cada tarjeta, en vw (nunca en %: dentro de la pista el % es cíclico y descoloca las
+   tarjetas en móvil). :where() deja la especificidad a cero para que sitio.css lo cambie sin pelear. */
+:where(.cine-horizontal__pista > *) { width: min(80vw, 26rem); }
+.cine-horizontal--estatica .cine-horizontal__pista { flex-wrap: wrap; }
+
+/* ------------------------------------------------------------ 6. Tarjetas apiladas */
+.cine-apilar { display: grid; gap: 2vh; }
+.cine-apilar__tarjeta {
+  /* !important: un `position: relative` en sitio.css (habitual en tarjetas) anularía el pegado en silencio */
+  position: sticky !important; top: calc(10vh + var(--n) * 1.2rem);
+  transform: scale(calc(1 - var(--cine-hundir, 0) * .06)); transform-origin: center top;
+  filter: brightness(calc(1 - var(--cine-hundir, 0) * .35));
+  border-radius: var(--cine-radio);
+}
+
+/* ------------------------------------------------------------ 7. Cintas */
+.cine-cinta { overflow: hidden; white-space: nowrap; }
+.cine-cinta__marco { display: inline-flex; will-change: transform; }
+.cine-cinta__pista { display: inline-flex; align-items: center; flex: none; }
+
+/* ------------------------------------------------------------ 8. Velocidad */
+[data-cine-velocidad] { will-change: transform; transform-origin: center; }
+
+/* ------------------------------------------------------------ 9. Código */
+[data-cine-codigo] { font-variant-numeric: tabular-nums; }
+
+/* ------------------------------------------------------------ 10. Focos en rejilla
+   Cada hijo recibe --fx/--fy. Borde y fondo iluminados alrededor del puntero. */
+.cine-foco > * { position: relative; isolation: isolate; }
+.cine-foco > *::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -1; pointer-events: none;
+  background: radial-gradient(420px circle at var(--fx, -500px) var(--fy, -500px), var(--cine-foco-color), transparent 65%);
+  opacity: 0; transition: opacity .4s;
+}
+.cine-foco:hover > *::before { opacity: 1; }
+.cine-foco > *::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: radial-gradient(260px circle at var(--fx, -500px) var(--fy, -500px), color-mix(in srgb, var(--cine-acento) 80%, white), transparent 70%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  opacity: 0; transition: opacity .4s;
+}
+.cine-foco:hover > *::after { opacity: 1; }
+
+/* ------------------------------------------------------------ 11. Tema por sección
+   En sitio.css: html[data-tema="oscuro"] { --fondo: …; --texto: …; } y body { transition: background-color .8s, color .8s; } */
+
+/* ------------------------------------------------------------ 12. Progreso de lectura */
+[data-cine-progreso] { height: 2px; background: var(--cine-acento); transform: scaleX(var(--p, 0)); transform-origin: left; }
+
+/* ------------------------------------------------------------ Movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .cine-cortina { display: none; }
+  .cine-apilar__tarjeta { position: relative !important; top: auto; transform: none; filter: none; }
+}
+.l3d-reducido .cine-apilar__tarjeta { position: relative !important; top: auto; transform: none; filter: none; }

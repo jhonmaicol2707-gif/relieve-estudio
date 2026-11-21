@@ -1,0 +1,518 @@
+<!doctype html>
+<!-- data-cine-entrada: cortina con la marca. Sin cursor propio a propósito: es una clínica y parte del público
+     llega con prisa o es mayor (references/cinematografia.md §7). -->
+<html lang="es-CO" data-cine-entrada="Huellas Felices">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veterinaria 24 horas en Medellín | Huellas Felices</title>
+  <meta name="description" content="Clínica veterinaria para perros y gatos en Medellín: consulta, urgencias 24 horas, peluquería y guardería. Pide tu cita con un mensaje de WhatsApp.">
+  <meta name="theme-color" content="#F6F0E6">
+  <!-- MUESTRA: quita esta línea al publicar para que Google la muestre. Sin dominio todavía: no hay canonical
+       y og:image va como ruta relativa (al publicar, pon la dirección completa). -->
+  <meta name="robots" content="noindex">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Huellas Felices · Veterinaria 24 horas en Medellín">
+  <meta property="og:description" content="Consulta, urgencias 24 horas, peluquería y guardería para perros y gatos en Medellín. Pide tu cita por WhatsApp.">
+  <meta property="og:image" content="assets/img/compartir.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fuentes/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fuentes/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/base.css?v=20261120">
+  <link rel="stylesheet" href="css/cine.css?v=20261120">
+  <link rel="stylesheet" href="css/sitio.css?v=20261120">
+
+  <!-- Datos estructurados: solo lo confirmado. Añade telephone, address completa, openingHours y url al tenerlos. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VeterinaryCare",
+    "name": "Huellas Felices",
+    "description": "Clínica veterinaria para perros y gatos con consulta, urgencias 24 horas, peluquería y guardería.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Medellín", "addressRegion": "Antioquia", "addressCountry": "CO" }
+  }
+  </script>
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <!-- Franja de muestra: la rellena js/app.js con los datos que faltan en js/datos.js; se va sola al completarlos -->
+  <p class="muestra" data-pendientes hidden></p>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <header class="nav" data-nav>
+    <div class="nav__progreso" data-cine-progreso></div>
+    <a class="marca" href="#inicio" aria-label="Huellas Felices — inicio">
+      <svg class="marca__huella" viewBox="0 0 48 48" width="30" height="30" aria-hidden="true"><use href="#huella"></use></svg>
+      <span class="marca__nombre">Huellas Felices</span>
+    </a>
+    <nav class="nav__menu" id="menu" data-menu aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#urgencias">Urgencias 24 h</a>
+      <a href="#pasos">Cómo pedir cita</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="boton boton--principal boton--compacto" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Huellas Felices. Quiero pedir una cita.">
+        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"></use></svg>Pedir cita
+      </a>
+    </nav>
+    <button class="nav__boton" data-menu-boton aria-label="Abrir menú" aria-controls="menu"><span></span><span></span></button>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ 00 · PORTADA — la escena dibuja huella → corazón → cruz ============ -->
+    <section class="portada" id="inicio">
+      <div class="portada__rejilla" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+      <div class="portada__meta mono" data-revelar>
+        <span><span data-cine-codigo>Clínica veterinaria</span></span>
+        <span class="portada__coordenadas">Medellín · 6.24° N 75.58° O</span>
+        <span class="vivo"><span class="vivo__punto" aria-hidden="true"></span><span data-reloj>Urgencias 24 horas</span></span>
+      </div>
+
+      <div class="portada__escena l3d-escena" aria-hidden="true">
+        <div class="l3d-respaldo">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <pattern id="p-puntos" width="2.6" height="2.6" patternUnits="userSpaceOnUse">
+                <circle cx="1.3" cy="1.3" r=".78" fill="#0F4A38"/>
+              </pattern>
+              <pattern id="p-chispas" width="13" height="11" patternUnits="userSpaceOnUse">
+                <circle cx="4" cy="3" r=".9" fill="#F26A2E"/>
+              </pattern>
+              <clipPath id="c-huella">
+                <path d="M50 46C66 46 80 62 78 76 77 88 64 90 58 86 54 83 46 83 42 86 36 90 23 88 22 76 20 62 34 46 50 46Z"/>
+                <ellipse cx="22" cy="42" rx="8.5" ry="11.5" transform="rotate(-26 22 42)"/>
+                <ellipse cx="39" cy="24" rx="8.5" ry="12.5" transform="rotate(-8 39 24)"/>
+                <ellipse cx="61" cy="24" rx="8.5" ry="12.5" transform="rotate(8 61 24)"/>
+                <ellipse cx="78" cy="42" rx="8.5" ry="11.5" transform="rotate(26 78 42)"/>
+              </clipPath>
+            </defs>
+            <g clip-path="url(#c-huella)"><rect width="100" height="100" fill="url(#p-puntos)"/><rect width="100" height="100" fill="url(#p-chispas)"/></g>
+          </svg>
+        </div>
+        <canvas class="l3d-lienzo" data-escena="siluetas" data-opciones='{"formas":["huella","corazon","cruz"],"ciclo":5.5,"cantidad":10000,"tamano":1.15,"modo":"portada","escala":1.02}'></canvas>
+      </div>
+
+      <div class="portada__texto">
+        <h1 class="portada__titular" data-dividir>Cuidamos a tu perro y a tu gato. <em>De día y de noche.</em></h1>
+        <div class="portada__pie">
+          <p class="portada__apoyo" data-revelar style="--i:5">Consulta, urgencias 24 horas, peluquería y guardería en una sola clínica de Medellín. Pide tu cita con un mensaje de WhatsApp.</p>
+          <div class="portada__acciones" data-revelar style="--i:7">
+            <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Huellas Felices. Quiero pedir una cita." data-iman="0.18">
+              <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"></use></svg>Pedir cita por WhatsApp
+            </a>
+            <a class="boton boton--linea" href="#servicios">Ver servicios<svg class="icono icono--flecha" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-abajo"></use></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <ol class="leyenda mono" role="list" aria-label="Lo que dibujan los puntos" data-leyenda data-revelar style="--i:9">
+        <li class="activa"><span>01</span> Huella <em>· llegan</em></li>
+        <li><span>02</span> Corazón <em>· los queremos</em></li>
+        <li><span>03</span> Cruz <em>· los curamos</em></li>
+      </ol>
+    </section>
+
+    <!-- ============ CINTA ============ -->
+    <div class="cinta" aria-label="Perros, gatos, urgencias 24 horas, peluquería, guardería, Medellín">
+      <div class="cinta__linea" data-cine-cinta="55" data-cine-velocidad="0.6" aria-hidden="true">
+        <span>Perros</span><svg viewBox="0 0 48 48"><use href="#huella"></use></svg>
+        <span class="hueca">Gatos</span><svg viewBox="0 0 48 48"><use href="#huella"></use></svg>
+        <span>Urgencias 24 h</span><svg viewBox="0 0 48 48"><use href="#huella"></use></svg>
+        <span class="hueca">Peluquería</span><svg viewBox="0 0 48 48"><use href="#huella"></use></svg>
+        <span>Guardería</span><svg viewBox="0 0 48 48"><use href="#huella"></use></svg>
+        <span class="hueca">Medellín</span><svg viewBox="0 0 48 48"><use href="#huella"></use></svg>
+      </div>
+    </div>
+
+    <!-- ============ MANIFIESTO (respiro) ============ -->
+    <section class="manifiesto" aria-label="Nuestra promesa">
+      <div class="contenedor manifiesto__caja">
+        <p class="etiqueta mono" data-revelar><span data-cine-codigo>00 / Huellas Felices</span></p>
+        <p class="manifiesto__frase" data-cine-leer>Hay días de vacuna, de baño con espuma y de dejarlo jugando mientras trabajas. Y hay noches en que algo no va bien. Para todos esos momentos hay una sola clínica, y su puerta de urgencias no se cierra.</p>
+      </div>
+    </section>
+
+    <!-- ============ 01 · SERVICIOS — tarjetas apiladas (plano inmersivo 1) ============ -->
+    <section class="servicios" id="servicios">
+      <div class="contenedor">
+        <header class="cabecera">
+          <p class="etiqueta mono" data-revelar><span data-cine-codigo>01 / Servicios</span></p>
+          <h2 data-dividir>Todo lo que necesita, en un mismo lugar.</h2>
+          <p class="cabecera__apoyo" data-revelar>Cuatro maneras de cuidar a tu perro o a tu gato. Cada una tiene su botón: el mensaje de WhatsApp ya sale escrito.</p>
+        </header>
+
+        <div class="pila" data-cine-apilar>
+          <article class="servicio servicio--consulta">
+            <div class="servicio__texto">
+              <p class="servicio__num mono">01 <span>/ 04</span></p>
+              <h3>Consulta veterinaria</h3>
+              <p>Revisamos a tu perro o a tu gato con calma y te explicamos qué le pasa en palabras claras, para que te vayas sin dudas.</p>
+              <a class="enlace" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Huellas Felices. Quiero pedir una cita de consulta veterinaria.">Pedir cita de consulta<svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-flecha"></use></svg></a>
+            </div>
+            <div class="servicio__dibujo" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-consulta"></use></svg></div>
+          </article>
+
+          <article class="servicio servicio--urgencias">
+            <div class="servicio__texto">
+              <p class="servicio__num mono">02 <span>/ 04</span></p>
+              <h3>Urgencias 24 horas</h3>
+              <p>De día, de noche y de madrugada. Cuando no puede esperar, escríbenos y di de entrada que es una urgencia.</p>
+              <a class="enlace" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Huellas Felices. Tengo una urgencia con mi mascota.">Escribir por una urgencia<svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-flecha"></use></svg></a>
+            </div>
+            <div class="servicio__dibujo" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-urgencias"></use></svg></div>
+          </article>
+
+          <article class="servicio servicio--peluqueria">
+            <div class="servicio__texto">
+              <p class="servicio__num mono">03 <span>/ 04</span></p>
+              <h3>Peluquería</h3>
+              <p>Baño y arreglo para que vuelva a casa limpio, cómodo y oliendo rico.</p>
+              <a class="enlace" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Huellas Felices. Quiero pedir un turno de peluquería.">Pedir turno de peluquería<svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-flecha"></use></svg></a>
+            </div>
+            <div class="servicio__dibujo" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-peluqueria"></use></svg></div>
+          </article>
+
+          <article class="servicio servicio--guarderia">
+            <div class="servicio__texto">
+              <p class="servicio__num mono">04 <span>/ 04</span></p>
+              <h3>Guardería</h3>
+              <p>Un lugar donde dejarlo cuidado y acompañado cuando tú no puedes estar con él.</p>
+              <a class="enlace" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Huellas Felices. Quiero información de la guardería.">Preguntar por la guardería<svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-flecha"></use></svg></a>
+            </div>
+            <div class="servicio__dibujo" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#i-guarderia"></use></svg></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 · URGENCIAS — cambio de luz: la página se hace de noche ============ -->
+    <section class="urgencias" id="urgencias" data-cine-tema="oscuro" data-progreso>
+      <div class="contenedor urgencias__rejilla">
+        <div class="urgencias__reloj" aria-hidden="true">
+          <svg class="esfera" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="96" class="esfera__aro"/>
+            <g class="esfera__marcas">
+              <line x1="100" y1="8" x2="100" y2="20"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(15 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(30 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(45 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(60 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(75 100 100)"/>
+              <line x1="100" y1="8" x2="100" y2="20" transform="rotate(90 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(105 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(120 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(135 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(150 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(165 100 100)"/>
+              <line x1="100" y1="8" x2="100" y2="20" transform="rotate(180 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(195 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(210 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(225 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(240 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(255 100 100)"/>
+              <line x1="100" y1="8" x2="100" y2="20" transform="rotate(270 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(285 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(300 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(315 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(330 100 100)"/><line x1="100" y1="8" x2="100" y2="14" transform="rotate(345 100 100)"/>
+            </g>
+            <circle cx="100" cy="100" r="80" class="esfera__arco"/>
+            <g class="esfera__aguja"><line x1="100" y1="100" x2="100" y2="30"/><circle cx="100" cy="30" r="4"/></g>
+            <circle cx="100" cy="100" r="3.5" class="esfera__centro"/>
+          </svg>
+          <p class="urgencias__cifra"><span data-contar="24">24</span><span class="mono">H</span></p>
+        </div>
+
+        <div class="urgencias__texto">
+          <p class="etiqueta mono" data-revelar><span data-cine-codigo>02 / Urgencias</span></p>
+          <h2 data-dividir>Cuando no puede esperar a mañana.</h2>
+          <p class="urgencias__apoyo" data-revelar>Las urgencias de Huellas Felices funcionan las 24 horas. Escríbenos a cualquier hora, de día o de madrugada, y di de entrada que es una urgencia.</p>
+          <dl class="ficha mono" data-revelar-grupo>
+            <div><dt>Disponibilidad</dt><dd>24 horas</dd></div>
+            <div><dt>Ahora en Medellín</dt><dd data-reloj-hora>—</dd></div>
+            <div><dt>Canal</dt><dd>WhatsApp</dd></div>
+            <div><dt>Teléfono</dt><dd><span data-dato="telefono" data-pendiente="por confirmar"></span></dd></div>
+          </dl>
+          <div class="urgencias__acciones" data-revelar>
+            <a class="boton boton--naranja" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Huellas Felices. Tengo una urgencia con mi mascota.">
+              <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"></use></svg>Escribir por una urgencia
+            </a>
+            <!-- Aparece solo cuando hay teléfono en js/datos.js -->
+            <a class="boton boton--linea" href="#contacto" data-enlace="telefono">
+              <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-telefono"></use></svg>Llamar a urgencias
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 · CÓMO PEDIR CITA — plano secuencia horizontal (plano inmersivo 2) ============ -->
+    <section class="pasos" id="pasos" data-cine-horizontal aria-label="Cómo pedir cita">
+      <div class="cine-horizontal__pista">
+        <article class="paso paso--intro">
+          <p class="etiqueta mono"><span data-cine-codigo>03 / Cómo pedir cita</span></p>
+          <h2>Tu cita, en tres mensajes.</h2>
+          <p>Sin formularios largos ni llamadas en espera. Todo pasa en tu WhatsApp.</p>
+          <p class="paso__desliza mono" aria-hidden="true">Sigue bajando <svg class="icono" viewBox="0 0 24 24"><use href="#i-flecha"></use></svg></p>
+        </article>
+        <article class="paso">
+          <p class="paso__num mono">01</p>
+          <h3>Escríbenos</h3>
+          <p>Toca cualquier botón de esta página: el mensaje ya sale escrito.</p>
+          <div class="chat" aria-hidden="true"><p class="burbuja burbuja--tuya">Hola, Huellas Felices. Quiero pedir una cita.</p></div>
+        </article>
+        <article class="paso">
+          <p class="paso__num mono">02</p>
+          <h3>Cuéntanos quién viene</h3>
+          <p>Si es perro o gato, cómo se llama y qué necesita: consulta, peluquería o guardería.</p>
+          <div class="chat" aria-hidden="true"><p class="burbuja burbuja--tuya"><span class="mono">p. ej.</span> Es Luna, mi gata. Necesita consulta.</p></div>
+        </article>
+        <article class="paso">
+          <p class="paso__num mono">03</p>
+          <h3>Acordamos día y hora</h3>
+          <p>Te confirmamos la cita por el mismo chat. Si es una urgencia, dilo de entrada.</p>
+          <div class="chat" aria-hidden="true"><p class="burbuja burbuja--clinica"><span class="mono">Huellas Felices</span> Listo, te confirmamos tu cita por aquí.</p></div>
+        </article>
+        <article class="paso paso--final">
+          <svg class="paso__huella" viewBox="0 0 48 48" aria-hidden="true"><use href="#huella"></use></svg>
+          <h3>¿Empezamos?</h3>
+          <p>Un mensaje y nos ponemos en marcha.</p>
+          <a class="boton boton--crema" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Huellas Felices. Quiero pedir una cita.">
+            <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"></use></svg>Pedir cita por WhatsApp
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 04 · POR QUÉ AQUÍ — bento con foco (respiro) ============ -->
+    <section class="porque" id="porque">
+      <div class="contenedor">
+        <header class="cabecera cabecera--fila">
+          <p class="etiqueta mono" data-revelar><span data-cine-codigo>04 / Por qué aquí</span></p>
+          <h2 data-dividir>Una clínica que no te deja solo.</h2>
+        </header>
+        <div class="bento" data-cine-foco data-revelar-grupo>
+          <article class="bloque bloque--ancho" data-inclinar="3">
+            <p class="bloque__dato">Perros <span class="amp">&amp;</span> gatos</p>
+            <p>Atendemos a los dos. Cada uno con su ritmo y su manera de ponerse nervioso.</p>
+            <div class="bloque__animales" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><use href="#perro"></use></svg>
+              <svg viewBox="0 0 64 64"><use href="#gato"></use></svg>
+            </div>
+          </article>
+          <article class="bloque bloque--noche" data-inclinar="3">
+            <p class="bloque__dato">24 h</p>
+            <p>Urgencias a cualquier hora del día o de la noche.</p>
+          </article>
+          <article class="bloque" data-inclinar="3">
+            <p class="bloque__dato">4 en 1</p>
+            <p>Consulta, urgencias, peluquería y guardería, sin cambiar de sitio.</p>
+          </article>
+          <article class="bloque bloque--naranja" data-inclinar="3">
+            <svg class="bloque__icono" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+            <p class="bloque__dato">1 mensaje</p>
+            <p>Pides la cita por WhatsApp, cuando te venga bien.</p>
+          </article>
+          <article class="bloque bloque--mapa" data-inclinar="3">
+            <svg class="bloque__curvas" viewBox="0 0 200 120" aria-hidden="true" preserveAspectRatio="none">
+              <path d="M0 96 C40 80 60 104 100 88 S160 60 200 74"/><path d="M0 76 C40 60 70 86 104 68 S160 40 200 52"/>
+              <path d="M0 56 C46 40 70 66 108 48 S164 22 200 30"/><path d="M0 36 C50 20 74 46 112 28 S166 6 200 10"/>
+            </svg>
+            <p class="bloque__dato">Medellín</p>
+            <p>Colombia. <span data-dato="direccion" data-pendiente="Dirección por confirmar"></span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 · PREGUNTAS (quieto) ============ -->
+    <section class="preguntas" id="preguntas">
+      <div class="contenedor preguntas__rejilla">
+        <header class="cabecera">
+          <p class="etiqueta mono" data-revelar><span data-cine-codigo>05 / Preguntas</span></p>
+          <h2 data-dividir>Lo que más nos preguntan.</h2>
+        </header>
+        <div class="acordeon">
+          <details>
+            <summary>¿Qué animales atienden?</summary>
+            <p>Perros y gatos.</p>
+          </details>
+          <details>
+            <summary>¿Atienden urgencias de noche?</summary>
+            <p>Sí. El servicio de urgencias funciona las 24 horas. Escríbenos por WhatsApp y di de entrada que es una urgencia.</p>
+          </details>
+          <details>
+            <summary>¿Cómo pido una cita?</summary>
+            <p>Por WhatsApp. Toca cualquier botón de “Pedir cita”, cuéntanos qué necesita tu perro o tu gato y acordamos el día y la hora por el chat.</p>
+          </details>
+          <details>
+            <summary>¿Qué servicios tienen además de la consulta?</summary>
+            <p>Urgencias 24 horas, peluquería y guardería.</p>
+          </details>
+          <details>
+            <summary>¿Dónde están?</summary>
+            <p>En Medellín, Colombia.<span data-dato="direccion" data-prefijo=" Nos encuentras en " data-sufijo="."></span> Escríbenos y te mandamos la ubicación por WhatsApp.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 · CIERRE — clímax: los puntos se encienden y forman huella → corazón ============ -->
+    <section class="cita" id="contacto">
+      <div class="cita__escena l3d-escena" aria-hidden="true">
+        <div class="l3d-respaldo"></div>
+        <canvas class="l3d-lienzo" data-escena="siluetas" data-opciones='{"formas":["huella","corazon"],"ciclo":0,"cantidad":4500,"modo":"llegada","fondo":"oscuro","escala":0.95}'></canvas>
+      </div>
+
+      <div class="contenedor cita__rejilla">
+        <div class="cita__texto">
+          <p class="etiqueta mono" data-revelar><span data-cine-codigo>06 / Pedir cita</span></p>
+          <h2 class="cita__titular" data-dividir>¿Le pedimos su cita?</h2>
+          <p data-revelar>Llena estos datos y se abre tu WhatsApp con el mensaje listo para enviar. O escríbenos directo, como prefieras.</p>
+          <a class="boton boton--crema" data-revelar href="#formulario" data-enlace="whatsapp" data-respaldo="#formulario" data-mensaje="Hola, Huellas Felices. Quiero pedir una cita.">
+            <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"></use></svg>Escribir por WhatsApp
+          </a>
+          <dl class="ficha ficha--cita mono" data-revelar>
+            <div><dt>Dónde</dt><dd>Medellín, Colombia<br><span data-dato="direccion" data-pendiente="Dirección por confirmar"></span></dd></div>
+            <div><dt>Urgencias</dt><dd>24 horas</dd></div>
+            <div><dt>Consulta</dt><dd><span data-dato="horario" data-pendiente="Horario por confirmar"></span></dd></div>
+            <div><dt>Teléfono</dt><dd><a href="#contacto" data-enlace="telefono" data-dato="telefono"></a><span data-si-falta="telefono" class="pendiente">Por confirmar</span></dd></div>
+          </dl>
+        </div>
+
+        <form class="formulario" id="formulario" data-formulario data-revelar="escala">
+          <p class="formulario__titulo mono">Tu mensaje</p>
+          <div class="campo">
+            <label for="f-nombre">Tu nombre</label>
+            <input id="f-nombre" name="Nombre" autocomplete="name" required>
+          </div>
+          <div class="campo campo--medio">
+            <label for="f-mascota">Tu compañero es</label>
+            <select id="f-mascota" name="Mascota" required>
+              <option value="">Elige…</option>
+              <option value="perro">Perro</option>
+              <option value="gato">Gato</option>
+            </select>
+          </div>
+          <div class="campo campo--medio">
+            <label for="f-servicio">Qué necesita</label>
+            <select id="f-servicio" name="Servicio" required>
+              <option value="">Elige…</option>
+              <option value="consulta veterinaria">Consulta veterinaria</option>
+              <option value="peluquería">Peluquería</option>
+              <option value="guardería">Guardería</option>
+              <option value="una urgencia">Es una urgencia</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="f-msg">¿Algo más que debamos saber? <span class="opcional">(opcional)</span></label>
+            <textarea id="f-msg" name="Mensaje" rows="3"></textarea>
+          </div>
+          <input name="web" tabindex="-1" autocomplete="off" class="solo-lector" aria-hidden="true">
+          <label class="casilla"><input type="checkbox" required> <span>He leído la <a href="privacidad.html">política de privacidad</a></span></label>
+          <button type="submit" class="boton boton--principal boton--ancho">
+            <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"></use></svg>Abrir WhatsApp con mi mensaje
+          </button>
+          <p class="formulario__nota">No guardamos nada en esta página: tú envías el mensaje desde tu WhatsApp.</p>
+          <p class="formulario__estado" data-formulario-estado role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="pie">
+    <div class="contenedor pie__rejilla">
+      <div class="pie__marca">
+        <p class="pie__lema">Cuidado que no se apaga.</p>
+        <p>Clínica veterinaria para perros y gatos.<br>Medellín, Colombia.</p>
+      </div>
+      <nav class="pie__enlaces" aria-label="Secciones">
+        <p class="mono">Secciones</p>
+        <a href="#servicios">Servicios</a>
+        <a href="#urgencias">Urgencias 24 h</a>
+        <a href="#pasos">Cómo pedir cita</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <div class="pie__contacto">
+        <p class="mono">Contacto</p>
+        <a href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Huellas Felices. Quiero pedir una cita.">WhatsApp</a>
+        <a href="#contacto" data-enlace="telefono" data-dato="telefono"></a>
+        <a href="#contacto" data-enlace="email" data-dato="email"></a>
+        <a href="#contacto" data-enlace="mapa">Cómo llegar</a>
+        <a href="#contacto" data-enlace="instagram">Instagram</a>
+        <a href="#contacto" data-enlace="facebook">Facebook</a>
+      </div>
+    </div>
+    <p class="pie__gigante" aria-hidden="true">Huellas Felices</p>
+    <div class="contenedor pie__legal mono">
+      <p>© <span data-anio>2026</span> Huellas Felices · Medellín</p>
+      <p><a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a></p>
+    </div>
+  </footer>
+
+  <!-- Barra fija del móvil: la acción principal siempre a mano (aparece al dejar atrás la portada) -->
+  <div class="barra-movil">
+    <a class="boton boton--principal boton--ancho" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Huellas Felices. Quiero pedir una cita.">
+      <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"></use></svg>Pedir cita por WhatsApp
+    </a>
+  </div>
+
+  <!-- Juego de iconos: un solo trazo (1.8) y radio redondeado -->
+  <svg width="0" height="0" class="solo-lector" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="huella" viewBox="0 0 48 48">
+        <path fill="currentColor" d="M24 22.5c7.6 0 14.2 7.4 13.3 14-.6 4.8-6 5.7-8.7 3.9-1.8-1.2-7.4-1.2-9.2 0-2.7 1.8-8.1.9-8.7-3.9-.9-6.6 5.7-14 13.3-14z"/>
+        <ellipse cx="10.2" cy="20.5" rx="4.1" ry="5.4" fill="currentColor" transform="rotate(-24 10.2 20.5)"/>
+        <ellipse cx="18.4" cy="11.6" rx="4.1" ry="5.9" fill="currentColor" transform="rotate(-8 18.4 11.6)"/>
+        <ellipse cx="29.6" cy="11.6" rx="4.1" ry="5.9" fill="currentColor" transform="rotate(8 29.6 11.6)"/>
+        <ellipse cx="37.8" cy="20.5" rx="4.1" ry="5.4" fill="currentColor" transform="rotate(24 37.8 20.5)"/>
+      </symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3.5 20.5l1.3-4.4A8.6 8.6 0 1 1 8 19.3l-4.5 1.2z"/>
+        <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M9 8.6c-.2 2.9 2.6 6 6.3 6.4l1-1.5-1.9-1-.9.8c-1-.4-1.9-1.3-2.4-2.4l.8-.9-.9-1.9L9 8.6z"/>
+      </symbol>
+      <symbol id="i-telefono" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l1.5 4.5-2.2 1.5a11 11 0 0 0 5.7 5.7l1.5-2.2L20 15v4a1.5 1.5 0 0 1-1.6 1.5A16 16 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/>
+      </symbol>
+      <symbol id="i-flecha" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/>
+      </symbol>
+      <symbol id="i-abajo" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/>
+      </symbol>
+      <symbol id="i-consulta" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 7v12a9 9 0 0 0 18 0V7"/><path d="M11 7h6M29 7h6"/><path d="M23 28v4a8 8 0 0 0 16 0v-3"/><circle cx="39" cy="25" r="4"/>
+        </g>
+      </symbol>
+      <symbol id="i-urgencias" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="24" cy="24" r="18"/><path d="M24 12v12l8 5"/><path d="M24 4v3M24 41v3M4 24h3M41 24h3"/>
+        </g>
+      </symbol>
+      <symbol id="i-peluqueria" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="13" r="5"/><circle cx="12" cy="35" r="5"/><path d="M16 16.5L41 34M16 31.5L41 14"/><path d="M33 8c1 2 3 3 5 3M38 40c1-2 3-3 5-3" opacity=".6"/>
+        </g>
+      </symbol>
+      <symbol id="i-guarderia" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 23L24 8l18 15"/><path d="M11 20v20h26V20"/><path d="M24 34.5c-3.5-2.4-5.5-4.3-5.5-6.8a3 3 0 0 1 5.5-1.6 3 3 0 0 1 5.5 1.6c0 2.5-2 4.4-5.5 6.8z"/>
+        </g>
+      </symbol>
+      <symbol id="perro" viewBox="0 0 64 64">
+        <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 13c6-3 14-3 20 0"/><path d="M22 13c-6-1-11 3-12 9-1 5 1 11 4 13 2 1 4-1 5-4"/><path d="M42 13c6-1 11 3 12 9 1 5-1 11-4 13-2 1-4-1-5-4"/>
+          <path d="M19 24c0 14 4 26 13 26s13-12 13-26"/><circle cx="26" cy="29" r="1.4" fill="currentColor"/><circle cx="38" cy="29" r="1.4" fill="currentColor"/>
+          <path d="M29 39c1.5 1.4 4.5 1.4 6 0"/><path d="M30 35.5h4l-2 2z" fill="currentColor"/>
+        </g>
+      </symbol>
+      <symbol id="gato" viewBox="0 0 64 64">
+        <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 30l-2-20 13 9c4-1.5 10-1.5 14 0l13-9-2 20c2 4 2 9 0 13-3 7-10 10-18 10s-15-3-18-10c-2-4-2-9 0-13z"/>
+          <path d="M24 33c1.5-1.5 3.5-1.5 5 0M35 33c1.5-1.5 3.5-1.5 5 0"/><path d="M30.5 39h3l-1.5 1.8z" fill="currentColor"/>
+          <path d="M32 41v2c-1 1.6-3 2-4.5 1M32 43c1 1.6 3 2 4.5 1"/><path d="M8 37l9 1M8 42l9-1M56 37l-9 1M56 42l-9-1"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Orden obligatorio. `defer` mantiene el orden y no bloquea la carga. -->
+  <script defer src="lib/three.min.js"></script>
+  <script defer src="js/datos.js?v=20261120"></script>
+  <script defer src="js/motor.js?v=20261120"></script>
+  <script defer src="js/cine.js?v=20261120"></script>
+  <script defer src="js/escena.js?v=20261120"></script>
+  <script defer src="js/app.js?v=20261120"></script>
+</body>
+</html>

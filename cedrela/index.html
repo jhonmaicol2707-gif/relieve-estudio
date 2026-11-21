@@ -1,0 +1,638 @@
+<!doctype html>
+<!-- Cedrela — PROYECTO DE MUESTRA (marca inventada; tipologías de ejemplo; precios del m² = referencias del mercado
+     con fuente). Sin cursor propio: compra de vivienda, público amplio (references/cinematografia.md). -->
+<html lang="es-CO" data-cine-entrada="Cedrela">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Sin destello antes de la cortina (ver cine.css: .cine-pre) -->
+  <script>try{var h=document.documentElement;if(h.hasAttribute("data-cine-entrada")&&!sessionStorage.getItem("cine-entro")&&!/[?&]qa=/.test(location.search)&&!matchMedia("(prefers-reduced-motion: reduce)").matches)h.classList.add("cine-pre")}catch(e){}</script>
+  <title>Cedrela · Apartamentos sobre planos en Medellín</title>
+  <meta name="description" content="Demo de vivienda sobre planos en Medellín: tipologías de 2 y 3 alcobas, precio del m² de referencia, simulador de cuota y visita por WhatsApp.">
+  <meta name="theme-color" content="#EDE9E2">
+  <!-- Muestra: que no aparezca en Google. Quitar esta línea el día de publicar la web real. -->
+  <meta name="robots" content="noindex">
+  <!-- Sin dominio todavía: sin canonical y og:image relativa (pendiente para el día de publicar). -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cedrela · Tu casa en Medellín, piso a piso">
+  <meta property="og:description" content="Apartamentos sobre planos en Medellín: elige tu tipología, simula la cuota inicial y agenda tu visita.">
+  <meta property="og:image" content="assets/img/compartir.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="css/fuentes.css?v=20261119">
+
+  <link rel="stylesheet" href="css/base.css?v=20261119">
+  <link rel="stylesheet" href="css/cine.css?v=20261119">
+  <link rel="stylesheet" href="css/sitio.css?v=20261119">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Residence",
+    "name": "Cedrela (proyecto de muestra)",
+    "description": "Demo de proyecto de apartamentos sobre planos en Medellín con tipologías de 2 y 3 alcobas.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Medellín", "addressRegion": "Antioquia", "addressCountry": "CO" }
+  }
+  </script>
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <!-- Iconos y planos (se usan con <use href="#…">) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-torre" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M6 21V5l6-2v18M12 7l6 2v12M3 21h18"/><path d="M8.5 8h1M8.5 11h1M8.5 14h1M14.5 12h1M14.5 15h1"/></g></symbol>
+    <symbol id="i-plano" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="1"/><path d="M11 4.5v6M11 14v5.5M3.5 11h4M14 11h6.5"/></g></symbol>
+    <symbol id="i-llave" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="12" r="4.5"/><path d="M12.5 12H21M17.5 12v3M20.5 12v2"/></g></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 3 4.5 6v5.5c0 4.6 3.2 8 7.5 9.5 4.3-1.5 7.5-4.9 7.5-9.5V6L12 3Zm-3.2 9 2.2 2.2 4.2-4.4"/></symbol>
+    <symbol id="i-mapa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></g></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+    <symbol id="i-papel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></g></symbol>
+    <symbol id="i-alerta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 2.8 19.5h18.4L12 3.5Z"/><path d="M12 10v4.2M12 17h.01"/></g></symbol>
+
+    <!-- Planos esquemáticos (no a escala). suelo-* = estancias y nombres; muros-* = muros que se levantan en 3D -->
+    <symbol id="suelo-a" viewBox="0 0 120 84">
+      <rect class="pl-terraza" x="70" y="72" width="40" height="9"/>
+      <rect class="pl-social" x="44" y="8" width="66" height="64"/>
+      <rect class="pl-humedo" x="44" y="8" width="28" height="22"/><rect class="pl-humedo" x="72" y="8" width="12" height="22"/>
+      <rect class="pl-privado" x="10" y="8" width="34" height="30"/><rect class="pl-privado" x="10" y="52" width="34" height="20"/>
+      <rect class="pl-humedo" x="10" y="38" width="18" height="14"/><rect class="pl-humedo" x="28" y="38" width="16" height="14"/>
+      <rect class="pl-mueble" x="46" y="10" width="24" height="4.5"/>
+      <g class="pl-texto"><text x="27" y="24">Alcoba 1</text><text x="19" y="46.5">Baño</text><text x="36" y="46.5">Baño</text><text x="27" y="63.5">Alcoba 2</text><text x="58" y="24">Cocina</text><text x="78" y="21" class="pl-mini">Ropas</text><text x="80" y="53">Sala-comedor</text><text x="90" y="78.4" class="pl-mini">Balcón</text></g>
+    </symbol>
+    <symbol id="muros-a" viewBox="0 0 120 84">
+      <path class="pl-muro" d="M106 72H110V8H10V72H74M44 8V31M44 37V42M44 48V58M44 66V72M10 38H18M24 38H44M28 38V52M10 52H44M72 8V14M72 20V30H84V8"/>
+      <path class="pl-vidrio" d="M74 72H106"/>
+    </symbol>
+
+    <symbol id="suelo-b" viewBox="0 0 120 84">
+      <rect class="pl-terraza" x="70" y="72" width="40" height="9"/>
+      <rect class="pl-social" x="44" y="8" width="66" height="64"/>
+      <rect class="pl-humedo" x="44" y="8" width="28" height="22"/><rect class="pl-humedo" x="72" y="8" width="12" height="22"/>
+      <rect class="pl-privado" x="84" y="8" width="26" height="26"/>
+      <rect class="pl-privado" x="10" y="8" width="34" height="30"/><rect class="pl-privado" x="10" y="52" width="34" height="20"/>
+      <rect class="pl-humedo" x="10" y="38" width="18" height="14"/><rect class="pl-humedo" x="28" y="38" width="16" height="14"/>
+      <rect class="pl-mueble" x="46" y="10" width="24" height="4.5"/>
+      <g class="pl-texto"><text x="27" y="24">Alcoba 1</text><text x="19" y="46.5">Baño</text><text x="36" y="46.5">Baño</text><text x="27" y="63.5">Alcoba 2</text><text x="97" y="22">Alcoba 3</text><text x="58" y="24">Cocina</text><text x="78" y="21" class="pl-mini">Ropas</text><text x="77" y="55">Sala-comedor</text><text x="90" y="78.4" class="pl-mini">Balcón</text></g>
+    </symbol>
+    <symbol id="muros-b" viewBox="0 0 120 84">
+      <path class="pl-muro" d="M106 72H110V8H10V72H74M44 8V31M44 37V42M44 48V58M44 66V72M10 38H18M24 38H44M28 38V52M10 52H44M72 8V14M72 20V30H84M84 8V34H88M95 34H110"/>
+      <path class="pl-vidrio" d="M74 72H106"/>
+    </symbol>
+
+    <symbol id="suelo-c" viewBox="0 0 120 84">
+      <rect class="pl-terraza" x="70" y="72" width="40" height="9"/>
+      <rect class="pl-social" x="44" y="8" width="66" height="64"/>
+      <rect class="pl-humedo" x="44" y="8" width="28" height="22"/><rect class="pl-humedo" x="72" y="8" width="12" height="12"/>
+      <rect class="pl-privado" x="84" y="8" width="26" height="26"/><rect class="pl-estudio" x="84" y="34" width="26" height="18"/>
+      <rect class="pl-privado" x="10" y="8" width="34" height="30"/><rect class="pl-privado" x="10" y="52" width="34" height="20"/>
+      <rect class="pl-humedo" x="10" y="38" width="18" height="14"/><rect class="pl-humedo" x="28" y="38" width="16" height="14"/>
+      <rect class="pl-mueble" x="46" y="10" width="24" height="4.5"/>
+      <g class="pl-texto"><text x="27" y="24">Alcoba 1</text><text x="19" y="46.5">Baño</text><text x="36" y="46.5">Baño</text><text x="27" y="63.5">Alcoba 2</text><text x="97" y="22">Alcoba 3</text><text x="97" y="44.5">Estudio</text><text x="58" y="24">Cocina</text><text x="78" y="15.5" class="pl-mini">Ropas</text><text x="66" y="58">Sala-comedor</text><text x="90" y="78.4" class="pl-mini">Balcón</text></g>
+    </symbol>
+    <symbol id="muros-c" viewBox="0 0 120 84">
+      <path class="pl-muro" d="M106 72H110V8H10V72H74M44 8V31M44 37V42M44 48V58M44 66V72M10 38H18M24 38H44M28 38V52M10 52H44M72 8V11M72 17V20H84M84 8V24M84 30V38M84 44V52H110M84 34H110"/>
+      <path class="pl-vidrio" d="M74 72H106"/>
+    </symbol>
+  </svg>
+
+  <!-- Franja de muestra: app.js la rellena mientras falte alguno de estos datos en datos.js -->
+  <p class="franja-muestra" data-pendientes="sector,salaVentas,constructora" data-pendientes-texto="Demo con marca inventada. Faltan:" hidden></p>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <header class="nav" data-nav>
+    <div class="nav__progreso" data-cine-progreso></div>
+    <a class="nav__marca marca" href="#inicio" aria-label="Cedrela — inicio">
+      <svg class="marca__simbolo" aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><use href="#i-torre"/></svg>
+      Cedrela</a>
+    <nav class="nav__menu" id="menu" data-menu aria-label="Principal">
+      <a href="#tipologias"><small>01</small> Tipologías</a>
+      <a href="#precios"><small>02</small> Precio del m²</a>
+      <a href="#simulador"><small>03</small> Simulador</a>
+      <a href="#proceso"><small>04</small> Cómo se compra</a>
+      <a href="#contacto"><small>05</small> Visita</a>
+      <a class="nav__wa" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Agendar visita por WhatsApp</a>
+    </nav>
+    <a class="nav__cita boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-wa"/></svg><span>Agendar visita</span></a>
+    <button class="nav__boton" data-menu-boton aria-label="Abrir menú" aria-controls="menu"><span></span></button>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ ZONA FIJADA: la torre → tu plano → tu llave (partículas que se transforman con el scroll) ============ -->
+    <section class="zona" id="inicio" data-escena-zona aria-label="Portada">
+      <div class="zona__escena l3d-pegada l3d-escena" aria-hidden="true">
+        <div class="l3d-respaldo"><svg class="respaldo__torre" viewBox="0 0 100 100"><use href="#i-torre" x="20" y="14" width="60" height="72"/></svg></div>
+        <canvas class="l3d-lienzo" data-escena="siluetas" data-opciones='{"formas":[{"trazo":"M30 10h40v2.4H30zM30 19.6h40v2.4H30zM30 29.2h40v2.4H30zM30 38.8h40v2.4H30zM30 48.4h40v2.4H30zM30 58h40v2.4H30zM30 67.6h40v2.4H30zM30 77.2h40v2.4H30zM30 10h2.6v80H30zM48.7 10h2.6v80h-2.6zM67.4 10h2.6v80h-2.6zM14 89.5h72v2.5H14zM79 4h2.2v86H79zM40 4h58v2.2H40zM46 6h.9v12H46zM43 18h7v3h-7zM92 6h5v6h-5z"},{"trazo":"M14 18h72v2.6H14zM14 79.4h72v2.6H14zM14 18h2.6v64H14zM83.4 18h2.6v64h-2.6zM48.7 18h2.6v24h-2.6zM48.7 50h2.6v32h-2.6zM50 48.7h20v2.6H50zM76 48.7h10v2.6H76zM14 38.7h16v2.6H14zM36 38.7h14v2.6H36zM20 22h22v4H20zM56 22h24v5H56zM62 60h16v12H62z"},{"trazo":"M16 50a16 16 0 1 0 32 0a16 16 0 1 0 -32 0ZM24 50a8 8 0 1 1 16 0a8 8 0 1 1 -16 0ZM46 46.5h42v7H46zM74 53h5.5v10H74zM82.5 53h5.5v13h-5.5z"}],"ciclo":0,"modo":"scroll","cantidad":8000,"tamano":0.9,"x":1.75,"y":0,"escala":1.05,"movil":[{"x":0,"y":-1.3,"s":0.78},{"x":0,"y":1.18,"s":0.8},{"x":0,"y":1.2,"s":0.8}]}'></canvas>
+        <!-- Leyenda: app.js marca la figura que se está dibujando (evento l3d-figura) -->
+        <ol class="leyenda" role="list" data-leyenda>
+          <li data-figura="0"><b>01</b> La torre</li>
+          <li data-figura="1"><b>02</b> Tu plano</li>
+          <li data-figura="2"><b>03</b> Tu llave</li>
+        </ol>
+      </div>
+
+      <div class="zona__pasos">
+        <article class="paso paso--portada">
+          <p class="etiqueta"><span data-cine-codigo>Preventa · Medellín</span></p>
+          <h1 class="portada__titulo" data-dividir>Tu casa en Medellín, <em>piso a piso.</em></h1>
+          <p class="portada__apoyo" data-revelar style="--i:5">Apartamentos de 2 y 3 alcobas sobre planos. Elige tu tipología, simula la cuota inicial y agenda tu visita a la sala de ventas.</p>
+          <div class="portada__acciones" data-revelar style="--i:7">
+            <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-iman="0.2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Agendar visita</a>
+            <a class="boton boton--fantasma" href="#simulador">Simular mi cuota</a>
+          </div>
+          <dl class="portada__datos" data-revelar style="--i:9">
+            <div><dt>Tipologías</dt><dd>54 · 68 · 82 m²</dd></div>
+            <div><dt>Entrega</dt><dd><span data-dato="entrega" data-pendiente="Por confirmar"></span></dd></div>
+          </dl>
+        </article>
+
+        <article class="paso paso--plano" aria-labelledby="plano-titulo">
+          <div class="paso__tarjeta">
+            <p class="etiqueta"><span data-cine-codigo>Del plano a la llave</span></p>
+            <h2 id="plano-titulo" data-dividir>Primero el plano. Después, la llave.</h2>
+            <ol class="ruta" role="list" data-revelar-grupo>
+              <li data-revelar><b>01</b><span><strong>Separas</strong> Reservas tu apartamento</span></li>
+              <li data-revelar><b>02</b><span><strong>Cuota inicial</strong> A cuotas mientras se construye</span></li>
+              <li data-revelar><b>03</b><span><strong>Crédito o leasing</strong> Para el saldo, al terminar la obra</span></li>
+              <li data-revelar><b>04</b><span><strong>Escrituras y entrega</strong> Recibes tus llaves</span></li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="paso paso--llave" aria-labelledby="llave-titulo">
+          <div class="paso__tarjeta">
+            <p class="etiqueta"><span data-cine-codigo>Sin sorpresas</span></p>
+            <h2 id="llave-titulo" data-dividir>Lo pagas mientras se construye.</h2>
+            <p data-revelar>La cuota inicial se reparte en cuotas mensuales hasta la entrega. El resto, con crédito hipotecario o leasing habitacional. Haz tus números antes de visitar.</p>
+            <a class="boton boton--principal" href="#simulador" data-revelar>Simular mi cuota
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-flecha"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CINTA ============ -->
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta__pista" data-cine-cinta="50">
+        <span>Preventa</span><i>◆</i><span>2 y 3 alcobas</span><i>◆</i><span>Medellín</span><i>◆</i><span>Cuota inicial a cuotas</span><i>◆</i><span>Encargo fiduciario</span><i>◆</i><span>Sala de ventas</span><i>◆</i>
+      </div>
+    </div>
+
+    <!-- ============ MANIFIESTO ============ -->
+    <section class="manifiesto-seccion" aria-label="Cómo trabajamos">
+      <div class="contenedor">
+        <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>00 · A la vista</span></p>
+        <p class="manifiesto" data-cine-leer>Comprar sobre planos es decidir hoy por la casa de mañana. Por eso aquí todo está a la vista: los planos, las cifras de referencia y cada paso del pago.</p>
+      </div>
+    </section>
+
+    <!-- ============ TIPOLOGÍAS (plano en 3D con CSS) ============ -->
+    <section class="tipologias" id="tipologias" aria-labelledby="tipologias-titulo">
+      <div class="contenedor">
+        <header class="cabecera cabecera--doble">
+          <div>
+            <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>01 · Tipologías</span></p>
+            <h2 id="tipologias-titulo" class="titulo-grande" data-dividir>Tres plantas, una para cada etapa.</h2>
+          </div>
+          <p class="cabecera__apoyo" data-revelar>De la primera casa en pareja a la familia que necesita un estudio. Elige una planta y mírala levantarse.</p>
+        </header>
+
+        <div class="selector" data-selector>
+          <div class="selector__pestanas" role="tablist" aria-label="Tipologías">
+            <button type="button" role="tab" id="tab-a" aria-controls="ficha" aria-selected="true" data-tipo="a"><b>A</b><span>54 m² · 2 alcobas</span></button>
+            <button type="button" role="tab" id="tab-b" aria-controls="ficha" aria-selected="false" tabindex="-1" data-tipo="b"><b>B</b><span>68 m² · 3 alcobas</span></button>
+            <button type="button" role="tab" id="tab-c" aria-controls="ficha" aria-selected="false" tabindex="-1" data-tipo="c"><b>C</b><span>82 m² · 3 alcobas + estudio</span></button>
+          </div>
+
+          <div class="selector__cuerpo" id="ficha" role="tabpanel" aria-labelledby="tab-a" tabindex="0">
+            <figure class="plano" data-progreso>
+              <div class="plano__marco">
+                <div class="plano__escena" data-plano-escena style="--escala:.86">
+                  <svg class="plano__suelo" viewBox="0 0 120 84" aria-hidden="true"><use href="#suelo-a" data-plano="suelo"/></svg>
+                  <svg class="plano__capa" style="--z:1" viewBox="0 0 120 84" aria-hidden="true"><use href="#muros-a" data-plano="muros"/></svg>
+                  <svg class="plano__capa" style="--z:2" viewBox="0 0 120 84" aria-hidden="true"><use href="#muros-a" data-plano="muros"/></svg>
+                  <svg class="plano__capa" style="--z:3" viewBox="0 0 120 84" aria-hidden="true"><use href="#muros-a" data-plano="muros"/></svg>
+                  <svg class="plano__capa" style="--z:4" viewBox="0 0 120 84" aria-hidden="true"><use href="#muros-a" data-plano="muros"/></svg>
+                  <svg class="plano__capa" style="--z:5" viewBox="0 0 120 84" aria-hidden="true"><use href="#muros-a" data-plano="muros"/></svg>
+                  <svg class="plano__capa" style="--z:6" viewBox="0 0 120 84" aria-hidden="true"><use href="#muros-a" data-plano="muros"/></svg>
+                  <svg class="plano__capa" style="--z:7" viewBox="0 0 120 84" aria-hidden="true"><use href="#muros-a" data-plano="muros"/></svg>
+                  <svg class="plano__capa plano__capa--tapa" style="--z:8" viewBox="0 0 120 84" aria-hidden="true"><use href="#muros-a" data-plano="muros"/></svg>
+                </div>
+              </div>
+              <figcaption><span data-plano-nombre>Tipo A</span> · esquema ilustrativo, no a escala</figcaption>
+            </figure>
+
+            <div class="ficha" data-ficha>
+              <p class="ficha__tipo" data-ficha-nombre>Tipo A</p>
+              <p class="ficha__area"><span data-ficha-area>54</span><small>m²</small></p>
+              <p class="ficha__nota">Área de ejemplo de la demo</p>
+              <dl class="ficha__datos">
+                <div><dt>Alcobas</dt><dd data-ficha-alcobas>2</dd></div>
+                <div><dt>Baños</dt><dd data-ficha-banos>2</dd></div>
+              </dl>
+              <ul class="chips" role="list" data-ficha-extras><li>Balcón</li><li>Cocina abierta</li><li>Zona de ropas</li></ul>
+              <div class="ficha__precio">
+                <p class="ficha__rotulo">Precio</p>
+                <p data-ficha-precio><span class="pendiente">Por confirmar</span></p>
+                <p class="ficha__estimacion" data-ficha-estimacion>Con el m² de referencia de Medellín (estratos 5 y 6): ≈ $481,7 millones. No es el precio del proyecto.</p>
+              </div>
+              <div class="ficha__acciones">
+                <a class="boton boton--principal" href="#simulador" data-ficha-simular>Simular el Tipo A
+                  <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-flecha"/></svg></a>
+                <a class="boton boton--fantasma" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-producto="Tipo A (54 m²)" data-ficha-wa
+                   data-mensaje="Hola, Cedrela. Quiero información del {producto}: precio, pisos disponibles y condiciones.">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Preguntar por esta</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resumen para quien no tiene JavaScript (app.js lo oculta) -->
+          <ul class="selector__resumen" role="list">
+            <li><strong>Tipo A</strong> · 54 m² · 2 alcobas · 2 baños · balcón, cocina abierta y zona de ropas</li>
+            <li><strong>Tipo B</strong> · 68 m² · 3 alcobas · 2 baños · balcón, cocina abierta y zona de ropas</li>
+            <li><strong>Tipo C</strong> · 82 m² · 3 alcobas + estudio · 2 baños · balcón y zona de ropas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ UBICACIÓN Y AMBIENTACIÓN ============ -->
+    <section class="lugar" id="ubicacion" aria-labelledby="lugar-titulo">
+      <div class="contenedor">
+        <figure class="lugar__foto" data-cine-imagen>
+          <img src="assets/img/fotos/medellin-1.webp" alt="Vista de Medellín con edificios de ladrillo y montañas al fondo" width="1024" height="683" loading="lazy" decoding="async">
+        </figure>
+        <div class="lugar__rejilla">
+          <header>
+            <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>02 · Dónde y cuándo</span></p>
+            <h2 id="lugar-titulo" class="titulo-grande" data-dividir>Medellín, con fecha de entrega.</h2>
+          </header>
+          <dl class="lugar__datos" data-revelar-grupo>
+            <div data-revelar><dt><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-mapa"/></svg> Sector</dt><dd><span data-dato="sector" data-pendiente="Por confirmar"></span></dd></div>
+            <div data-revelar><dt><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-reloj"/></svg> Entrega estimada</dt><dd><span data-dato="entrega" data-pendiente="Por confirmar"></span></dd></div>
+            <div data-revelar><dt><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-torre"/></svg> Sala de ventas</dt><dd><span data-dato="salaVentas" data-pendiente="Por confirmar"></span><a href="#" data-enlace="mapa" hidden> · Ver en el mapa</a></dd></div>
+          </dl>
+        </div>
+        <div class="ambientes" data-revelar-grupo>
+          <figure class="ambiente ambiente--sala" data-revelar>
+            <div class="ambiente__img" data-cine-imagen><img src="assets/img/fotos/sala-2.webp" alt="Sala-comedor con piso claro y puerta corrediza hacia un balcón" width="1024" height="683" loading="lazy" decoding="async"></div>
+            <figcaption>Sala-comedor con luz natural <small>Foto de referencia, no del proyecto</small></figcaption>
+          </figure>
+          <figure class="ambiente ambiente--alcoba" data-revelar>
+            <div class="ambiente__img" data-cine-imagen><img src="assets/img/fotos/alcoba-2.webp" alt="Alcoba clara con cama doble y ventanas en el techo" width="1024" height="768" loading="lazy" decoding="async"></div>
+            <figcaption>Alcobas tranquilas <small>Foto de referencia, no del proyecto</small></figcaption>
+          </figure>
+          <figure class="ambiente ambiente--obra" data-revelar>
+            <div class="ambiente__img" data-cine-imagen><img src="assets/img/fotos/obra-3.webp" alt="Edificio de ladrillo en construcción con una grúa torre" width="1024" height="683" loading="lazy" decoding="async"></div>
+            <figcaption>Obra en altura <small>Foto de referencia, no del proyecto</small></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRECIO DEL M² DE REFERENCIA ============ -->
+    <section class="precios" id="precios" aria-labelledby="precios-titulo">
+      <div class="contenedor">
+        <header class="cabecera cabecera--doble">
+          <div>
+            <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>03 · Precio del m²</span></p>
+            <h2 id="precios-titulo" class="titulo-grande" data-dividir>Lo que vale el m² en el valle.</h2>
+          </div>
+          <p class="cabecera__apoyo" data-revelar>Para comparar con criterio: precio de publicación por m² de apartamentos de 50 a 100 m² en Medellín y el Valle de Aburrá. <strong>Son referencias del mercado, no precios de Cedrela.</strong></p>
+        </header>
+
+        <div class="tabla-precios" data-revelar>
+          <table>
+            <caption class="solo-lector">Precio de publicación por metro cuadrado, apartamentos de 50 a 100 m², agosto de 2026</caption>
+            <thead>
+              <tr><th scope="col">Municipio</th><th scope="col">Estratos 3 y 4</th><th scope="col">Estratos 5 y 6</th></tr>
+            </thead>
+            <!-- app.js repinta estas filas desde js/datos.js (precios.lista). Este resumen es para quien no tiene JavaScript. -->
+            <tbody data-precios>
+              <tr><th scope="row">Medellín</th><td>$6,50 millones</td><td>$8,92 millones</td></tr>
+              <tr><th scope="row">Envigado</th><td>$7,97 millones</td><td>$9,29 millones</td></tr>
+              <tr><th scope="row">Sabaneta</th><td>$7,18 millones</td><td>$7,69 millones</td></tr>
+              <tr><th scope="row">Itagüí</th><td>$6,84 millones</td><td>$7,43 millones</td></tr>
+              <tr><th scope="row">Bello</th><td>$5,45 millones</td><td>$6,65 millones</td></tr>
+              <tr><th scope="row">La Estrella</th><td>$6,34 millones</td><td>$6,63 millones</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="precios__fuente" data-revelar>Fuente: <a href="https://www.metrocuadrado.com/noticias/precios-m2/cual-es-el-precio-del-metro-cuadrado-en-venta-en-medellin-y-los-municipios-del-valle-de-aburra-7053" target="_blank" rel="noopener" data-precios-fuente>Metrocuadrado, análisis de 41.000 apartamentos en venta publicados en agosto de 2026</a>. Precios de publicación (no de cierre), en pesos colombianos por m²; incluyen vivienda nueva y usada.</p>
+      </div>
+    </section>
+
+    <!-- ============ SIMULADOR ============ -->
+    <section class="simulador" id="simulador" data-cine-tema="oscuro" aria-labelledby="simulador-titulo">
+      <div class="contenedor">
+        <header class="cabecera cabecera--doble">
+          <div>
+            <p class="etiqueta"><span data-cine-codigo>04 · Simulador</span></p>
+            <h2 id="simulador-titulo" class="titulo-grande" data-dividir>Haz números antes de visitar.</h2>
+          </div>
+          <p class="cabecera__apoyo" data-revelar>Cambia el precio, la cuota inicial o la tasa y mira cómo se reparte el pago. Es una estimación orientativa: las condiciones reales las da la sala de ventas y la tasa, tu banco.</p>
+        </header>
+
+        <div class="sim" data-simulador data-revelar>
+          <form class="sim__datos" data-sim-form novalidate>
+            <div class="campo">
+              <label for="s-tipo">Tipología</label>
+              <select id="s-tipo" name="tipo" data-sim="tipo">
+                <option value="a">Tipo A · 54 m²</option>
+                <option value="b">Tipo B · 68 m²</option>
+                <option value="c">Tipo C · 82 m²</option>
+                <option value="">Otro precio</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="s-precio">Precio del apartamento <small>(pesos)</small></label>
+              <input id="s-precio" name="precio" type="text" inputmode="numeric" autocomplete="off" value="481.680.000" data-sim="precio" data-moneda>
+              <p class="campo__ayuda" data-sim-origen>Estimación con el m² de referencia (Medellín, estratos 5 y 6). Escribe el precio real si lo tienes.</p>
+            </div>
+            <div class="sim__fila">
+              <div class="campo">
+                <label for="s-separacion">Separación <small>(pesos)</small></label>
+                <input id="s-separacion" name="separacion" type="text" inputmode="numeric" autocomplete="off" value="5.000.000" data-sim="separacion" data-moneda>
+              </div>
+              <div class="campo">
+                <label for="s-inicial">Cuota inicial</label>
+                <select id="s-inicial" name="inicial" data-sim="inicial">
+                  <option value="20">20 %</option><option value="25">25 %</option><option value="30" selected>30 %</option><option value="35">35 %</option><option value="40">40 %</option><option value="50">50 %</option>
+                </select>
+              </div>
+            </div>
+            <div class="sim__fila">
+              <div class="campo">
+                <label for="s-meses">Meses para pagarla</label>
+                <input id="s-meses" name="meses" type="number" min="1" max="60" step="1" value="24" data-sim="meses">
+              </div>
+              <div class="campo">
+                <label for="s-plazo">Plazo del crédito</label>
+                <select id="s-plazo" name="plazo" data-sim="plazo">
+                  <option value="10">10 años</option><option value="15">15 años</option><option value="20" selected>20 años</option><option value="25">25 años</option><option value="30">30 años</option>
+                </select>
+              </div>
+            </div>
+            <div class="campo">
+              <label for="s-tasa">Tasa del crédito <small>(% efectivo anual)</small></label>
+              <input id="s-tasa" name="tasa" type="number" min="1" max="40" step="0.1" value="13" data-sim="tasa">
+              <p class="campo__ayuda"><span data-sim-tasa-nota>Tasas de crédito hipotecario no VIS reportadas a la Superintendencia Financiera entre 11,55 % y 16,99 % E.A. (corte del 6 de febrero de 2026, según Noticias RCN).</span> <a href="https://www.noticiasrcn.com/economia/bancos-con-la-tasa-mas-baja-para-comprar-casa-en-2026-993955" target="_blank" rel="noopener" data-sim-tasa-fuente>Ver fuente</a></p>
+            </div>
+          </form>
+
+          <div class="sim__resultado" aria-live="polite" data-sim-resultado>
+            <p class="sim__rotulo">Cuota mensual estimada del crédito</p>
+            <p class="sim__cifra" data-sim-out="cuota">$3.779.623</p>
+            <p class="sim__sub">por <span data-sim-out="plazo">20 años</span> · sin seguros</p>
+            <dl class="sim__desglose">
+              <div><dt>Separación</dt><dd data-sim-out="separacion">$5.000.000</dd></div>
+              <div><dt>Cuota inicial (<span data-sim-out="inicialPct">30 %</span>)</dt><dd data-sim-out="inicial">$144.504.000</dd></div>
+              <div><dt>Cuotas durante la obra</dt><dd><span data-sim-out="mensualObra">$5.812.667</span> <small>× <span data-sim-out="meses">24</span> meses</small></dd></div>
+              <div><dt>Crédito o leasing (<span data-sim-out="creditoPct">70 %</span>)</dt><dd data-sim-out="credito">$337.176.000</dd></div>
+            </dl>
+            <div class="sim__barra" aria-hidden="true"><i data-sim-barra="inicial" style="--w:30%"></i><i data-sim-barra="credito" style="--w:70%"></i></div>
+            <p class="sim__aviso"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-alerta"/></svg> Estimación sin seguros, gastos notariales, de registro ni impuestos. No es una oferta de crédito ni el precio del proyecto.</p>
+            <a class="boton boton--principal boton--ancho" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-sim-wa>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Enviar mi simulación por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO SE COMPRA (tarjetas apiladas) ============ -->
+    <section class="proceso" id="proceso" aria-labelledby="proceso-titulo">
+      <div class="contenedor">
+        <header class="cabecera">
+          <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>05 · Cómo se compra</span></p>
+          <h2 id="proceso-titulo" class="titulo-grande" data-dividir>Cuatro pasos hasta tus llaves.</h2>
+        </header>
+        <ol class="pila" data-cine-apilar role="list">
+          <li class="pila__tarjeta pila__tarjeta--1">
+            <p class="pila__num">01</p>
+            <div>
+              <h3>Separas tu apartamento</h3>
+              <p>Eliges tipología y piso, y te vinculas al proyecto. Pregunta si la separación se abona a la cuota inicial o a los gastos de escrituración: depende de cada proyecto.</p>
+            </div>
+            <svg class="pila__icono" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-plano"/></svg>
+          </li>
+          <li class="pila__tarjeta pila__tarjeta--2">
+            <p class="pila__num">02</p>
+            <div>
+              <h3>Pagas la cuota inicial durante la obra</h3>
+              <p>En cuotas mensuales mientras se construye. Los pagos van a la fiduciaria del proyecto, nunca a cuentas personales.</p>
+            </div>
+            <svg class="pila__icono" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-reloj"/></svg>
+          </li>
+          <li class="pila__tarjeta pila__tarjeta--3">
+            <p class="pila__num">03</p>
+            <div>
+              <h3>Tramitas tu crédito o leasing</h3>
+              <p>Pide la preaprobación desde el principio: así sabes con cuánto cuentas para el saldo y llegas a la escritura sin afanes.</p>
+            </div>
+            <svg class="pila__icono" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-papel"/></svg>
+          </li>
+          <li class="pila__tarjeta pila__tarjeta--4">
+            <p class="pila__num">04</p>
+            <div>
+              <h3>Escrituras y recibes tus llaves</h3>
+              <p>Se firma la escritura, el banco desembolsa el saldo y recibes el apartamento con el acta de entrega.</p>
+              <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Agendar mi visita</a>
+            </div>
+            <svg class="pila__icono" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-llave"/></svg>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ DOCUMENTOS ============ -->
+    <section class="documentos" id="documentos" aria-labelledby="documentos-titulo">
+      <div class="contenedor">
+        <header class="cabecera cabecera--doble">
+          <div>
+            <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>06 · Documentos</span></p>
+            <h2 id="documentos-titulo" class="titulo-grande" data-dividir>Compra con los papeles a la vista.</h2>
+          </div>
+          <p class="cabecera__apoyo" data-revelar>Antes de separar, revisa que el proyecto figure en el <a href="https://www.medellin.gov.co/es/secretaria-gestion-y-control-territorial/subsecretaria-de-control-urbanistico/enajenaciones/proyectos-de-vivienda-decreto-1077-de-2015" target="_blank" rel="noopener">listado de enajenaciones de la Alcaldía de Medellín</a> (Decreto 1077 de 2015) y pide estos datos por escrito.</p>
+        </header>
+        <ul class="docs" role="list" data-revelar-grupo>
+          <li class="doc" data-revelar>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28"><use href="#i-torre"/></svg>
+            <p class="doc__rotulo">Constructora</p>
+            <p class="doc__valor"><span data-dato="constructora" data-pendiente="Por confirmar"></span></p>
+          </li>
+          <li class="doc" data-revelar>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28"><use href="#i-escudo"/></svg>
+            <p class="doc__rotulo">Fiduciaria (recibe tus pagos)</p>
+            <p class="doc__valor"><span data-dato="fiduciaria" data-pendiente="Por confirmar"></span></p>
+          </li>
+          <li class="doc" data-revelar>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28"><use href="#i-papel"/></svg>
+            <p class="doc__rotulo">Licencia de construcción</p>
+            <p class="doc__valor"><span data-dato="licencia" data-pendiente="Por confirmar"></span></p>
+          </li>
+          <li class="doc" data-revelar>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28"><use href="#i-papel"/></svg>
+            <p class="doc__rotulo">Radicado de enajenación</p>
+            <p class="doc__valor"><span data-dato="radicado" data-pendiente="Por confirmar"></span></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PREGUNTAS ============ -->
+    <section class="preguntas-seccion" id="preguntas" aria-labelledby="preguntas-titulo">
+      <div class="contenedor preguntas__rejilla">
+        <header class="cabecera">
+          <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>07 · Preguntas</span></p>
+          <h2 id="preguntas-titulo" class="titulo-grande" data-dividir>Lo que conviene saber antes de separar.</h2>
+        </header>
+        <div class="preguntas">
+          <details>
+            <summary>¿Qué es el encargo fiduciario?</summary>
+            <p>Es el contrato con una sociedad fiduciaria vigilada por la Superintendencia Financiera que recibe y administra tus pagos mientras el proyecto cumple las condiciones para empezar la obra. Por eso los pagos se hacen a la fiduciaria y no a la constructora.</p>
+          </details>
+          <details>
+            <summary>¿De cuánto es la cuota inicial?</summary>
+            <p>En vivienda sobre planos suele ir del 20 % al 30 % del precio y se paga en cuotas durante la construcción. Las condiciones de este proyecto se entregan por escrito en la sala de ventas.</p>
+          </details>
+          <details>
+            <summary>¿Crédito hipotecario o leasing habitacional?</summary>
+            <p>Con el crédito, el apartamento queda a tu nombre desde la escritura y el banco tiene una hipoteca. Con el leasing, el banco es el dueño hasta que pagas la última cuota y ejerces la opción de compra. Compara tasa, plazo y beneficios tributarios con tu banco.</p>
+          </details>
+          <details>
+            <summary>¿Puedo usar mis cesantías?</summary>
+            <p>Sí, las cesantías se pueden usar para comprar vivienda. Consulta con tu fondo los requisitos y los documentos que te piden.</p>
+          </details>
+          <details>
+            <summary>¿Cuándo se entrega?</summary>
+            <p>Entrega estimada: <span data-dato="entrega" data-pendiente="por confirmar"></span>.</p>
+          </details>
+          <details>
+            <summary>¿Cuándo puedo visitar la sala de ventas?</summary>
+            <p><span data-dato="horario" data-pendiente="Horario por confirmar"></span>. Escríbenos por WhatsApp y te reservamos una hora.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO / CIERRE ============ -->
+    <section class="contacto" id="contacto" data-cine-tema="oscuro" aria-labelledby="contacto-titulo">
+      <div class="contenedor contacto__rejilla">
+        <div class="contacto__texto">
+          <p class="etiqueta"><span data-cine-codigo>08 · Visita</span></p>
+          <h2 id="contacto-titulo" class="contacto__titulo" data-dividir>Ven a ver tu casa antes de que exista.</h2>
+          <p data-revelar>Déjanos tu nombre y qué tipología te interesa: se abre tu WhatsApp con el mensaje escrito y te proponemos un día para la visita.</p>
+          <ul class="contacto__datos" role="list" data-revelar-grupo>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-wa"/></svg>
+              <a href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto"><span data-dato="whatsappTexto" data-pendiente="WhatsApp por confirmar"></span></a>
+            </li>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-mapa"/></svg>
+              <span>Sala de ventas: <span data-dato="salaVentas" data-pendiente="por confirmar"></span><a href="#" data-enlace="mapa" hidden> · Ver en el mapa</a></span>
+            </li>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-reloj"/></svg>
+              <span data-dato="horario" data-pendiente="Horario por confirmar"></span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="formulario" data-formulario data-whatsapp-saludo="Hola, Cedrela. Quiero agendar una visita a la sala de ventas." novalidate data-revelar>
+          <div class="campo">
+            <label for="f-nombre">Tu nombre</label>
+            <input id="f-nombre" name="Nombre" type="text" autocomplete="name" required maxlength="80">
+          </div>
+          <div class="campo">
+            <label for="f-tipo">¿Qué tipología te interesa?</label>
+            <select id="f-tipo" name="Tipología" required>
+              <option value="">Elige una opción</option>
+              <option>Tipo A · 54 m² · 2 alcobas</option>
+              <option>Tipo B · 68 m² · 3 alcobas</option>
+              <option>Tipo C · 82 m² · 3 alcobas + estudio</option>
+              <option>Aún no lo sé</option>
+            </select>
+          </div>
+          <fieldset class="campo campo--opciones">
+            <legend>¿Cómo piensas pagar el saldo?</legend>
+            <label><input type="radio" name="Forma de pago" value="Crédito hipotecario" checked> Crédito</label>
+            <label><input type="radio" name="Forma de pago" value="Leasing habitacional"> Leasing</label>
+            <label><input type="radio" name="Forma de pago" value="Recursos propios"> Recursos propios</label>
+            <label><input type="radio" name="Forma de pago" value="Aún no lo sé"> Aún no lo sé</label>
+          </fieldset>
+          <div class="campo">
+            <label for="f-visita">¿Cuándo te queda mejor la visita?</label>
+            <select id="f-visita" name="Visita">
+              <option>Entre semana</option>
+              <option>Fin de semana</option>
+              <option>Prefiero una videollamada</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="f-nota">Algo más <small>(opcional)</small></label>
+            <textarea id="f-nota" name="Nota" rows="3" maxlength="300" placeholder="Por ejemplo: busco piso alto y me interesa el Tipo B."></textarea>
+          </div>
+          <label class="campo campo--casilla">
+            <input type="checkbox" name="autorizacion" value="Sí" required data-no-mensaje>
+            <span>Autorizo el tratamiento de mis datos para atender mi solicitud, según la <a href="privacidad.html">política de privacidad</a> (Ley 1581 de 2012).</span>
+          </label>
+          <input class="trampa" type="text" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="boton boton--principal boton--ancho" type="submit">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Enviar por WhatsApp</button>
+          <p class="formulario__estado" data-formulario-estado role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__rejilla">
+        <div>
+          <p class="pie__marca marca">Cedrela</p>
+          <p class="pie__lema">Apartamentos sobre planos · Medellín</p>
+        </div>
+        <div class="pie__datos">
+          <a href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto">WhatsApp <span data-dato="whatsappTexto"></span></a>
+          <span>Sala de ventas: <span data-dato="salaVentas" data-pendiente="por confirmar"></span></span>
+          <span data-dato="horario" data-pendiente="Horario por confirmar"></span>
+          <span>Constructora: <span data-dato="constructora" data-pendiente="por confirmar"></span></span>
+        </div>
+        <div class="pie__legal">
+          <a href="privacidad.html">Política de privacidad</a>
+          <a href="creditos.html">Créditos e imágenes</a>
+          <a href="#inicio">Volver arriba</a>
+        </div>
+      </div>
+      <p class="pie__muestra"><strong>Proyecto de muestra.</strong> Cedrela es una marca inventada para enseñar este diseño. Las tipologías y sus áreas son ejemplos; los planos son esquemas ilustrativos; el precio del m² es una referencia del mercado con su fuente, y las fotos de ambientes son de banco y no corresponden a ningún proyecto. El simulador da una estimación orientativa, no una oferta de crédito. © <span data-anio>2026</span></p>
+    </div>
+  </footer>
+
+  <!-- Barra fija del móvil: aparece al salir de la portada y se esconde en el cierre -->
+  <div class="barra-movil">
+    <a class="barra-movil__boton" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto">
+      <span class="barra-movil__icono"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><use href="#i-wa"/></svg></span>
+      <span class="barra-movil__texto">Agendar visita</span>
+      <span class="barra-movil__extra">WhatsApp</span>
+    </a>
+  </div>
+
+  <script defer src="lib/three.min.js"></script>
+  <script defer src="js/datos.js?v=20261119"></script>
+  <script defer src="js/motor.js?v=20261119"></script>
+  <script defer src="js/cine.js?v=20261119"></script>
+  <script defer src="js/escena.js?v=20261119"></script>
+  <script defer src="js/app.js?v=20261119"></script>
+</body>
+</html>

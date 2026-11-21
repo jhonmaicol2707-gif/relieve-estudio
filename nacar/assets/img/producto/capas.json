@@ -1,0 +1,45 @@
+{
+  "aspecto": 0.3805424020662936,
+  "capas": [
+    {
+      "archivo": "capa-0.webp",
+      "ancho": 246,
+      "alto": 572,
+      "x0": 0.3631,
+      "x1": 0.6369,
+      "y0": 0.0667,
+      "y1": 0.3087,
+      "rellenados": 0
+    },
+    {
+      "archivo": "capa-1.webp",
+      "ancho": 88,
+      "alto": 621,
+      "x0": 0.4514,
+      "x1": 0.5486,
+      "y0": 0.3427,
+      "y1": 0.6053,
+      "rellenados": 0
+    },
+    {
+      "archivo": "capa-2.webp",
+      "ancho": 521,
+      "alto": 670,
+      "x0": 0.2104,
+      "x1": 0.7896,
+      "y0": 0.644,
+      "y1": 0.9272,
+      "rellenados": 0
+    }
+  ],
+  "cortes_opacidad": [
+    0.0,
+    0.0
+  ],
+  "armada": {
+    "archivo": "armada.webp",
+    "ancho": 1000,
+    "alto": 2145,
+    "aspecto": 0.4662
+  }
+}

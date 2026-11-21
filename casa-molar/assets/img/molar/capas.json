@@ -1,0 +1,56 @@
+{
+  "aspecto": 0.6640625,
+  "capas": [
+    {
+      "archivo": "capa-0.webp",
+      "ancho": 596,
+      "alto": 427,
+      "x0": 0.2574,
+      "x1": 0.7162,
+      "y0": 0.022,
+      "y1": 0.2402,
+      "rellenados": 0
+    },
+    {
+      "archivo": "capa-1.webp",
+      "ancho": 534,
+      "alto": 369,
+      "x0": 0.2838,
+      "x1": 0.6949,
+      "y0": 0.2578,
+      "y1": 0.4463,
+      "rellenados": 0
+    },
+    {
+      "archivo": "capa-2.webp",
+      "ancho": 346,
+      "alto": 434,
+      "x0": 0.3574,
+      "x1": 0.6235,
+      "y0": 0.4746,
+      "y1": 0.6963,
+      "rellenados": 0
+    },
+    {
+      "archivo": "capa-3.webp",
+      "ancho": 504,
+      "alto": 548,
+      "x0": 0.2831,
+      "x1": 0.6706,
+      "y0": 0.7056,
+      "y1": 0.9854,
+      "rellenados": 0
+    }
+  ],
+  "cortes_opacidad": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "armada": {
+    "archivo": "armada.webp",
+    "ancho": 1200,
+    "alto": 1976,
+    "aspecto": 0.6073
+  }
+}

@@ -1,0 +1,670 @@
+<!doctype html>
+<!-- Fasor — PROYECTO DE MUESTRA (marca inventada; precios = rangos de referencia del mercado con fuente: Sendwork 2026,
+     Presucosto 2026 y EPM a tu puerta 2026). Sin cursor propio: servicio urgente, público amplio. -->
+<html lang="es-CO" data-cine-entrada="Fasor" data-tema="oscuro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Sin destello antes de la cortina (ver cine.css: .cine-pre) -->
+  <script>try{var h=document.documentElement;if(h.hasAttribute("data-cine-entrada")&&!sessionStorage.getItem("cine-entro")&&!/[?&]qa=/.test(location.search)&&!matchMedia("(prefers-reduced-motion: reduce)").matches)h.classList.add("cine-pre")}catch(e){}</script>
+  <title>Fasor · Electricistas a domicilio en Medellín</title>
+  <meta name="description" content="Demo de electricistas en el Valle de Aburrá: precios de referencia con fuente, cotizador por puntos, qué hacer ante una falla y WhatsApp o llamada.">
+  <meta name="theme-color" content="#111317">
+  <!-- Muestra: que no aparezca en Google. Quitar esta línea el día de publicar la web real. -->
+  <meta name="robots" content="noindex">
+  <!-- Sin dominio todavía: sin canonical y og:image relativa (pendiente para el día de publicar). -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fasor · Corriente bien puesta">
+  <meta property="og:description" content="Reparaciones, puntos nuevos, tableros y revisiones eléctricas en el Valle de Aburrá. Escribe o llama.">
+  <meta property="og:image" content="assets/img/compartir.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="css/fuentes.css?v=20261119">
+
+  <link rel="stylesheet" href="css/base.css?v=20261119">
+  <link rel="stylesheet" href="css/cine.css?v=20261119">
+  <link rel="stylesheet" href="css/sitio.css?v=20261119">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "name": "Fasor (proyecto de muestra)",
+    "description": "Demo de servicio de electricistas a domicilio en Medellín y el Valle de Aburrá.",
+    "areaServed": "Área Metropolitana del Valle de Aburrá",
+    "address": { "@type": "PostalAddress", "addressLocality": "Medellín", "addressRegion": "Antioquia", "addressCountry": "CO" }
+  }
+  </script>
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <!-- Iconos (se usan con <use href="#…">) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5 3.5h3.2l1.6 4.2-2.2 1.4a11 11 0 0 0 7.3 7.3l1.4-2.2 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5Z"/></symbol>
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-rayo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M13 2.5 5 13.5h6l-1 8 8-11h-6l1-8Z"/></symbol>
+    <symbol id="i-fasor" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 12 18 6.6"/><path d="m15.2 6.4 2.8.2-.2 2.8"/></g><circle cx="12" cy="12" r="1.6" fill="currentColor"/></symbol>
+    <symbol id="i-bombillo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17.5h6M9.8 20.5h4.4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1 1.3 1 2.2v1.5h5.2V16c0-.9.3-1.6 1-2.2A6 6 0 0 0 12 3Z"/></g></symbol>
+    <symbol id="i-breaker" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="4.5" y="2.5" width="15" height="19" rx="1.5"/><rect x="9" y="6.5" width="6" height="11" rx="1"/><path d="M9 10.5h6" stroke-linecap="round"/></g></symbol>
+    <symbol id="i-humo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-3.6 0-6-2.4-6-5.6 0-3.3 3-5 3-8.4 2.4 1.3 3.4 3.4 3.4 5.4 1-.6 1.6-1.6 1.8-2.8 2 1.6 3.8 3.6 3.8 5.8 0 3.2-2.4 5.6-6 5.6Z"/></g></symbol>
+    <symbol id="i-toma" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M9.2 9v3M14.8 9v3M10 16a2.5 2.5 0 0 1 4 0"/></g></symbol>
+    <symbol id="i-mano" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12V5.5a1.5 1.5 0 0 1 3 0V11m0-1.5V4a1.5 1.5 0 0 1 3 0v6m0-1a1.5 1.5 0 0 1 3 0v5.5a6.5 6.5 0 0 1-6.5 6.5H10a5 5 0 0 1-4-2l-2.4-3.5a1.5 1.5 0 0 1 2.3-1.9L8 15.5"/></g></symbol>
+    <symbol id="i-poste" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V3M3.5 6.5h7M4.5 6.5v2M9.5 6.5v2"/><path d="M7 4.5c4 1 7 5 8.5 10.5l1.5 1.5m-1.5-1.5-1 2.5"/></g></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 3 4.5 6v5.5c0 4.6 3.2 8 7.5 9.5 4.3-1.5 7.5-4.9 7.5-9.5V6L12 3Zm-3.2 9 2.2 2.2 4.2-4.4"/></symbol>
+    <symbol id="i-mapa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></g></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+    <symbol id="i-papel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></g></symbol>
+    <symbol id="i-carne" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><circle cx="8.5" cy="11" r="2.2"/><path d="M5.5 16c.6-1.4 1.7-2 3-2s2.4.6 3 2M14 10h4.5M14 13.5h3"/></g></symbol>
+    <symbol id="i-alerta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 2.8 19.5h18.4L12 3.5Z"/><path d="M12 10v4.2M12 17h.01"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-no" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6.5 6.5 11 11M17.5 6.5l-11 11"/></g></symbol>
+  </svg>
+
+  <!-- Franja de muestra: app.js la rellena mientras falte alguno de estos datos en datos.js -->
+  <p class="franja-muestra" data-pendientes="horario,garantia,matricula" data-pendientes-texto="Demo con marca inventada. Faltan:" hidden></p>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <header class="nav" data-nav>
+    <div class="nav__progreso" data-cine-progreso></div>
+    <a class="nav__marca marca" href="#inicio" aria-label="Fasor — inicio">
+      <svg class="marca__simbolo" aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><use href="#i-fasor"/></svg>
+      Fasor</a>
+    <nav class="nav__menu" id="menu" data-menu aria-label="Principal">
+      <a href="#precios"><small>01</small> Precios</a>
+      <a href="#cotizador"><small>02</small> Cotizador</a>
+      <a href="#seguridad"><small>03</small> ¿Qué hago si…?</a>
+      <a href="#cobertura"><small>04</small> Cobertura</a>
+      <a href="#contacto"><small>05</small> Contacto</a>
+      <a class="nav__wa" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Escribir por WhatsApp</a>
+      <a class="nav__wa" href="#contacto" data-enlace="telefono" data-respaldo="#contacto">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-tel"/></svg> Llamar ahora</a>
+    </nav>
+    <a class="nav__llamar boton boton--fantasma" href="#contacto" data-enlace="telefono" data-respaldo="#contacto" aria-label="Llamar">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-tel"/></svg><span>Llamar</span></a>
+    <a class="nav__cita boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" aria-label="WhatsApp">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+    <button class="nav__boton" data-menu-boton aria-label="Abrir menú" aria-controls="menu"><span></span></button>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ ZONA FIJADA: placa de circuito que se enciende con el scroll (falla → revisión → corriente segura) ============ -->
+    <section class="zona" id="inicio" data-escena-zona data-cine-tema="oscuro" aria-label="Portada">
+      <div class="zona__escena l3d-pegada l3d-escena" aria-hidden="true">
+        <div class="l3d-respaldo"><svg class="respaldo__rayo" viewBox="0 0 24 24"><use href="#i-rayo"/></svg></div>
+        <canvas class="l3d-lienzo" data-escena="circuito" data-opciones='{"modo":"scroll","carga":[0.1,1],"x":1.85,"y":0,"escala":0.8,"fondo":"oscuro","movil":[{"x":0,"y":-1.15,"s":0.86},{"x":0,"y":1.3,"s":0.82},{"x":0,"y":1.3,"s":0.82}]}'></canvas>
+        <!-- Medidor: app.js lo mueve con la carga de la escena (evento l3d-carga del lienzo) -->
+        <div class="medidor" data-medidor data-nivel="falla">
+          <p class="medidor__rotulo">Carga del circuito</p>
+          <p class="medidor__cifra"><b data-medidor-valor>10</b><small>%</small></p>
+          <div class="medidor__pista"><i data-medidor-barra style="--x:10%"></i></div>
+          <ol class="medidor__estados" role="list">
+            <li data-estado="falla" class="activa">Falla</li>
+            <li data-estado="revision">Revisión</li>
+            <li data-estado="estable">Estable</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="zona__pasos">
+        <article class="paso paso--portada">
+          <p class="etiqueta"><span data-cine-codigo>Electricistas · Valle de Aburrá</span></p>
+          <h1 class="portada__titulo" data-dividir>Corriente <em>bien puesta.</em></h1>
+          <p class="portada__apoyo" data-revelar style="--i:5">Reparaciones, puntos nuevos, tableros y revisiones eléctricas a domicilio en Medellín y el Valle de Aburrá. Cuéntanos qué pasó: te decimos si es urgente y cuánto puede costar antes de ir.</p>
+          <div class="portada__acciones" data-revelar style="--i:7">
+            <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-iman="0.2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> WhatsApp</a>
+            <a class="boton boton--fantasma" href="#contacto" data-enlace="telefono" data-respaldo="#contacto">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-tel"/></svg> Llamar</a>
+          </div>
+          <dl class="portada__datos" data-revelar style="--i:9">
+            <div><dt>Visita en Medellín</dt><dd>Ref. $80.000–$120.000</dd></div>
+            <div><dt>Horario</dt><dd><span data-dato="horario" data-pendiente="Por confirmar"></span></dd></div>
+          </dl>
+        </article>
+
+        <article class="paso paso--revision" aria-labelledby="revision-titulo">
+          <div class="paso__tarjeta">
+            <p class="etiqueta"><span data-cine-codigo>Diagnóstico</span></p>
+            <h2 id="revision-titulo" data-dividir>Primero, encontrar la falla.</h2>
+            <ol class="ruta" role="list" data-revelar-grupo>
+              <li data-revelar><b>01</b><span><strong>Nos cuentas qué pasó</strong> Por WhatsApp o llamada, con fotos si puedes</span></li>
+              <li data-revelar><b>02</b><span><strong>Medimos, no adivinamos</strong> Tablero, circuitos, tomas y puesta a tierra</span></li>
+              <li data-revelar><b>03</b><span><strong>Te decimos qué es y cuánto cuesta</strong> Antes de tocar nada</span></li>
+              <li data-revelar><b>04</b><span><strong>Reparamos con material certificado</strong> Y lo dejamos probado</span></li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="paso paso--segura" aria-labelledby="segura-titulo">
+          <div class="paso__tarjeta">
+            <p class="etiqueta"><span data-cine-codigo>Corriente segura</span></p>
+            <h2 id="segura-titulo" data-dividir>Luz que no asusta.</h2>
+            <p data-revelar>Tomas que no se calientan, breakers que no saltan sin razón y un tablero que se entiende. ¿Vas a poner puntos nuevos o un aire acondicionado? Arma tu cotización en un minuto.</p>
+            <a class="boton boton--principal" href="#cotizador" data-revelar>Cotizar mis puntos
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-flecha"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CINTA ============ -->
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta__pista" data-cine-cinta="50">
+        <span>Reparaciones</span><i>⚡</i><span>Puntos nuevos</span><i>⚡</i><span>Tableros</span><i>⚡</i><span>Puesta a tierra</span><i>⚡</i><span>Revisiones</span><i>⚡</i><span>Valle de Aburrá</span><i>⚡</i>
+      </div>
+    </div>
+
+    <!-- ============ MANIFIESTO ============ -->
+    <section class="manifiesto-seccion" aria-label="Cómo trabajamos">
+      <div class="contenedor manifiesto__rejilla">
+        <div>
+          <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>00 · Sin sorpresas</span></p>
+          <p class="manifiesto" data-cine-leer>La electricidad no se improvisa. Te mostramos el precio de referencia antes de ir, medimos antes de cambiar y dejamos todo probado.</p>
+        </div>
+        <figure class="manifiesto__foto" data-cine-imagen>
+          <img src="assets/img/fotos/bombillo.webp" alt="Bombillo incandescente encendido, con el filamento brillando dentro de un reflector" width="1024" height="768" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS Y PRECIOS DE REFERENCIA ============ -->
+    <section class="precios" id="precios" aria-labelledby="precios-titulo">
+      <div class="contenedor">
+        <header class="cabecera cabecera--doble">
+          <div>
+            <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>01 · Servicios y precios</span></p>
+            <h2 id="precios-titulo" class="titulo-grande" data-dividir>Cuánto cuesta, antes de ir.</h2>
+          </div>
+          <p class="cabecera__apoyo" data-revelar>Rangos del mercado colombiano en 2026, cada uno con su fuente, para que compares con criterio. <strong>Son referencias, no tarifas de Fasor.</strong></p>
+        </header>
+
+        <div class="filtros" role="group" aria-label="Filtrar servicios" data-filtros>
+          <button type="button" aria-pressed="true" data-filtro="">Todos</button>
+          <button type="button" aria-pressed="false" data-filtro="Revisión">Revisiones</button>
+          <button type="button" aria-pressed="false" data-filtro="Puntos">Tomas y puntos</button>
+          <button type="button" aria-pressed="false" data-filtro="Tablero">Tablero y acometida</button>
+        </div>
+
+        <div class="tabla-precios" data-revelar>
+          <table>
+            <caption class="solo-lector">Servicios eléctricos con su rango de precio de referencia, la fuente y el precio de Fasor</caption>
+            <thead>
+              <tr><th scope="col">Servicio</th><th scope="col">Referencia 2026</th><th scope="col">Fuente</th><th scope="col">Fasor</th><th scope="col"><span class="solo-lector">Pedir</span></th></tr>
+            </thead>
+            <!-- app.js repinta estas filas desde js/datos.js (precios.lista). Este resumen es para quien no tiene JavaScript. -->
+            <tbody data-precios>
+              <tr data-grupo="Revisión"><th scope="row">Visita de diagnóstico (Medellín)</th><td data-rotulo="Referencia 2026">$80.000 – $120.000</td><td data-rotulo="Fuente">Sendwork 2026</td><td data-rotulo="Fasor"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-grupo="Revisión"><th scope="row">Diagnóstico de daños eléctricos</th><td data-rotulo="Referencia 2026">$90.800</td><td data-rotulo="Fuente">EPM a tu puerta 2026</td><td data-rotulo="Fasor"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-grupo="Puntos"><th scope="row">Cambio de toma o interruptor</th><td data-rotulo="Referencia 2026">$40.000 – $80.000</td><td data-rotulo="Fuente">Sendwork 2026</td><td data-rotulo="Fasor"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-grupo="Puntos"><th scope="row">Toma doble nueva</th><td data-rotulo="Referencia 2026">$85.000 – $120.000</td><td data-rotulo="Fuente">Presucosto 2026</td><td data-rotulo="Fasor"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-grupo="Puntos"><th scope="row">Punto 220 V (aire acondicionado, ducha)</th><td data-rotulo="Referencia 2026">$180.000 – $280.000</td><td data-rotulo="Fuente">Presucosto 2026</td><td data-rotulo="Fasor"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-grupo="Tablero"><th scope="row">Tablero residencial (Medellín)</th><td data-rotulo="Referencia 2026">$450.000 – $800.000</td><td data-rotulo="Fuente">Sendwork 2026</td><td data-rotulo="Fasor"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-grupo="Revisión"><th scope="row">Certificación RETIE de una instalación</th><td data-rotulo="Referencia 2026">$300.000 – $800.000</td><td data-rotulo="Fuente">Sendwork 2026</td><td data-rotulo="Fasor"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="precios__notas" data-revelar>
+          <p><span data-precios-nota>Rangos de referencia del mercado, no tarifas de Fasor.</span></p>
+          <p class="precios__fuentes">Fuentes:
+            <a href="https://blog-es.sendwork.com/precios-electricistas-colombia/" target="_blank" rel="noopener">Sendwork, precios de electricistas en Colombia (mayo de 2026)</a> ·
+            <a href="https://presucosto.com/blog/precio-punto-electrico-colombia-2026" target="_blank" rel="noopener">Presucosto, precio del punto eléctrico en Colombia 2026</a> ·
+            <a href="https://www.epm.com.co/epmatupuerta/listado-de-precios/" target="_blank" rel="noopener">EPM a tu puerta, precios 2026</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COTIZADOR POR PUNTOS ============ -->
+    <section class="cotizar" id="cotizador" data-cine-tema="oscuro" aria-labelledby="cotizar-titulo">
+      <div class="contenedor">
+        <header class="cabecera cabecera--doble">
+          <div>
+            <p class="etiqueta"><span data-cine-codigo>02 · Cotizador</span></p>
+            <h2 id="cotizar-titulo" class="titulo-grande" data-dividir>Arma tu cotización por puntos.</h2>
+          </div>
+          <p class="cabecera__apoyo" data-revelar>¿Cuántas tomas, luces o puntos de 220 V necesitas? Suma y mira el rango de referencia. Lo envías por WhatsApp y el técnico lo confirma en la visita.</p>
+        </header>
+
+        <div class="coti" data-cotizador data-revelar>
+          <form class="coti__datos" data-coti-form novalidate>
+            <ul class="coti__puntos" role="list" data-coti-puntos>
+              <li class="coti__punto" data-punto="toma">
+                <span class="coti__nombre" id="cp-toma"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><use href="#i-toma"/></svg><span><strong>Toma doble</strong> <small>Sala, alcobas, estudio</small></span></span>
+                <span class="coti__control"><button type="button" data-coti-menos aria-label="Una toma doble menos">−</button><output aria-labelledby="cp-toma" aria-live="polite" data-coti-cuenta>2</output><button type="button" data-coti-mas aria-label="Una toma doble más">+</button></span>
+              </li>
+              <li class="coti__punto" data-punto="tierra">
+                <span class="coti__nombre" id="cp-tierra"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><use href="#i-escudo"/></svg><span><strong>Toma con polo a tierra</strong> <small>Computador, nevera, TV</small></span></span>
+                <span class="coti__control"><button type="button" data-coti-menos aria-label="Una toma con polo a tierra menos">−</button><output aria-labelledby="cp-tierra" aria-live="polite" data-coti-cuenta>0</output><button type="button" data-coti-mas aria-label="Una toma con polo a tierra más">+</button></span>
+              </li>
+              <li class="coti__punto" data-punto="gfci">
+                <span class="coti__nombre" id="cp-gfci"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><use href="#i-breaker"/></svg><span><strong>Toma GFCI</strong> <small>Baño, cocina, patio</small></span></span>
+                <span class="coti__control"><button type="button" data-coti-menos aria-label="Una toma GFCI menos">−</button><output aria-labelledby="cp-gfci" aria-live="polite" data-coti-cuenta>0</output><button type="button" data-coti-mas aria-label="Una toma GFCI más">+</button></span>
+              </li>
+              <li class="coti__punto" data-punto="luz">
+                <span class="coti__nombre" id="cp-luz"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><use href="#i-bombillo"/></svg><span><strong>Punto de iluminación</strong> <small>Lámpara con su interruptor</small></span></span>
+                <span class="coti__control"><button type="button" data-coti-menos aria-label="Un punto de iluminación menos">−</button><output aria-labelledby="cp-luz" aria-live="polite" data-coti-cuenta>1</output><button type="button" data-coti-mas aria-label="Un punto de iluminación más">+</button></span>
+              </li>
+              <li class="coti__punto" data-punto="p220">
+                <span class="coti__nombre" id="cp-p220"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><use href="#i-rayo"/></svg><span><strong>Punto 220 V</strong> <small>Aire acondicionado, ducha</small></span></span>
+                <span class="coti__control"><button type="button" data-coti-menos aria-label="Un punto de 220 V menos">−</button><output aria-labelledby="cp-p220" aria-live="polite" data-coti-cuenta>0</output><button type="button" data-coti-mas aria-label="Un punto de 220 V más">+</button></span>
+              </li>
+            </ul>
+
+            <label class="interruptor">
+              <input type="checkbox" name="materiales" data-coti="materiales" checked>
+              <span class="interruptor__texto"><strong>Con materiales</strong> Cable, caja, aparato y tubería. Apágalo si ya los compraste.</span>
+              <span class="interruptor__pista" aria-hidden="true"></span>
+            </label>
+            <label class="interruptor">
+              <input type="checkbox" name="urgente" data-coti="urgente">
+              <span class="interruptor__texto"><strong>Es urgente (noche o festivo)</strong> Referencia: de +50 % a +100 %</span>
+              <span class="interruptor__pista" aria-hidden="true"></span>
+            </label>
+          </form>
+
+          <div class="coti__resultado" aria-live="polite">
+            <p class="coti__rotulo">Rango de referencia</p>
+            <p class="coti__cifra"><span data-coti-out="desde">$265.000</span> <i>–</i> <span data-coti-out="hasta">$390.000</span></p>
+            <p class="coti__sub" data-coti-out="resumen">3 puntos con materiales.</p>
+            <div class="coti__barras" aria-hidden="true" data-coti-barras></div>
+            <dl class="coti__desglose" data-coti-desglose></dl>
+            <p class="coti__aviso"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-alerta"/></svg>
+              <span>Rangos de <a href="https://presucosto.com/blog/precio-punto-electrico-colombia-2026" target="_blank" rel="noopener" data-coti-fuente>Presucosto 2026</a> (nacional, ±15 %) y recargo de urgencia de Sendwork. No incluye la visita, regatas en muro ni resanes. Es orientativo, no una cotización.</span></p>
+            <a class="boton boton--principal boton--ancho" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-coti-wa>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Enviar esta cotización</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ¿QUÉ HAGO SI…? (guía de seguridad) ============ -->
+    <section class="guia" id="seguridad" aria-labelledby="guia-titulo">
+      <div class="contenedor">
+        <header class="cabecera cabecera--doble">
+          <div>
+            <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>03 · Seguridad</span></p>
+            <h2 id="guia-titulo" class="titulo-grande" data-dividir>¿Qué hago si…?</h2>
+          </div>
+          <p class="cabecera__apoyo" data-revelar>Elige lo que está pasando. Te decimos qué hacer ya, qué no hacer y cuándo llamar. <strong>Si hay fuego, humo o alguien herido: sal y llama al 123.</strong></p>
+        </header>
+
+        <div class="diag" data-diagnostico>
+          <div class="diag__sintomas" role="tablist" aria-label="Situaciones">
+            <button type="button" role="tab" id="t-luz" aria-controls="p-luz" aria-selected="true" data-sintoma="luz"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-bombillo"/></svg><span>Se fue la luz</span></button>
+            <button type="button" role="tab" id="t-breaker" aria-controls="p-breaker" aria-selected="false" tabindex="-1" data-sintoma="breaker"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-breaker"/></svg><span>Salta el breaker</span></button>
+            <button type="button" role="tab" id="t-quemado" aria-controls="p-quemado" aria-selected="false" tabindex="-1" data-sintoma="quemado"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-humo"/></svg><span>Huele a quemado</span></button>
+            <button type="button" role="tab" id="t-toma" aria-controls="p-toma" aria-selected="false" tabindex="-1" data-sintoma="toma"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-toma"/></svg><span>Toma caliente o negra</span></button>
+            <button type="button" role="tab" id="t-corriente" aria-controls="p-corriente" aria-selected="false" tabindex="-1" data-sintoma="corriente"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-mano"/></svg><span>Da corriente</span></button>
+            <button type="button" role="tab" id="t-cable" aria-controls="p-cable" aria-selected="false" tabindex="-1" data-sintoma="cable"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-poste"/></svg><span>Cable caído en la calle</span></button>
+          </div>
+
+          <div class="diag__paneles">
+            <article class="diag__panel" id="p-luz" role="tabpanel" aria-labelledby="t-luz" tabindex="0" data-producto="Se fue la luz en mi casa">
+              <h3>Se fue la luz</h3>
+              <div class="diag__columnas">
+                <div><p class="diag__rotulo">Haz esto</p>
+                  <ul role="list" class="diag__ok"><li>Mira si los vecinos y el alumbrado de la calle también están sin luz. Si es todo el sector, es la red: repórtalo a EPM.</li><li>Si es solo tu casa, revisa el tablero: busca un breaker abajo o a medio camino.</li><li>Desconecta los aparatos grandes antes de que vuelva la luz.</li></ul></div>
+                <div><p class="diag__rotulo">No hagas</p>
+                  <ul role="list" class="diag__no"><li>No abras el contador ni toques los cables que llegan de la calle (la acometida).</li><li>No uses velas cerca de cortinas: mejor una linterna.</li></ul></div>
+              </div>
+              <p class="diag__llamar"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-alerta"/></svg> Si solo falla tu casa y los breakers están arriba, o se fue la luz en una parte de la casa, llama a un electricista.</p>
+              <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Fasor. {producto} (los vecinos sí tienen). ¿Pueden venir a revisar?">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Pedir electricista</a>
+            </article>
+
+            <article class="diag__panel" id="p-breaker" role="tabpanel" aria-labelledby="t-breaker" tabindex="0" hidden data-producto="Se me salta el breaker">
+              <h3>Salta el breaker</h3>
+              <div class="diag__columnas">
+                <div><p class="diag__rotulo">Haz esto</p>
+                  <ul role="list" class="diag__ok"><li>Desconecta lo que estaba funcionando en ese circuito.</li><li>Baja el breaker del todo y vuelve a subirlo, una sola vez.</li><li>Conecta los aparatos uno por uno: si salta con uno en particular, el problema puede ser ese aparato.</li></ul></div>
+                <div><p class="diag__rotulo">No hagas</p>
+                  <ul role="list" class="diag__no"><li>No lo sostengas arriba ni lo amarres.</li><li>No lo cambies por uno «más grande»: el breaker protege el cable.</li></ul></div>
+              </div>
+              <p class="diag__llamar"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-alerta"/></svg> Si salta sin nada conectado o salta seguido, puede haber un corto o una sobrecarga: déjalo abajo y llama a un electricista.</p>
+              <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Fasor. {producto} y ya probé desconectando los aparatos. ¿Pueden venir a revisar?">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Pedir revisión</a>
+            </article>
+
+            <article class="diag__panel" id="p-quemado" role="tabpanel" aria-labelledby="t-quemado" tabindex="0" hidden data-producto="Huele a quemado o salen chispas">
+              <h3>Huele a quemado o salen chispas</h3>
+              <div class="diag__columnas">
+                <div><p class="diag__rotulo">Haz esto</p>
+                  <ul role="list" class="diag__ok"><li>Si llegas al tablero sin riesgo, baja el breaker principal.</li><li>Si hay humo o fuego, sal de la casa con todos y llama al 123.</li><li>Ubica de dónde viene el olor sin tocar tomas ni cables.</li></ul></div>
+                <div><p class="diag__rotulo">No hagas</p>
+                  <ul role="list" class="diag__no"><li>Nunca eches agua sobre un aparato o un cable con corriente.</li><li>No vuelvas a subir el breaker hasta que lo revise un electricista.</li></ul></div>
+              </div>
+              <p class="diag__llamar diag__llamar--urgente"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-alerta"/></svg> Es urgente. Con fuego o humo, primero el 123; después, un electricista para encontrar la causa.</p>
+              <a class="boton boton--principal" href="#contacto" data-enlace="telefono" data-respaldo="#contacto">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-tel"/></svg> Llamar ya</a>
+            </article>
+
+            <article class="diag__panel" id="p-toma" role="tabpanel" aria-labelledby="t-toma" tabindex="0" hidden data-producto="Tengo una toma caliente o ennegrecida">
+              <h3>Una toma caliente, negra o floja</h3>
+              <div class="diag__columnas">
+                <div><p class="diag__rotulo">Haz esto</p>
+                  <ul role="list" class="diag__ok"><li>Deja de usarla.</li><li>Baja el breaker de ese circuito antes de desconectar lo que tenga enchufado.</li><li>Toma una foto: ayuda al técnico a llevar el repuesto.</li></ul></div>
+                <div><p class="diag__rotulo">No hagas</p>
+                  <ul role="list" class="diag__no"><li>No conectes multitomas una tras otra ni aparatos de mucho consumo en la misma toma.</li><li>No la arregles con cinta.</li></ul></div>
+              </div>
+              <p class="diag__llamar"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-alerta"/></svg> Una toma que se calienta tiene un mal contacto o más carga de la que aguanta. Hay que cambiarla y revisar el circuito.</p>
+              <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Fasor. {producto}. ¿Pueden venir a cambiarla?">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Pedir cambio de toma</a>
+            </article>
+
+            <article class="diag__panel" id="p-corriente" role="tabpanel" aria-labelledby="t-corriente" tabindex="0" hidden data-producto="Un aparato o la ducha da corriente">
+              <h3>Un aparato, la ducha o una pared da corriente</h3>
+              <div class="diag__columnas">
+                <div><p class="diag__rotulo">Haz esto</p>
+                  <ul role="list" class="diag__ok"><li>Si alguien quedó pegado a la corriente, no lo toques: baja el breaker principal y llama al 123.</li><li>Si no puedes cortar la energía, sepáralo con algo seco que no conduzca, como un palo de madera.</li><li>Si fue un corrientazo leve, deja de usar ese aparato o esa ducha.</li></ul></div>
+                <div><p class="diag__rotulo">No hagas</p>
+                  <ul role="list" class="diag__no"><li>No sigas usando la ducha eléctrica si da corriente.</li><li>No toques aparatos con las manos mojadas o descalzo sobre piso mojado.</li></ul></div>
+              </div>
+              <p class="diag__llamar diag__llamar--urgente"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-alerta"/></svg> Suele ser falta de puesta a tierra o un cable pelado. Es una revisión prioritaria.</p>
+              <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Fasor. {producto}. ¿Pueden venir a revisar la puesta a tierra?">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Pedir revisión</a>
+            </article>
+
+            <article class="diag__panel" id="p-cable" role="tabpanel" aria-labelledby="t-cable" tabindex="0" hidden>
+              <h3>Un cable caído en la calle</h3>
+              <div class="diag__columnas">
+                <div><p class="diag__rotulo">Haz esto</p>
+                  <ul role="list" class="diag__ok"><li>Aléjate y aleja a los demás, también a las mascotas.</li><li>Repórtalo a EPM: línea de atención 604 444 4115.</li><li>Si hay fuego o alguien herido, llama al 123.</li></ul></div>
+                <div><p class="diag__rotulo">No hagas</p>
+                  <ul role="list" class="diag__no"><li>No lo toques ni lo muevas, ni con un palo.</li><li>No pises charcos cerca del cable.</li></ul></div>
+              </div>
+              <p class="diag__llamar"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-alerta"/></svg> Las redes de la calle son de la empresa de energía: no las arregla un electricista particular. Confirma las líneas de EPM en su web o en tu factura.</p>
+            </article>
+          </div>
+        </div>
+        <p class="diag__nota" data-revelar>Orientación general de seguridad, no reemplaza la revisión de un electricista. Antes de tocar cualquier toma, interruptor o aparato, corta la energía en el tablero.</p>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO TRABAJAMOS (tarjetas apiladas) ============ -->
+    <section class="proceso" id="proceso" aria-labelledby="proceso-titulo">
+      <div class="contenedor">
+        <header class="cabecera">
+          <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>04 · Cómo trabajamos</span></p>
+          <h2 id="proceso-titulo" class="titulo-grande" data-dividir>Del aviso al circuito probado.</h2>
+        </header>
+        <ol class="pila" data-cine-apilar role="list">
+          <li class="pila__tarjeta pila__tarjeta--1">
+            <p class="pila__num">01</p>
+            <div>
+              <h3>Nos cuentas qué pasó</h3>
+              <p>Por WhatsApp, con una foto del tablero o de la toma si puedes. Te decimos si es urgente, qué puedes hacer mientras llegamos y el valor de la visita.</p>
+            </div>
+            <figure class="pila__foto"><img src="assets/img/fotos/toma.webp" alt="Electricista con casco blanco instalando una toma en la pared" width="960" height="639" loading="lazy" decoding="async"><figcaption>Foto de referencia</figcaption></figure>
+          </li>
+          <li class="pila__tarjeta pila__tarjeta--2">
+            <p class="pila__num">02</p>
+            <div>
+              <h3>Medimos antes de cambiar</h3>
+              <p>Revisamos el tablero, cada circuito, las tomas y la puesta a tierra con instrumentos. Así se encuentra la causa y no se cambian piezas a ciegas.</p>
+            </div>
+            <figure class="pila__foto"><img src="assets/img/fotos/tablero.webp" alt="Electricista de espaldas, con casco y cables en el hombro, frente a un tablero eléctrico abierto" width="960" height="639" loading="lazy" decoding="async"><figcaption>Foto de referencia</figcaption></figure>
+          </li>
+          <li class="pila__tarjeta pila__tarjeta--3">
+            <p class="pila__num">03</p>
+            <div>
+              <h3>Cotización por escrito</h3>
+              <p>Qué hay que hacer, con qué materiales y cuánto cuesta, antes de empezar. Cable del calibre correcto, colores según la norma y material con certificado.</p>
+            </div>
+            <figure class="pila__foto"><img src="assets/img/fotos/cables.webp" alt="Cuatro cables eléctricos pelados en la punta: amarillo, azul, café y rojo" width="1024" height="683" loading="lazy" decoding="async"><figcaption>Foto de referencia</figcaption></figure>
+          </li>
+          <li class="pila__tarjeta pila__tarjeta--4">
+            <p class="pila__num">04</p>
+            <div>
+              <h3>Prueba y entrega</h3>
+              <p>Probamos cada punto, marcamos los circuitos en el tablero y te explicamos qué se hizo. Garantía por escrito y, cuando la obra lo exige, la declaración de cumplimiento del RETIE.</p>
+              <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Fasor. Quiero cotizar un trabajo eléctrico en mi casa.">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Cotizar mi trabajo</a>
+            </div>
+            <svg class="pila__icono" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ COBERTURA (línea del valle, de sur a norte) ============ -->
+    <section class="cobertura" id="cobertura" aria-labelledby="cobertura-titulo">
+      <div class="contenedor cobertura__rejilla">
+        <div class="cobertura__texto">
+          <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>05 · Cobertura</span></p>
+          <h2 id="cobertura-titulo" class="titulo-grande" data-dividir>De Caldas a Barbosa.</h2>
+          <p class="cabecera__apoyo" data-revelar>Los diez municipios del Área Metropolitana del Valle de Aburrá, de sur a norte. Toca el tuyo y pide el electricista con tu municipio ya escrito.</p>
+          <p class="cobertura__ejemplo" data-cobertura-ejemplo><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-alerta"/></svg> Cobertura de ejemplo: el negocio confirma sus municipios.</p>
+        </div>
+        <div class="valle" data-cobertura>
+          <ol class="valle__linea" role="list" data-cobertura-lista>
+            <li><button type="button" aria-pressed="false" data-municipio="Caldas"><i></i><span>Caldas</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="La Estrella"><i></i><span>La Estrella</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="Sabaneta"><i></i><span>Sabaneta</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="Itagüí"><i></i><span>Itagüí</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="Envigado"><i></i><span>Envigado</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="true" data-municipio="Medellín"><i></i><span>Medellín</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="Bello"><i></i><span>Bello</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="Copacabana"><i></i><span>Copacabana</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="Girardota"><i></i><span>Girardota</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="Barbosa"><i></i><span>Barbosa</span><small>Atiende</small></button></li>
+          </ol>
+          <div class="valle__accion">
+            <p class="valle__elegido" aria-live="polite">Electricista en <b data-cobertura-elegido>Medellín</b></p>
+            <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-cobertura-wa data-mensaje="Hola, Fasor. Estoy en Medellín y necesito un electricista.">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Pedir electricista aquí</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONFIANZA ============ -->
+    <section class="confianza" id="confianza" aria-labelledby="confianza-titulo">
+      <div class="contenedor">
+        <header class="cabecera cabecera--doble">
+          <div>
+            <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>06 · Confianza</span></p>
+            <h2 id="confianza-titulo" class="titulo-grande" data-dividir>Pídele esto a tu electricista.</h2>
+          </div>
+          <p class="cabecera__apoyo" data-revelar>Antes de dejar que alguien abra tu tablero, pregunta por estos datos. Aquí están los nuestros.</p>
+        </header>
+        <ul class="docs" role="list" data-revelar-grupo>
+          <li class="doc" data-revelar>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28"><use href="#i-carne"/></svg>
+            <p class="doc__rotulo">Matrícula profesional</p>
+            <p class="doc__valor"><span data-dato="matricula" data-pendiente="Por confirmar"></span></p>
+            <p class="doc__ayuda">En Colombia, los técnicos electricistas necesitan matrícula profesional (Ley 19 de 1990 y Ley 1264 de 2008). La expide el <a href="https://www.conte.org.co" target="_blank" rel="noopener">CONTE</a>: pide el número y verifícalo.</p>
+          </li>
+          <li class="doc" data-revelar>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28"><use href="#i-papel"/></svg>
+            <p class="doc__rotulo">RETIE</p>
+            <p class="doc__valor">Declaración de cumplimiento</p>
+            <p class="doc__ayuda">En instalaciones nuevas y reformas, el reglamento técnico (RETIE, actualizado en 2026) pide una declaración de cumplimiento de quien construye, y en algunos casos inspección. Pregunta si tu obra la necesita.</p>
+          </li>
+          <li class="doc" data-revelar>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28"><use href="#i-escudo"/></svg>
+            <p class="doc__rotulo">Garantía</p>
+            <p class="doc__valor"><span data-dato="garantia" data-pendiente="Por confirmar"></span></p>
+            <p class="doc__ayuda">Pídela por escrito, con lo que cubre y por cuánto tiempo (Ley 1480 de 2011).</p>
+          </li>
+          <li class="doc" data-revelar>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28"><use href="#i-reloj"/></svg>
+            <p class="doc__rotulo">Horario y urgencias</p>
+            <p class="doc__valor"><span data-dato="horario" data-pendiente="Por confirmar"></span></p>
+            <p class="doc__ayuda">Urgencias: <span data-dato="urgencias" data-pendiente="por confirmar"></span>. Si hay recargo de noche o festivo, que te lo digan antes de ir.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PREGUNTAS ============ -->
+    <section class="preguntas-seccion" id="preguntas" aria-labelledby="preguntas-titulo">
+      <div class="contenedor preguntas__rejilla">
+        <header class="cabecera">
+          <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>07 · Preguntas</span></p>
+          <h2 id="preguntas-titulo" class="titulo-grande" data-dividir>Lo que más nos preguntan.</h2>
+        </header>
+        <div class="preguntas">
+          <details>
+            <summary>¿Cuánto cuesta la visita?</summary>
+            <p>Como referencia, una visita de diagnóstico en Medellín cuesta entre $80.000 y $120.000 (Sendwork, 2026), y el diagnóstico de daños eléctricos de EPM a tu puerta, $90.800. El valor de la visita de Fasor: <span data-dato="visita" data-pendiente="por confirmar"></span>.</p>
+          </details>
+          <details>
+            <summary>¿Por qué se me salta el breaker?</summary>
+            <p>Casi siempre por una de tres cosas: demasiados aparatos en el mismo circuito (sobrecarga), un corto en un cable o un aparato dañado. El breaker hace su trabajo: protege el cable. Lo que hay que encontrar es la causa.</p>
+          </details>
+          <details>
+            <summary>¿Puedo conectar el aire acondicionado en cualquier toma?</summary>
+            <p>Depende del equipo: muchos aires y las duchas eléctricas necesitan un punto de 220 V o un circuito solo para ellos. Mira la placa o el manual del equipo y pregunta antes de conectarlo.</p>
+          </details>
+          <details>
+            <summary>¿Mi casa necesita certificado RETIE?</summary>
+            <p>Las instalaciones nuevas y las reformas deben cumplir el RETIE, y quien las construye firma una declaración de cumplimiento; algunas, además, necesitan inspección. Una reparación pequeña no siempre lo exige. Cuéntanos tu caso y te decimos qué aplica.</p>
+          </details>
+          <details>
+            <summary>¿Ustedes compran los materiales?</summary>
+            <p>Como prefieras: la cotización puede ir con materiales o solo con mano de obra. Si los compras tú, te decimos qué referencia y qué calibre de cable llevar.</p>
+          </details>
+          <details>
+            <summary>¿Atienden urgencias?</summary>
+            <p><span data-dato="urgencias" data-pendiente="Por confirmar"></span>. Horario: <span data-dato="horario" data-pendiente="por confirmar"></span>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO / CIERRE ============ -->
+    <section class="contacto" id="contacto" data-cine-tema="oscuro" aria-labelledby="contacto-titulo">
+      <div class="contenedor contacto__rejilla">
+        <div class="contacto__texto">
+          <p class="etiqueta"><span data-cine-codigo>08 · Contacto</span></p>
+          <h2 id="contacto-titulo" class="contacto__titulo" data-dividir>¿Se fue la luz? Escríbenos.</h2>
+          <p data-revelar>Cuéntanos qué pasa y dónde estás: se abre tu WhatsApp con el mensaje escrito. Si es urgente, llama.</p>
+          <a class="contacto__llamar" href="#contacto" data-enlace="telefono" data-respaldo="#contacto" data-revelar>
+            <span class="contacto__llamar-icono"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-tel"/></svg></span>
+            <span><small>Llamar ahora</small> <b data-dato="telefonoTexto" data-pendiente="Teléfono por confirmar"></b></span>
+          </a>
+          <ul class="contacto__datos" role="list" data-revelar-grupo>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-wa"/></svg>
+              <a href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto"><span data-dato="whatsappTexto" data-pendiente="WhatsApp por confirmar"></span></a>
+            </li>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-reloj"/></svg>
+              <span data-dato="horario" data-pendiente="Horario por confirmar"></span>
+            </li>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-mapa"/></svg>
+              <span>Servicio a domicilio en el Valle de Aburrá</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="formulario" data-formulario data-whatsapp-saludo="Hola, Fasor. Necesito un electricista." novalidate data-revelar>
+          <div class="campo">
+            <label for="f-nombre">Tu nombre</label>
+            <input id="f-nombre" name="Nombre" type="text" autocomplete="name" required maxlength="80">
+          </div>
+          <fieldset class="campo campo--opciones">
+            <legend>¿Qué necesitas?</legend>
+            <label><input type="radio" name="Servicio" value="Reparación" checked> Reparación</label>
+            <label><input type="radio" name="Servicio" value="Instalación"> Instalación</label>
+            <label><input type="radio" name="Servicio" value="Revisión"> Revisión</label>
+          </fieldset>
+          <div class="formulario__fila">
+            <div class="campo">
+              <label for="f-caso">¿Qué pasa?</label>
+              <select id="f-caso" name="Caso" required>
+                <option value="">Elige uno</option>
+                <option>Se fue la luz en parte de la casa</option>
+                <option>Salta el breaker</option>
+                <option>Toma o cable quemado</option>
+                <option>Puntos nuevos</option>
+                <option>Tablero o acometida</option>
+                <option>Punto para aire o ducha</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="f-municipio">Municipio</label>
+              <select id="f-municipio" name="Municipio" required data-municipios>
+                <option value="">Elige uno</option>
+                <option>Caldas</option><option>La Estrella</option><option>Sabaneta</option><option>Itagüí</option><option>Envigado</option>
+                <option>Medellín</option><option>Bello</option><option>Copacabana</option><option>Girardota</option><option>Barbosa</option>
+                <option>Otro</option>
+              </select>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="f-cuando">¿Para cuándo?</label>
+            <select id="f-cuando" name="Para cuándo">
+              <option>Es urgente</option>
+              <option>Esta semana</option>
+              <option>Puedo esperar</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="f-nota">Cuéntanos más <small>(opcional)</small></label>
+            <textarea id="f-nota" name="Detalle" rows="3" maxlength="300" placeholder="Por ejemplo: la toma de la cocina se calienta y huele a quemado."></textarea>
+          </div>
+          <label class="campo campo--casilla">
+            <input type="checkbox" name="autorizacion" value="Sí" required data-no-mensaje>
+            <span>Autorizo el tratamiento de mis datos para atender mi solicitud, según la <a href="privacidad.html">política de privacidad</a> (Ley 1581 de 2012).</span>
+          </label>
+          <input class="trampa" type="text" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="boton boton--principal boton--ancho" type="submit">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Enviar por WhatsApp</button>
+          <p class="formulario__estado" data-formulario-estado role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__rejilla">
+        <div>
+          <p class="pie__marca marca">Fasor</p>
+          <p class="pie__lema">Electricistas a domicilio · Valle de Aburrá</p>
+        </div>
+        <div class="pie__datos">
+          <a href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto">WhatsApp <span data-dato="whatsappTexto"></span></a>
+          <a href="#contacto" data-enlace="telefono" data-respaldo="#contacto">Llamar <span data-dato="telefonoTexto"></span></a>
+          <span data-dato="horario" data-pendiente="Horario por confirmar"></span>
+          <span>NIT: <span data-dato="nit" data-pendiente="por confirmar"></span></span>
+        </div>
+        <div class="pie__legal">
+          <a href="privacidad.html">Política de privacidad</a>
+          <a href="creditos.html">Créditos y fuentes</a>
+          <a href="#inicio">Volver arriba</a>
+        </div>
+      </div>
+      <p class="pie__muestra"><strong>Proyecto de muestra.</strong> Fasor es una marca inventada para enseñar este diseño. Los precios son rangos de referencia del mercado con su fuente (Sendwork, Presucosto y EPM, 2026), no tarifas de Fasor; el cotizador y la guía de seguridad son orientativos; la cobertura es de ejemplo, y las fotos son de banco. © <span data-anio>2026</span></p>
+    </div>
+  </footer>
+
+  <!-- Barra fija del móvil: llamar y WhatsApp, aparece al salir de la portada y se esconde en el cierre -->
+  <div class="barra-movil">
+    <a class="barra-movil__llamar" href="#contacto" data-enlace="telefono" data-respaldo="#contacto">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-tel"/></svg> Llamar</a>
+    <a class="barra-movil__boton" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto">
+      <span class="barra-movil__icono"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><use href="#i-wa"/></svg></span>
+      <span class="barra-movil__texto">WhatsApp</span>
+    </a>
+  </div>
+
+  <script defer src="lib/three.min.js"></script>
+  <script defer src="js/datos.js?v=20261119"></script>
+  <script defer src="js/motor.js?v=20261119"></script>
+  <script defer src="js/cine.js?v=20261119"></script>
+  <script defer src="js/escena.js?v=20261119"></script>
+  <script defer src="js/app.js?v=20261119"></script>
+</body>
+</html>

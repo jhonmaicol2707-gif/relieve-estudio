@@ -1,0 +1,152 @@
+{
+  "carta/perro-zampa.webp": {
+    "uso": "Perro Zampa",
+    "titulo_original": "Mmm... hot dog with cheese sauce",
+    "autor": "jeffreyw",
+    "licencia": "BY 2.0",
+    "licencia_url": "https://creativecommons.org/licenses/by/2.0/",
+    "origen": "https://www.flickr.com/photos/7927684@N03/6190694912",
+    "cambios": "Recortada y convertida a WebP",
+    "exige_credito": true
+  },
+  "carta/perro-chili.webp": {
+    "uso": "Perro Chili",
+    "titulo_original": "Mmm... chili cheese dogs",
+    "autor": "jeffreyw",
+    "licencia": "BY 2.0",
+    "licencia_url": "https://creativecommons.org/licenses/by/2.0/",
+    "origen": "https://www.flickr.com/photos/7927684@N03/8666837182",
+    "cambios": "Recortada y convertida a WebP",
+    "exige_credito": true
+  },
+  "carta/perro-con-todo.webp": {
+    "uso": "Perro Con Todo",
+    "titulo_original": "Breakfast Hot Dog bacon wrapped scrambled eggs american cheese Sriracha chives Hawaiian bun",
+    "autor": "PersonalCreations.com",
+    "licencia": "BY 2.0",
+    "licencia_url": "https://creativecommons.org/licenses/by/2.0/",
+    "origen": "https://www.flickr.com/photos/127294011@N07/28868673696",
+    "cambios": "Recortada y convertida a WebP",
+    "exige_credito": true
+  },
+  "carta/burger-clasica.webp": {
+    "uso": "Zampa Clásica",
+    "titulo_original": "Pub Burger - Burns Pub & Restaurant - Broomfield, CO",
+    "autor": "vwcampin",
+    "licencia": "BY 2.0",
+    "licencia_url": "https://creativecommons.org/licenses/by/2.0/",
+    "origen": "https://www.flickr.com/photos/125112383@N06/27900215948",
+    "cambios": "Recortada y convertida a WebP",
+    "exige_credito": true
+  },
+  "carta/burger-doble.webp": {
+    "uso": "Doble Bulla (y respaldo de la portada sin 3D)",
+    "titulo_original": "Close up photography of hamburger - Credit to https://homegets.com/",
+    "autor": "homegets.com",
+    "licencia": "BY 2.0",
+    "licencia_url": "https://creativecommons.org/licenses/by/2.0/",
+    "origen": "https://www.flickr.com/photos/141436406@N04/49662549217",
+    "cambios": "Recortada y convertida a WebP",
+    "exige_credito": true
+  },
+  "carta/burger-cebollona.webp": {
+    "uso": "La Cebollona",
+    "titulo_original": "Double Bacon Cheeseburger Slider @ marks",
+    "autor": "pellesten",
+    "licencia": "BY 2.0",
+    "licencia_url": "https://creativecommons.org/licenses/by/2.0/",
+    "origen": "https://www.flickr.com/photos/82976024@N00/5655196241",
+    "cambios": "Recortada y convertida a WebP",
+    "exige_credito": true
+  },
+  "carta/burger-pollo.webp": {
+    "uso": "Pollo Crocante",
+    "titulo_original": "A wooden table holds two plates with sesame seed burgers—one with chicken, the other with lettuce and tomato—plus crispy chips, cheesy fries with chili flakes, orange dipping sauce, and a pizza.",
+    "autor": "Aditya Pratap Singh",
+    "licencia": "CC0 1.0",
+    "licencia_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "origen": "https://wordpress.org/photos/photo/9166879e7c/",
+    "cambios": "Recortada y convertida a WebP",
+    "exige_credito": false
+  },
+  "carta/arepa-desmechada.webp": {
+    "uso": "Arepa de Desmechada",
+    "titulo_original": "Shredded Beef Arepa - Cruzao Arepa Bar AUD9",
+    "autor": "avlxyz",
+    "licencia": "BY-SA 2.0",
+    "licencia_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "origen": "https://www.flickr.com/photos/10559879@N00/5040743676",
+    "cambios": "Recortada y convertida a WebP (la versión adaptada se comparte bajo la misma licencia CC BY-SA)",
+    "exige_credito": true
+  },
+  "carta/arepa-mixta.webp": {
+    "uso": "Arepa Mixta",
+    "titulo_original": "Filling - Shredded Beef Arepa - Cruzao Arepa Bar AUD9",
+    "autor": "avlxyz",
+    "licencia": "BY-SA 2.0",
+    "licencia_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "origen": "https://www.flickr.com/photos/10559879@N00/5040123327",
+    "cambios": "Recortada y convertida a WebP (la versión adaptada se comparte bajo la misma licencia CC BY-SA)",
+    "exige_credito": true
+  },
+  "carta/salchipapa-callejera.webp": {
+    "uso": "Salchipapa Callejera",
+    "titulo_original": "Free curry sausage image",
+    "autor": "Desconocido",
+    "licencia": "CC0 1.0",
+    "licencia_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "origen": "https://www.rawpixel.com/image/5920244/photo-image-public-domain-food-free",
+    "cambios": "Recortada y convertida a WebP",
+    "exige_credito": false
+  },
+  "carta/papas-francesa.webp": {
+    "uso": "Papas a la francesa",
+    "titulo_original": "The world's best sliders & fries",
+    "autor": "Ross Catrow",
+    "licencia": "BY-SA 2.0",
+    "licencia_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "origen": "https://www.flickr.com/photos/76877398@N00/4943008359",
+    "cambios": "Recortada y convertida a WebP (la versión adaptada se comparte bajo la misma licencia CC BY-SA)",
+    "exige_credito": true
+  },
+  "carta/limonada-hierbabuena.webp": {
+    "uso": "Limonada de hierbabuena",
+    "titulo_original": "Water lemon mint jug",
+    "autor": "Jakub Kapusnak",
+    "licencia": "CC0 1.0",
+    "licencia_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "origen": "https://www.rawpixel.com/image/448006/free-photo-image-mint-beverage-cc0",
+    "cambios": "Recortada y convertida a WebP",
+    "exige_credito": false
+  },
+  "carta/jugo-mango.webp": {
+    "uso": "Jugo de mango en leche",
+    "titulo_original": "mango dream",
+    "autor": "Matthias Rhomberg",
+    "licencia": "BY 2.0",
+    "licencia_url": "https://creativecommons.org/licenses/by/2.0/",
+    "origen": "https://www.flickr.com/photos/33772123@N03/3444207913",
+    "cambios": "Recortada y convertida a WebP",
+    "exige_credito": true
+  },
+  "carta/jugo-maracuya.webp": {
+    "uso": "Jugo de maracuyá en agua",
+    "titulo_original": "Coconut Pineapple Colada_02of4",
+    "autor": "Breville USA",
+    "licencia": "BY 2.0",
+    "licencia_url": "https://creativecommons.org/licenses/by/2.0/",
+    "origen": "https://www.flickr.com/photos/38102750@N06/8735135315",
+    "cambios": "Recortada y convertida a WebP",
+    "exige_credito": true
+  },
+  "plancha.webp": {
+    "uso": "Sección «La pregunta» (foto a sangre)",
+    "titulo_original": "Grilling Burgers",
+    "autor": "Valters Krontals",
+    "licencia": "BY 2.0",
+    "licencia_url": "https://creativecommons.org/licenses/by/2.0/",
+    "origen": "https://www.flickr.com/photos/53442856@N06/7668772348",
+    "cambios": "Recortada y convertida a WebP",
+    "exige_credito": true
+  }
+}

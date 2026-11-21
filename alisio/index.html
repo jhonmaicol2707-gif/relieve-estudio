@@ -1,0 +1,686 @@
+<!doctype html>
+<!-- Alisio — PROYECTO DE MUESTRA (marca inventada; precios = referencias del mercado con fuente: EPM a tu puerta
+     2026; calculadora con la regla de Midea Colombia). Sin cursor propio: servicio urgente, público amplio. -->
+<html lang="es-CO" data-cine-entrada="Alisio" data-tema="oscuro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Sin destello antes de la cortina (ver cine.css: .cine-pre) -->
+  <script>try{var h=document.documentElement;if(h.hasAttribute("data-cine-entrada")&&!sessionStorage.getItem("cine-entro")&&!/[?&]qa=/.test(location.search)&&!matchMedia("(prefers-reduced-motion: reduce)").matches)h.classList.add("cine-pre")}catch(e){}</script>
+  <title>Alisio · Aire acondicionado y refrigeración en Medellín</title>
+  <meta name="description" content="Demo de técnicos de aire acondicionado y neveras en el Valle de Aburrá: precios de referencia, calculadora de BTU, diagnóstico y WhatsApp o llamada.">
+  <meta name="theme-color" content="#07121E">
+  <!-- Muestra: que no aparezca en Google. Quitar esta línea el día de publicar la web real. -->
+  <meta name="robots" content="noindex">
+  <!-- Sin dominio todavía: sin canonical y og:image relativa (pendiente para el día de publicar). -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alisio · Frío que llega, frío que dura">
+  <meta property="og:description" content="Instalación, mantenimiento y reparación de aires acondicionados y neveras en el Valle de Aburrá. Escribe o llama.">
+  <meta property="og:image" content="assets/img/compartir.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="css/fuentes.css?v=20261119">
+
+  <link rel="stylesheet" href="css/base.css?v=20261119">
+  <link rel="stylesheet" href="css/cine.css?v=20261119">
+  <link rel="stylesheet" href="css/sitio.css?v=20261119">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HVACBusiness",
+    "name": "Alisio (proyecto de muestra)",
+    "description": "Demo de servicio técnico de aire acondicionado y refrigeración en Medellín y el Valle de Aburrá.",
+    "areaServed": "Área Metropolitana del Valle de Aburrá",
+    "address": { "@type": "PostalAddress", "addressLocality": "Medellín", "addressRegion": "Antioquia", "addressCountry": "CO" }
+  }
+  </script>
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <!-- Iconos (se usan con <use href="#…">) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5 3.5h3.2l1.6 4.2-2.2 1.4a11 11 0 0 0 7.3 7.3l1.4-2.2 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5Z"/></symbol>
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-copo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2.5v19M3.8 7.2l16.4 9.6M3.8 16.8l16.4-9.6"/><path d="m9.6 4.3 2.4 2 2.4-2M9.6 19.7l2.4-2 2.4 2M4.6 10.4l3-.6-1-2.9M19.4 13.6l-3 .6 1 2.9M4.6 13.6l3 .6-1 2.9M19.4 10.4l-3-.6 1-2.9"/></g></symbol>
+    <symbol id="i-split" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="8" rx="2"/><path d="M5.5 10h13M8 15.5l-1 3M12 15.5v3.5M16 15.5l1 3"/></g></symbol>
+    <symbol id="i-gota" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 3.5S6 10 6 14.2a6 6 0 0 0 12 0C18 10 12 3.5 12 3.5Z"/></symbol>
+    <symbol id="i-ruido" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3l4-3.5v12l-4-3.5H4z"/><path d="M15 9a4 4 0 0 1 0 6M17.8 6.5a7.5 7.5 0 0 1 0 11"/></g></symbol>
+    <symbol id="i-olor" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M7 20c-2-2.5 2-4.5 0-7s2-4.5 0-7M12 20c-2-2.5 2-4.5 0-7s2-4.5 0-7M17 20c-2-2.5 2-4.5 0-7s2-4.5 0-7"/></g></symbol>
+    <symbol id="i-hielo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="m12 3 7.5 4.3v8.4L12 20l-7.5-4.3V7.3z"/><path d="M12 3v17M4.5 7.3 19.5 15.7M19.5 7.3 4.5 15.7"/></g></symbol>
+    <symbol id="i-nevera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="2.5" width="13" height="19" rx="2"/><path d="M5.5 9.5h13M8.5 5.5v2M8.5 12.5v3"/></g></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 3 4.5 6v5.5c0 4.6 3.2 8 7.5 9.5 4.3-1.5 7.5-4.9 7.5-9.5V6L12 3Zm-3.2 9 2.2 2.2 4.2-4.4"/></symbol>
+    <symbol id="i-mapa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></g></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+    <symbol id="i-papel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></g></symbol>
+    <symbol id="i-alerta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 2.8 19.5h18.4L12 3.5Z"/><path d="M12 10v4.2M12 17h.01"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-rayo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M13 2.5 5 13.5h6l-1 8 8-11h-6l1-8Z"/></symbol>
+  </svg>
+
+  <!-- Franja de muestra: app.js la rellena mientras falte alguno de estos datos en datos.js -->
+  <p class="franja-muestra" data-pendientes="horario,garantia,certificacion" data-pendientes-texto="Demo con marca inventada. Faltan:" hidden></p>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <header class="nav" data-nav>
+    <div class="nav__progreso" data-cine-progreso></div>
+    <a class="nav__marca marca" href="#inicio" aria-label="Alisio — inicio">
+      <svg class="marca__simbolo" aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><use href="#i-copo"/></svg>
+      Alisio</a>
+    <nav class="nav__menu" id="menu" data-menu aria-label="Principal">
+      <a href="#precios"><small>01</small> Precios</a>
+      <a href="#calculadora"><small>02</small> Calculadora</a>
+      <a href="#diagnostico"><small>03</small> ¿Qué le pasa?</a>
+      <a href="#cobertura"><small>04</small> Cobertura</a>
+      <a href="#contacto"><small>05</small> Contacto</a>
+      <a class="nav__wa" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Escribir por WhatsApp</a>
+      <a class="nav__wa" href="#contacto" data-enlace="telefono" data-respaldo="#contacto">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-tel"/></svg> Llamar ahora</a>
+    </nav>
+    <a class="nav__llamar boton boton--fantasma" href="#contacto" data-enlace="telefono" data-respaldo="#contacto" aria-label="Llamar">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-tel"/></svg><span>Llamar</span></a>
+    <a class="nav__cita boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" aria-label="WhatsApp">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+    <button class="nav__boton" data-menu-boton aria-label="Abrir menú" aria-controls="menu"><span></span></button>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ ZONA FIJADA: copo → mini split → 18° (partículas de hielo que se transforman con el scroll) ============ -->
+    <section class="zona" id="inicio" data-escena-zona data-cine-tema="oscuro" aria-label="Portada">
+      <div class="zona__escena l3d-pegada l3d-escena" aria-hidden="true">
+        <div class="l3d-respaldo"><svg class="respaldo__copo" viewBox="0 0 24 24"><use href="#i-copo"/></svg></div>
+        <canvas class="l3d-lienzo" data-escena="siluetas" data-opciones='{"formas":[{"trazo":"M52.1 45.0L52.1 8.0L47.9 8.0L47.9 45.0ZM51.2 34.2L59.0 26.4L56.6 24.0L48.8 31.8ZM51.2 31.8L43.4 24.0L41.0 26.4L48.8 34.2ZM51.2 22.2L57.6 15.8L55.2 13.4L48.8 19.8ZM51.2 19.8L44.8 13.4L42.4 15.8L48.8 22.2ZM55.4 49.3L87.4 30.8L85.3 27.2L53.3 45.7ZM64.3 43.1L74.9 46.0L75.8 42.7L65.2 39.9ZM66.4 41.9L69.2 31.3L65.9 30.4L63.1 41.1ZM74.7 37.1L83.4 39.5L84.2 36.2L75.6 33.9ZM76.8 35.9L79.1 27.2L75.8 26.4L73.5 35.1ZM53.3 54.3L85.3 72.8L87.4 69.2L55.4 50.7ZM63.1 58.9L65.9 69.6L69.2 68.7L66.4 58.1ZM65.2 60.1L75.8 57.3L74.9 54.0L64.3 56.9ZM73.5 64.9L75.8 73.6L79.1 72.8L76.8 64.1ZM75.6 66.1L84.2 63.8L83.4 60.5L74.7 62.9ZM47.9 55.0L47.9 92.0L52.1 92.0L52.1 55.0ZM48.8 65.8L41.0 73.6L43.4 76.0L51.2 68.2ZM48.8 68.2L56.6 76.0L59.0 73.6L51.2 65.8ZM48.8 77.8L42.4 84.2L44.8 86.6L51.2 80.2ZM48.8 80.2L55.2 86.6L57.6 84.2L51.2 77.8ZM44.6 50.7L12.6 69.2L14.7 72.8L46.7 54.3ZM35.7 56.9L25.1 54.0L24.2 57.3L34.8 60.1ZM33.6 58.1L30.8 68.7L34.1 69.6L36.9 58.9ZM25.3 62.9L16.6 60.5L15.8 63.8L24.4 66.1ZM23.2 64.1L20.9 72.8L24.2 73.6L26.5 64.9ZM46.7 45.7L14.7 27.2L12.6 30.8L44.6 49.3ZM36.9 41.1L34.1 30.4L30.8 31.3L33.6 41.9ZM34.8 39.9L24.2 42.7L25.1 46.0L35.7 43.1ZM26.5 35.1L24.2 26.4L20.9 27.2L23.2 35.9ZM24.4 33.9L15.8 36.2L16.6 39.5L25.3 37.1ZM56.9 49.4L52.4 57.1L54.6 58.4L59.1 50.6ZM54.0 55.6L45.0 55.6L45.0 58.2L54.0 58.2ZM47.1 56.3L42.6 48.5L40.4 49.8L44.9 57.6ZM43.1 50.6L47.6 42.9L45.4 41.6L40.9 49.4ZM46.0 44.4L55.0 44.4L55.0 41.8L46.0 41.8ZM52.9 43.7L57.4 51.5L59.6 50.2L55.1 42.4Z"},{"trazo":"M12 26h76v3h-76zM12 26h3v30h-3zM85 26h3v30h-3zM15 53h70v3h-70zM20 47h60v2.2h-60zM72 33h8v3.2h-8zM20 34h26v1.4h-26zM28.9 61.6L26.6 67.1L28.9 68.0L31.1 62.4ZM26.2 71.6L24.0 77.1L26.2 78.0L28.5 72.4ZM23.6 81.6L21.4 87.1L23.6 88.0L25.8 82.4ZM48.8 62.0L48.8 68.0L51.2 68.0L51.2 62.0ZM48.8 72.0L48.8 78.0L51.2 78.0L51.2 72.0ZM48.8 82.0L48.8 88.0L51.2 88.0L51.2 82.0ZM68.9 62.4L71.1 68.0L73.4 67.1L71.1 61.6ZM71.5 72.4L73.8 78.0L76.0 77.1L73.8 71.6ZM74.2 82.4L76.4 88.0L78.6 87.1L76.4 81.6Z"},{"texto":"18°"}],"ciclo":0,"modo":"scroll","cantidad":8000,"tamano":0.9,"x":1.75,"y":0,"escala":1.05,"fondo":"oscuro","movil":[{"x":0,"y":-1.22,"s":0.84},{"x":0,"y":1.2,"s":0.8},{"x":0,"y":1.25,"s":0.78}]}'></canvas>
+        <!-- Leyenda: app.js marca la figura que se está dibujando (evento l3d-figura) -->
+        <ol class="leyenda" role="list" data-leyenda>
+          <li data-figura="0"><b>01</b> El frío</li>
+          <li data-figura="1"><b>02</b> Bien instalado</li>
+          <li data-figura="2"><b>03</b> Que dure</li>
+        </ol>
+        <p class="termometro" aria-hidden="true"><span>Medellín</span> <b>calor de tarde</b> <i></i> <b>18 °C</b> <span>en casa</span></p>
+      </div>
+
+      <div class="zona__pasos">
+        <article class="paso paso--portada">
+          <p class="etiqueta"><span data-cine-codigo>Clima y refrigeración · Valle de Aburrá</span></p>
+          <h1 class="portada__titulo" data-dividir>Frío que llega, <em>frío que dura.</em></h1>
+          <p class="portada__apoyo" data-revelar style="--i:5">Instalación, mantenimiento y reparación de aires acondicionados y neveras en Medellín y el Valle de Aburrá. Escríbenos o llámanos: te decimos qué necesitas antes de ir.</p>
+          <div class="portada__acciones" data-revelar style="--i:7">
+            <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-iman="0.2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> WhatsApp</a>
+            <a class="boton boton--fantasma" href="#contacto" data-enlace="telefono" data-respaldo="#contacto">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-tel"/></svg> Llamar</a>
+          </div>
+          <dl class="portada__datos" data-revelar style="--i:9">
+            <div><dt>Mantenimiento mini split</dt><dd>Ref. EPM $255.700</dd></div>
+            <div><dt>Horario</dt><dd><span data-dato="horario" data-pendiente="Por confirmar"></span></dd></div>
+          </dl>
+        </article>
+
+        <article class="paso paso--split" aria-labelledby="split-titulo">
+          <div class="paso__tarjeta">
+            <p class="etiqueta"><span data-cine-codigo>Instalación</span></p>
+            <h2 id="split-titulo" data-dividir>Instalado como se debe.</h2>
+            <ol class="ruta" role="list" data-revelar-grupo>
+              <li data-revelar><b>01</b><span><strong>Cálculo y ubicación</strong> Los BTU justos y el mejor sitio para cada unidad</span></li>
+              <li data-revelar><b>02</b><span><strong>Soportes, tubería y drenaje</strong> Nivelado, aislado y con pendiente</span></li>
+              <li data-revelar><b>03</b><span><strong>Vacío y prueba de fugas</strong> Antes de abrir el refrigerante</span></li>
+              <li data-revelar><b>04</b><span><strong>Prueba de frío</strong> Y te explicamos el control</span></li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="paso paso--grados" aria-labelledby="grados-titulo">
+          <div class="paso__tarjeta">
+            <p class="etiqueta"><span data-cine-codigo>Mantenimiento</span></p>
+            <h2 id="grados-titulo" data-dividir>Que vuelva el frío.</h2>
+            <p data-revelar>Filtros, serpentines, drenaje y presiones. Un equipo limpio enfría mejor, gasta menos energía y no gotea. ¿No sabes qué capacidad necesitas? Calcúlalo en un minuto.</p>
+            <a class="boton boton--principal" href="#calculadora" data-revelar>Calcular mi equipo
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-flecha"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CINTA ============ -->
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta__pista" data-cine-cinta="50">
+        <span>Instalación</span><i>✻</i><span>Mantenimiento</span><i>✻</i><span>Reparación</span><i>✻</i><span>Neveras</span><i>✻</i><span>Mini split · ventana · casete</span><i>✻</i><span>Valle de Aburrá</span><i>✻</i>
+      </div>
+    </div>
+
+    <!-- ============ MANIFIESTO ============ -->
+    <section class="manifiesto-seccion" aria-label="Cómo trabajamos">
+      <div class="contenedor">
+        <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>00 · Sin sorpresas</span></p>
+        <p class="manifiesto" data-cine-leer>Un aire mal instalado gasta más, enfría menos y dura poco. Por eso te mostramos el precio de referencia antes de ir y lo que incluye cada visita.</p>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS Y PRECIOS DE REFERENCIA ============ -->
+    <section class="precios" id="precios" aria-labelledby="precios-titulo">
+      <div class="contenedor">
+        <header class="cabecera cabecera--doble">
+          <div>
+            <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>01 · Servicios y precios</span></p>
+            <h2 id="precios-titulo" class="titulo-grande" data-dividir>Cuánto cuesta, antes de ir.</h2>
+          </div>
+          <p class="cabecera__apoyo" data-revelar>Para comparar con criterio: la lista oficial de servicios técnicos de EPM para 2026. <strong>Son precios de referencia del mercado, no tarifas de Alisio.</strong></p>
+        </header>
+
+        <div class="filtros" role="group" aria-label="Filtrar por equipo" data-filtros>
+          <button type="button" aria-pressed="true" data-filtro="">Todos</button>
+          <button type="button" aria-pressed="false" data-filtro="Mini split">Mini split</button>
+          <button type="button" aria-pressed="false" data-filtro="Ventana">Ventana</button>
+          <button type="button" aria-pressed="false" data-filtro="Casete">Casete</button>
+          <button type="button" aria-pressed="false" data-filtro="Nevera">Neveras</button>
+        </div>
+
+        <div class="tabla-precios" data-revelar>
+          <table>
+            <caption class="solo-lector">Servicios de aire acondicionado y refrigeración con el precio de referencia de EPM a tu puerta 2026 y el precio de Alisio</caption>
+            <thead>
+              <tr><th scope="col">Servicio</th><th scope="col">Referencia EPM 2026</th><th scope="col">Alisio</th><th scope="col"><span class="solo-lector">Pedir</span></th></tr>
+            </thead>
+            <!-- app.js repinta estas filas desde js/datos.js (precios.lista). Este resumen es para quien no tiene JavaScript. -->
+            <tbody data-precios>
+              <tr data-equipo="Mini split"><th scope="row">Instalación de mini split</th><td data-rotulo="Referencia EPM 2026">$490.700</td><td data-rotulo="Alisio"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-equipo="Mini split"><th scope="row">Mantenimiento de mini split</th><td data-rotulo="Referencia EPM 2026">$255.700</td><td data-rotulo="Alisio"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-equipo="Ventana"><th scope="row">Instalación de aire de ventana</th><td data-rotulo="Referencia EPM 2026">$207.800</td><td data-rotulo="Alisio"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-equipo="Ventana"><th scope="row">Mantenimiento de aire de ventana</th><td data-rotulo="Referencia EPM 2026">$292.600</td><td data-rotulo="Alisio"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-equipo="Casete"><th scope="row">Instalación de aire tipo casete</th><td data-rotulo="Referencia EPM 2026">$699.800</td><td data-rotulo="Alisio"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-equipo="Casete"><th scope="row">Mantenimiento de aire tipo casete</th><td data-rotulo="Referencia EPM 2026">$363.500</td><td data-rotulo="Alisio"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-equipo="Nevera"><th scope="row">Mantenimiento de nevera o nevecón</th><td data-rotulo="Referencia EPM 2026">$248.900</td><td data-rotulo="Alisio"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+              <tr data-equipo="Cualquiera"><th scope="row">Diagnóstico técnico</th><td data-rotulo="Referencia EPM 2026">$90.800</td><td data-rotulo="Alisio"><span class="pendiente">Por confirmar</span></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="precios__notas" data-revelar>
+          <p>Fuente: <a href="https://www.epm.com.co/epmatupuerta/listado-de-precios/" target="_blank" rel="noopener" data-precios-fuente>EPM a tu puerta, precios de servicios técnicos vigentes para 2026</a>. <span data-precios-nota>IVA incluido. Los repuestos van aparte, con cotización previa. Fuera del Área Metropolitana del Valle de Aburrá, EPM suma $16.000 de desplazamiento.</span></p>
+          <p class="precios__equipo"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-split"/></svg> <span><span data-precios-equipo>Un equipo inverter de 12.000 BTU con instalación cuesta en Medellín entre $1,8 y $3,2 millones, según la marca (guía de precios de ManoRapido).</span> <a href="https://manorapido.com/articulo/aire-acondicionado-medellin-precios-guia-2025" target="_blank" rel="noopener" data-precios-equipo-fuente>Ver fuente</a></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CALCULADORA DE BTU ============ -->
+    <section class="calc" id="calculadora" data-cine-tema="oscuro" aria-labelledby="calc-titulo">
+      <div class="contenedor">
+        <header class="cabecera cabecera--doble">
+          <div>
+            <p class="etiqueta"><span data-cine-codigo>02 · Calculadora</span></p>
+            <h2 id="calc-titulo" class="titulo-grande" data-dividir>¿Qué aire necesita tu cuarto?</h2>
+          </div>
+          <p class="cabecera__apoyo" data-revelar>Un equipo pequeño no da abasto; uno grande gasta de más y deja el aire húmedo. Mide el cuarto y mira cuántos BTU te tocan. El técnico lo confirma en la visita.</p>
+        </header>
+
+        <div class="btu" data-calculadora data-revelar>
+          <form class="btu__datos" data-calc-form novalidate>
+            <div class="btu__medidas">
+              <div class="campo">
+                <label for="c-largo">Largo <small>(metros)</small></label>
+                <input id="c-largo" name="largo" type="number" min="1" max="30" step="0.1" value="4" inputmode="decimal" data-calc="largo">
+              </div>
+              <span class="btu__por" aria-hidden="true">×</span>
+              <div class="campo">
+                <label for="c-ancho">Ancho <small>(metros)</small></label>
+                <input id="c-ancho" name="ancho" type="number" min="1" max="30" step="0.1" value="4" inputmode="decimal" data-calc="ancho">
+              </div>
+              <p class="btu__area">= <b data-calc-out="area">16</b> m²</p>
+            </div>
+
+            <div class="contador">
+              <span class="contador__texto" id="c-personas-r">Personas en el cuarto <small>(normalmente)</small></span>
+              <div class="contador__control">
+                <button type="button" data-calc-menos="personas" aria-label="Una persona menos">−</button>
+                <output data-calc="personas" aria-labelledby="c-personas-r" aria-live="polite">2</output>
+                <button type="button" data-calc-mas="personas" aria-label="Una persona más">+</button>
+              </div>
+            </div>
+            <div class="contador">
+              <span class="contador__texto" id="c-aparatos-r">Aparatos que dan calor <small>(TV, computador, consola)</small></span>
+              <div class="contador__control">
+                <button type="button" data-calc-menos="aparatos" aria-label="Un aparato menos">−</button>
+                <output data-calc="aparatos" aria-labelledby="c-aparatos-r" aria-live="polite">1</output>
+                <button type="button" data-calc-mas="aparatos" aria-label="Un aparato más">+</button>
+              </div>
+            </div>
+
+            <label class="interruptor">
+              <input type="checkbox" name="sol" data-calc="sol">
+              <span class="interruptor__texto"><strong>Sol fuerte o ventanas grandes</strong> Suma un 10 %</span>
+              <span class="interruptor__pista" aria-hidden="true"></span>
+            </label>
+            <label class="interruptor">
+              <input type="checkbox" name="techo" data-calc="techo">
+              <span class="interruptor__texto"><strong>Techo de 2,5 m o más</strong> Suma un 10 %</span>
+              <span class="interruptor__pista" aria-hidden="true"></span>
+            </label>
+          </form>
+
+          <div class="btu__resultado" aria-live="polite">
+            <p class="btu__rotulo">Equipo recomendado</p>
+            <p class="btu__cifra"><span data-calc-out="equipo">12.000</span> <small>BTU</small></p>
+            <p class="btu__sub" data-calc-out="explicacion">Tu cuarto pide unos 10.000 BTU: el equipo comercial que lo cubre es de 12.000.</p>
+
+            <div class="escala" aria-hidden="true">
+              <div class="escala__pista"><i class="escala__relleno" data-calc-barra style="--x:11.1%"></i><i class="escala__aguja" data-calc-aguja style="--x:3.7%"></i></div>
+              <ol class="escala__marcas" role="list" data-calc-marcas>
+                <li style="--x:0%" data-btu="9000">9k</li>
+                <li style="--x:11.1%" data-btu="12000" class="activa">12k</li>
+                <li style="--x:33.3%" data-btu="18000">18k</li>
+                <li style="--x:55.6%" data-btu="24000">24k</li>
+                <li style="--x:100%" data-btu="36000">36k</li>
+              </ol>
+            </div>
+
+            <dl class="btu__desglose">
+              <div><dt>Base: <span data-calc-out="area2">16</span> m² × 600</dt><dd data-calc-out="base">9.600</dd></div>
+              <div data-calc-fila="personas" hidden><dt>Personas adicionales</dt><dd data-calc-out="personasBtu">+0</dd></div>
+              <div data-calc-fila="aparatos"><dt>Aparatos que dan calor</dt><dd data-calc-out="aparatosBtu">+400</dd></div>
+              <div data-calc-fila="sol" hidden><dt>Sol o ventanas grandes</dt><dd data-calc-out="solBtu">+0</dd></div>
+              <div data-calc-fila="techo" hidden><dt>Techo alto</dt><dd data-calc-out="techoBtu">+0</dd></div>
+              <div class="btu__total"><dt>Total estimado</dt><dd data-calc-out="total">10.000 BTU</dd></div>
+            </dl>
+            <p class="btu__aviso"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-alerta"/></svg>
+              <span>Regla de <a href="https://www.midea.com/co/blog/que-significa-btu-en-aire-acondicionado" target="_blank" rel="noopener" data-calc-fuente>Midea Colombia</a>: área × 600 BTU, +10 % con sol o techo alto, +600 por persona adicional (contamos 2 de base) y +400 por aparato. Es orientativa: el técnico confirma en la visita.</span></p>
+            <a class="boton boton--principal boton--ancho" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-calc-wa>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Cotizar con este cálculo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ¿QUÉ LE PASA A TU AIRE? (diagnóstico por síntomas) ============ -->
+    <section class="diagnostico" id="diagnostico" aria-labelledby="diag-titulo">
+      <div class="contenedor">
+        <header class="cabecera cabecera--doble">
+          <div>
+            <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>03 · Diagnóstico</span></p>
+            <h2 id="diag-titulo" class="titulo-grande" data-dividir>¿Qué le pasa a tu aire?</h2>
+          </div>
+          <p class="cabecera__apoyo" data-revelar>Elige lo que notas. Te contamos las causas más comunes, lo que puedes revisar tú sin riesgo y cuándo conviene llamar a un técnico.</p>
+        </header>
+
+        <div class="diag" data-diagnostico>
+          <div class="diag__sintomas" role="tablist" aria-label="Síntomas">
+            <button type="button" role="tab" id="t-frio" aria-controls="p-frio" aria-selected="true" data-sintoma="frio"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-copo"/></svg><span>No enfría</span></button>
+            <button type="button" role="tab" id="t-gotea" aria-controls="p-gotea" aria-selected="false" tabindex="-1" data-sintoma="gotea"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-gota"/></svg><span>Gotea agua</span></button>
+            <button type="button" role="tab" id="t-ruido" aria-controls="p-ruido" aria-selected="false" tabindex="-1" data-sintoma="ruido"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-ruido"/></svg><span>Hace ruido</span></button>
+            <button type="button" role="tab" id="t-olor" aria-controls="p-olor" aria-selected="false" tabindex="-1" data-sintoma="olor"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-olor"/></svg><span>Huele mal</span></button>
+            <button type="button" role="tab" id="t-hielo" aria-controls="p-hielo" aria-selected="false" tabindex="-1" data-sintoma="hielo"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-hielo"/></svg><span>Tiene hielo</span></button>
+            <button type="button" role="tab" id="t-nevera" aria-controls="p-nevera" aria-selected="false" tabindex="-1" data-sintoma="nevera"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-nevera"/></svg><span>La nevera no enfría</span></button>
+          </div>
+
+          <div class="diag__paneles">
+            <article class="diag__panel" id="p-frio" role="tabpanel" aria-labelledby="t-frio" tabindex="0" data-producto="aire acondicionado no enfría">
+              <h3>No enfría o enfría poco</h3>
+              <div class="diag__columnas">
+                <div><p class="diag__rotulo">Lo más común</p>
+                  <ul role="list"><li>Filtros sucios que no dejan pasar el aire.</li><li>Unidad exterior sucia o tapada.</li><li>Falta de refrigerante por una fuga.</li><li>Equipo pequeño para el tamaño del cuarto.</li></ul></div>
+                <div><p class="diag__rotulo">Revisa tú, sin riesgo</p>
+                  <ul role="list" class="diag__ok"><li>Que esté en modo frío (el copo) y a una temperatura menor que la del cuarto.</li><li>Lava los filtros con agua y déjalos secar antes de volver a ponerlos.</li><li>Que nada tape la unidad de afuera.</li></ul></div>
+              </div>
+              <p class="diag__llamar"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-alerta"/></svg> Si con filtros limpios sigue igual, llama a un técnico. Un aire no "gasta" refrigerante: si le falta, hay una fuga, y recargar sin repararla es pagar dos veces.</p>
+              <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Alisio. Mi {producto}. Ya revisé el modo y los filtros. ¿Pueden venir a revisarlo?">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Pedir visita por esto</a>
+            </article>
+
+            <article class="diag__panel" id="p-gotea" role="tabpanel" aria-labelledby="t-gotea" tabindex="0" hidden data-producto="aire acondicionado gotea agua por dentro">
+              <h3>Gotea agua por dentro</h3>
+              <div class="diag__columnas">
+                <div><p class="diag__rotulo">Lo más común</p>
+                  <ul role="list"><li>Manguera de drenaje tapada, doblada o sin pendiente.</li><li>Filtros sucios: el serpentín se congela y luego se derrite.</li><li>Unidad interior desnivelada.</li></ul></div>
+                <div><p class="diag__rotulo">Revisa tú, sin riesgo</p>
+                  <ul role="list" class="diag__ok"><li>Apágalo y seca el agua para no dañar paredes ni pisos.</li><li>Limpia los filtros.</li><li>Mira que la manguera de drenaje no esté doblada.</li></ul></div>
+              </div>
+              <p class="diag__llamar"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-alerta"/></svg> Si el agua cae cerca de tomas o cables, desconecta el equipo desde el breaker y llama a un técnico.</p>
+              <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Alisio. Mi {producto}. ¿Pueden venir a revisarlo?">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Pedir visita por esto</a>
+            </article>
+
+            <article class="diag__panel" id="p-ruido" role="tabpanel" aria-labelledby="t-ruido" tabindex="0" hidden data-producto="aire acondicionado hace ruido o vibra">
+              <h3>Hace ruido o vibra</h3>
+              <div class="diag__columnas">
+                <div><p class="diag__rotulo">Lo más común</p>
+                  <ul role="list"><li>Tornillos, soportes o tapas flojas.</li><li>Ventilador sucio o que roza.</li><li>Compresor o motor con desgaste.</li></ul></div>
+                <div><p class="diag__rotulo">Revisa tú, sin riesgo</p>
+                  <ul role="list" class="diag__ok"><li>Fíjate si el ruido viene de adentro o de la unidad de afuera.</li><li>Mira que no haya hojas, bolsas u objetos cerca de la unidad exterior.</li></ul></div>
+              </div>
+              <p class="diag__llamar"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-alerta"/></svg> Si es un golpe metálico, un chirrido fuerte o huele a quemado, apágalo y no lo vuelvas a encender hasta que lo revise un técnico.</p>
+              <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Alisio. Mi {producto}. ¿Pueden venir a revisarlo?">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Pedir visita por esto</a>
+            </article>
+
+            <article class="diag__panel" id="p-olor" role="tabpanel" aria-labelledby="t-olor" tabindex="0" hidden data-producto="aire acondicionado huele mal">
+              <h3>Huele a humedad o a guardado</h3>
+              <div class="diag__columnas">
+                <div><p class="diag__rotulo">Lo más común</p>
+                  <ul role="list"><li>Humedad y moho en los filtros y el serpentín.</li><li>Agua estancada en la bandeja de drenaje.</li></ul></div>
+                <div><p class="diag__rotulo">Revisa tú, sin riesgo</p>
+                  <ul role="list" class="diag__ok"><li>Lava los filtros.</li><li>Ventila el cuarto un rato con el equipo apagado.</li></ul></div>
+              </div>
+              <p class="diag__llamar"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-alerta"/></svg> Si el olor sigue, toca un mantenimiento con limpieza del serpentín y del drenaje. Si huele a quemado, apágalo de inmediato.</p>
+              <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Alisio. Mi {producto}. Quiero un mantenimiento.">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Pedir mantenimiento</a>
+            </article>
+
+            <article class="diag__panel" id="p-hielo" role="tabpanel" aria-labelledby="t-hielo" tabindex="0" hidden data-producto="aire acondicionado tiene hielo en la tubería">
+              <h3>Hielo en la tubería o en el serpentín</h3>
+              <div class="diag__columnas">
+                <div><p class="diag__rotulo">Lo más común</p>
+                  <ul role="list"><li>Poco paso de aire por filtros sucios.</li><li>Falta de refrigerante por una fuga.</li><li>Ventilador interior que gira lento.</li></ul></div>
+                <div><p class="diag__rotulo">Revisa tú, sin riesgo</p>
+                  <ul role="list" class="diag__ok"><li>Ponlo solo en ventilador (o apágalo) hasta que se derrita.</li><li>Limpia los filtros antes de volver a enfriar.</li></ul></div>
+              </div>
+              <p class="diag__llamar"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-alerta"/></svg> Si el hielo vuelve con filtros limpios, el equipo necesita revisión: no lo dejes trabajar así, porque se puede dañar el compresor.</p>
+              <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Alisio. Mi {producto}. ¿Pueden venir a revisarlo?">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Pedir visita por esto</a>
+            </article>
+
+            <article class="diag__panel" id="p-nevera" role="tabpanel" aria-labelledby="t-nevera" tabindex="0" hidden data-producto="nevera no enfría bien">
+              <h3>La nevera no enfría bien</h3>
+              <div class="diag__columnas">
+                <div><p class="diag__rotulo">Lo más común</p>
+                  <ul role="list"><li>Empaque de la puerta gastado: se escapa el frío.</li><li>Condensador con polvo (atrás o abajo).</li><li>Salidas de aire tapadas por comida.</li></ul></div>
+                <div><p class="diag__rotulo">Revisa tú, sin riesgo</p>
+                  <ul role="list" class="diag__ok"><li>Cierra la puerta sobre una hoja de papel: si sale sin esfuerzo, el empaque no sella.</li><li>Deja espacio entre la nevera y la pared.</li><li>No tapes las rejillas de adentro.</li></ul></div>
+              </div>
+              <p class="diag__llamar"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-alerta"/></svg> Si el motor suena todo el tiempo o no arranca, llama a un técnico antes de que se pierda la comida.</p>
+              <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Alisio. Mi {producto}. ¿Pueden venir a revisarla?">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Pedir visita por esto</a>
+            </article>
+          </div>
+        </div>
+        <p class="diag__nota" data-revelar>Orientación general, no reemplaza la revisión de un técnico. Antes de abrir o limpiar cualquier equipo, desconéctalo.</p>
+      </div>
+    </section>
+
+    <!-- ============ LO QUE DEBE INCLUIR UNA BUENA INSTALACIÓN (tarjetas apiladas) ============ -->
+    <section class="proceso" id="instalacion" aria-labelledby="proceso-titulo">
+      <div class="contenedor">
+        <header class="cabecera">
+          <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>04 · Buena instalación</span></p>
+          <h2 id="proceso-titulo" class="titulo-grande" data-dividir>Lo que debe incluir una instalación.</h2>
+        </header>
+        <ol class="pila" data-cine-apilar role="list">
+          <li class="pila__tarjeta pila__tarjeta--1">
+            <p class="pila__num">01</p>
+            <div>
+              <h3>Visita y cálculo</h3>
+              <p>Los BTU según el cuarto, dónde va cada unidad y si hay un punto eléctrico adecuado. Si vives en edificio, revisa el reglamento: muchas copropiedades piden permiso para la unidad de fachada.</p>
+            </div>
+            <svg class="pila__icono" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-papel"/></svg>
+          </li>
+          <li class="pila__tarjeta pila__tarjeta--2">
+            <p class="pila__num">02</p>
+            <div>
+              <h3>Soportes, tubería y drenaje</h3>
+              <p>Unidad nivelada, tubería de cobre aislada y una manguera de drenaje con pendiente para que el agua no se devuelva.</p>
+            </div>
+            <figure class="pila__foto"><img src="assets/img/fotos/split-tecnico.webp" alt="Manos de un técnico revisando la unidad interior de un mini split con el filtro a la vista" width="690" height="560" loading="lazy" decoding="async"><figcaption>Foto de referencia</figcaption></figure>
+          </li>
+          <li class="pila__tarjeta pila__tarjeta--3">
+            <p class="pila__num">03</p>
+            <div>
+              <h3>Vacío y prueba de fugas</h3>
+              <p>Antes de abrir el refrigerante se saca el aire y la humedad de la tubería con una bomba de vacío, y se revisan las presiones con manómetros. Es el paso que más se salta, y el que más daña equipos.</p>
+            </div>
+            <figure class="pila__foto"><img src="assets/img/fotos/manometro.webp" alt="Juego de manómetros azul y rojo conectado para medir la presión del refrigerante" width="1024" height="768" loading="lazy" decoding="async"><figcaption>Foto de referencia</figcaption></figure>
+          </li>
+          <li class="pila__tarjeta pila__tarjeta--4">
+            <p class="pila__num">04</p>
+            <div>
+              <h3>Prueba y entrega</h3>
+              <p>Se mide que el aire salga frío, te explican el control y el cuidado de los filtros, y recibes la garantía por escrito.</p>
+              <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-mensaje="Hola, Alisio. Quiero cotizar la instalación de un aire acondicionado.">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Cotizar mi instalación</a>
+            </div>
+            <svg class="pila__icono" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ COBERTURA (línea del valle, de sur a norte) ============ -->
+    <section class="cobertura" id="cobertura" aria-labelledby="cobertura-titulo">
+      <div class="contenedor cobertura__rejilla">
+        <div class="cobertura__texto">
+          <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>05 · Cobertura</span></p>
+          <h2 id="cobertura-titulo" class="titulo-grande" data-dividir>De Caldas a Barbosa.</h2>
+          <p class="cabecera__apoyo" data-revelar>Los diez municipios del Área Metropolitana del Valle de Aburrá, de sur a norte. Toca el tuyo y pide el técnico con tu municipio ya escrito.</p>
+          <p class="cobertura__ejemplo" data-cobertura-ejemplo><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-alerta"/></svg> Cobertura de ejemplo: el negocio confirma sus municipios.</p>
+          <figure class="cobertura__foto" data-cine-imagen>
+            <img src="assets/img/fotos/medellin.webp" alt="Medellín de día, con edificios en el valle y montañas detrás" width="1024" height="683" loading="lazy" decoding="async">
+          </figure>
+        </div>
+        <div class="valle" data-cobertura>
+          <ol class="valle__linea" role="list" data-cobertura-lista>
+            <li><button type="button" aria-pressed="false" data-municipio="Caldas"><i></i><span>Caldas</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="La Estrella"><i></i><span>La Estrella</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="Sabaneta"><i></i><span>Sabaneta</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="Itagüí"><i></i><span>Itagüí</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="Envigado"><i></i><span>Envigado</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="true" data-municipio="Medellín"><i></i><span>Medellín</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="Bello"><i></i><span>Bello</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="Copacabana"><i></i><span>Copacabana</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="Girardota"><i></i><span>Girardota</span><small>Atiende</small></button></li>
+            <li><button type="button" aria-pressed="false" data-municipio="Barbosa"><i></i><span>Barbosa</span><small>Atiende</small></button></li>
+          </ol>
+          <div class="valle__accion">
+            <p class="valle__elegido" aria-live="polite">Técnico en <b data-cobertura-elegido>Medellín</b></p>
+            <a class="boton boton--principal" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto" data-cobertura-wa data-mensaje="Hola, Alisio. Estoy en Medellín y necesito un técnico para mi aire acondicionado.">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Pedir técnico aquí</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONFIANZA ============ -->
+    <section class="confianza" id="confianza" aria-labelledby="confianza-titulo">
+      <div class="contenedor">
+        <header class="cabecera cabecera--doble">
+          <div>
+            <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>06 · Confianza</span></p>
+            <h2 id="confianza-titulo" class="titulo-grande" data-dividir>Lo que tienes derecho a preguntar.</h2>
+          </div>
+          <p class="cabecera__apoyo" data-revelar>Antes de dejar entrar a un técnico a tu casa, pide estos datos. Aquí están los nuestros.</p>
+        </header>
+        <ul class="docs" role="list" data-revelar-grupo>
+          <li class="doc" data-revelar>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28"><use href="#i-escudo"/></svg>
+            <p class="doc__rotulo">Certificación</p>
+            <p class="doc__valor"><span data-dato="certificacion" data-pendiente="Por confirmar"></span></p>
+            <p class="doc__ayuda">El SENA certifica técnicos en buenas prácticas en refrigeración (norma de competencia 280501022). Pregunta si tu técnico la tiene.</p>
+          </li>
+          <li class="doc" data-revelar>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28"><use href="#i-papel"/></svg>
+            <p class="doc__rotulo">Garantía</p>
+            <p class="doc__valor"><span data-dato="garantia" data-pendiente="Por confirmar"></span></p>
+            <p class="doc__ayuda">Pídela por escrito, con lo que cubre y por cuánto tiempo (Ley 1480 de 2011).</p>
+          </li>
+          <li class="doc" data-revelar>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28"><use href="#i-reloj"/></svg>
+            <p class="doc__rotulo">Horario</p>
+            <p class="doc__valor"><span data-dato="horario" data-pendiente="Por confirmar"></span></p>
+            <p class="doc__ayuda">Pregunta también cuánto tardan en llegar a tu municipio.</p>
+          </li>
+          <li class="doc" data-revelar>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28"><use href="#i-rayo"/></svg>
+            <p class="doc__rotulo">Urgencias</p>
+            <p class="doc__valor"><span data-dato="urgencias" data-pendiente="Por confirmar"></span></p>
+            <p class="doc__ayuda">Si hay recargo por noche o festivo, que te lo digan antes de ir.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PREGUNTAS ============ -->
+    <section class="preguntas-seccion" id="preguntas" aria-labelledby="preguntas-titulo">
+      <div class="contenedor preguntas__rejilla">
+        <header class="cabecera">
+          <p class="etiqueta etiqueta--tinta"><span data-cine-codigo>07 · Preguntas</span></p>
+          <h2 id="preguntas-titulo" class="titulo-grande" data-dividir>Lo que más nos preguntan.</h2>
+        </header>
+        <div class="preguntas">
+          <details>
+            <summary>¿Recargar el gas lo arregla?</summary>
+            <p>Un aire acondicionado no consume refrigerante: si le falta, es porque hay una fuga. Recargar sin encontrar y reparar la fuga solo aplaza el problema. Por eso la revisión empieza con un diagnóstico.</p>
+          </details>
+          <details>
+            <summary>¿Cada cuánto se hace mantenimiento?</summary>
+            <p>Depende del uso y de lo que diga el manual de tu equipo. Los filtros se lavan seguido (es fácil y lo puedes hacer tú); el mantenimiento técnico, con limpieza de serpentines y drenaje, según el uso: te decimos cuándo en la visita.</p>
+          </details>
+          <details>
+            <summary>¿Vale la pena un equipo inverter?</summary>
+            <p>Un inverter regula la velocidad del compresor en vez de prenderlo y apagarlo, y en uso continuo suele gastar menos energía. Compara la etiqueta de eficiencia energética (RETIQ) que traen los equipos en Colombia.</p>
+          </details>
+          <details>
+            <summary>¿Qué necesito para la instalación?</summary>
+            <p>Un sitio para la unidad interior, otro afuera para la exterior (balcón, patio o fachada), un punto eléctrico adecuado y, si vives en edificio, el permiso de la administración.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto cuesta la visita?</summary>
+            <p>Como referencia, el diagnóstico de EPM a tu puerta cuesta $90.800 en 2026. El valor de la visita de Alisio: <span data-dato="visita" data-pendiente="por confirmar"></span>.</p>
+          </details>
+          <details>
+            <summary>¿Atienden urgencias?</summary>
+            <p><span data-dato="urgencias" data-pendiente="Por confirmar"></span>. Horario: <span data-dato="horario" data-pendiente="por confirmar"></span>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO / CIERRE ============ -->
+    <section class="contacto" id="contacto" data-cine-tema="oscuro" aria-labelledby="contacto-titulo">
+      <div class="contenedor contacto__rejilla">
+        <div class="contacto__texto">
+          <p class="etiqueta"><span data-cine-codigo>08 · Contacto</span></p>
+          <h2 id="contacto-titulo" class="contacto__titulo" data-dividir>¿Hace calor? Escríbenos.</h2>
+          <p data-revelar>Cuéntanos qué equipo tienes y qué le pasa: se abre tu WhatsApp con el mensaje escrito. Si es urgente, llama.</p>
+          <a class="contacto__llamar" href="#contacto" data-enlace="telefono" data-respaldo="#contacto" data-revelar>
+            <span class="contacto__llamar-icono"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-tel"/></svg></span>
+            <span><small>Llamar ahora</small> <b data-dato="telefonoTexto" data-pendiente="Teléfono por confirmar"></b></span>
+          </a>
+          <ul class="contacto__datos" role="list" data-revelar-grupo>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-wa"/></svg>
+              <a href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto"><span data-dato="whatsappTexto" data-pendiente="WhatsApp por confirmar"></span></a>
+            </li>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-reloj"/></svg>
+              <span data-dato="horario" data-pendiente="Horario por confirmar"></span>
+            </li>
+            <li data-revelar>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-mapa"/></svg>
+              <span>Servicio a domicilio en el Valle de Aburrá</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="formulario" data-formulario data-whatsapp-saludo="Hola, Alisio. Necesito un técnico." novalidate data-revelar>
+          <div class="campo">
+            <label for="f-nombre">Tu nombre</label>
+            <input id="f-nombre" name="Nombre" type="text" autocomplete="name" required maxlength="80">
+          </div>
+          <fieldset class="campo campo--opciones">
+            <legend>¿Qué necesitas?</legend>
+            <label><input type="radio" name="Servicio" value="Instalación" checked> Instalación</label>
+            <label><input type="radio" name="Servicio" value="Mantenimiento"> Mantenimiento</label>
+            <label><input type="radio" name="Servicio" value="Reparación"> Reparación</label>
+          </fieldset>
+          <div class="formulario__fila">
+            <div class="campo">
+              <label for="f-equipo">Equipo</label>
+              <select id="f-equipo" name="Equipo" required>
+                <option value="">Elige uno</option>
+                <option>Mini split</option>
+                <option>Aire de ventana</option>
+                <option>Aire tipo casete</option>
+                <option>Nevera o nevecón</option>
+                <option>No sé</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="f-municipio">Municipio</label>
+              <select id="f-municipio" name="Municipio" required data-municipios>
+                <option value="">Elige uno</option>
+                <option>Caldas</option><option>La Estrella</option><option>Sabaneta</option><option>Itagüí</option><option>Envigado</option>
+                <option>Medellín</option><option>Bello</option><option>Copacabana</option><option>Girardota</option><option>Barbosa</option>
+                <option>Otro</option>
+              </select>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="f-cuando">¿Para cuándo?</label>
+            <select id="f-cuando" name="Para cuándo">
+              <option>Lo antes posible</option>
+              <option>Esta semana</option>
+              <option>Puedo esperar</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="f-nota">¿Qué le pasa? <small>(opcional)</small></label>
+            <textarea id="f-nota" name="Detalle" rows="3" maxlength="300" placeholder="Por ejemplo: el mini split de la alcoba gotea y enfría poco."></textarea>
+          </div>
+          <label class="campo campo--casilla">
+            <input type="checkbox" name="autorizacion" value="Sí" required data-no-mensaje>
+            <span>Autorizo el tratamiento de mis datos para atender mi solicitud, según la <a href="privacidad.html">política de privacidad</a> (Ley 1581 de 2012).</span>
+          </label>
+          <input class="trampa" type="text" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="boton boton--principal boton--ancho" type="submit">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg> Enviar por WhatsApp</button>
+          <p class="formulario__estado" data-formulario-estado role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__rejilla">
+        <div>
+          <p class="pie__marca marca">Alisio</p>
+          <p class="pie__lema">Aire acondicionado y refrigeración · Valle de Aburrá</p>
+        </div>
+        <div class="pie__datos">
+          <a href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto">WhatsApp <span data-dato="whatsappTexto"></span></a>
+          <a href="#contacto" data-enlace="telefono" data-respaldo="#contacto">Llamar <span data-dato="telefonoTexto"></span></a>
+          <span data-dato="horario" data-pendiente="Horario por confirmar"></span>
+          <span>NIT: <span data-dato="nit" data-pendiente="por confirmar"></span></span>
+        </div>
+        <div class="pie__legal">
+          <a href="privacidad.html">Política de privacidad</a>
+          <a href="creditos.html">Créditos e imágenes</a>
+          <a href="#inicio">Volver arriba</a>
+        </div>
+      </div>
+      <p class="pie__muestra"><strong>Proyecto de muestra.</strong> Alisio es una marca inventada para enseñar este diseño. Los precios son referencias del mercado con su fuente (EPM a tu puerta 2026), no tarifas de Alisio; la calculadora y el diagnóstico son orientativos; la cobertura es de ejemplo, y las fotos son de banco. © <span data-anio>2026</span></p>
+    </div>
+  </footer>
+
+  <!-- Barra fija del móvil: llamar y WhatsApp, aparece al salir de la portada y se esconde en el cierre -->
+  <div class="barra-movil">
+    <a class="barra-movil__llamar" href="#contacto" data-enlace="telefono" data-respaldo="#contacto">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-tel"/></svg> Llamar</a>
+    <a class="barra-movil__boton" href="#contacto" data-enlace="whatsapp" data-respaldo="#contacto">
+      <span class="barra-movil__icono"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><use href="#i-wa"/></svg></span>
+      <span class="barra-movil__texto">WhatsApp</span>
+    </a>
+  </div>
+
+  <script defer src="lib/three.min.js"></script>
+  <script defer src="js/datos.js?v=20261119"></script>
+  <script defer src="js/motor.js?v=20261119"></script>
+  <script defer src="js/cine.js?v=20261119"></script>
+  <script defer src="js/escena.js?v=20261119"></script>
+  <script defer src="js/app.js?v=20261119"></script>
+</body>
+</html>
